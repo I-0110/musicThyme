@@ -5,11 +5,18 @@
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+  --color-music-100: #f4e8d0; /* lightmode bg, darkmode text*/
+  --color-music-200: #dda15e; /* primary brand color (header, links) */
+  --color-music-300: #bc6c25; /* accent colors (buttons, highlights, hover) */
+  --color-music-400: #423324; /* borders, subtle dividers, disable states */
+  --color-music-500: #1a1410; /* light mode text, dark mode background */
+  
+  --color-thyme-100: #dad7cd; /* lightmode bg, darkmode text*/
+  --color-thyme-200: #a3b18a; /* primary brand color (header, links) */
+  --color-thyme-300: #588157; /* accent colors (buttons, highlights, hover) */
+  --color-thyme-400: #3a5a40; /* borders, subtle dividers, disable states */
+  --color-thyme-500: #344e41; /* light mode text, dark mode background */
 }
 
 @media (prefers-color-scheme: dark) {
