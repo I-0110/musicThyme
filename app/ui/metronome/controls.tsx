@@ -17,10 +17,10 @@ export default function Controls() {
     return (
         <>
             <div className="text-center mb-4">
-                <div className="text-5xl font-bold text-thyme-300 mb-2">
+                <div className="text-5xl font-bold text-thyme-300 dark:text-thyme-100 mb-2">
                     {bpm}
                 </div>
-                <div className="text-lg text-thyme-400">BPM</div>
+                <div className="text-lg text-thyme-400 dark:text-thyme-200">BPM</div>
             </div>
 
             <div className="mb-4">
@@ -30,16 +30,16 @@ export default function Controls() {
                     max="240"
                     value={bpm}
                     onChange={(e) => setBpm(Number(e.target.value))}
-                    className="w-full h-6 bg-thyme-200 rounded-lg apparance-none cursor-pointer accent-thyme-300"
+                    className="w-full h-6 bg-thyme-200 rounded-lg apparance-none cursor-pointer accent-thyme-300 dark:bg-thyme-100 dark:accent-thyme-200"
                 />
-                <div className="flex justify-between text-sm text-thyme-400 mt-0">
+                <div className="flex justify-between text-sm text-thyme-400 dark:text-thyme-100 mt-0">
                     <span>1</span>
                     <span>240</span>
                 </div>
             </div>
 
             <div className="mb-3">
-                <label className="block text-thyme-500 font-medium mb-3">
+                <label className="block text-thyme-500 dark:text-thyme-100 font-medium mb-3">
                     Beats per Measure
                 </label>
                 <input
@@ -48,7 +48,7 @@ export default function Controls() {
                     max="12"
                     value={beatsPerMeasure}
                     onChange={(e) => setBeatsPerMeasure(Number(e.target.value))}
-                    className="w-full px-4 py-2 border-2 border-thyme-400 rounded-lg text-thyme-500 focus:outline-none focus:border-thyme-300"
+                    className="w-full px-4 py-2 border-2 border-thyme-400 rounded-lg text-thyme-500 dark:text-thyme-100 focus:outline-none focus:border-thyme-300"
                 />
             </div>
 
