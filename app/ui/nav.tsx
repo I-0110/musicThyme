@@ -18,8 +18,12 @@ export default function Nav() {
             label: 'Metronome' 
         },
         { 
-            href: '/tuner', 
+            href: '#', 
             label: 'Tuner' 
+        },
+        { 
+            href: 'flutists', 
+            label: 'Flutists' 
         },
     ]
 
