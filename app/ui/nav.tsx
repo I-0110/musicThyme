@@ -25,6 +25,10 @@ export default function Nav() {
             href: 'flutists', 
             label: 'Flutists' 
         },
+                { 
+            href: 'patw', 
+            label: 'Peter and the Wolf' 
+        },
     ]
 
     return (
