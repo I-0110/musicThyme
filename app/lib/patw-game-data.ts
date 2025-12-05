@@ -15,7 +15,7 @@ export const characterData: Record<Characters, {
         correctInstr: 'fl',
         correctMemeUrl: '/images/bird-yay.gif',
         audioUrl: '/audio/bird-theme.mp3',
-        imageUrl: '/images/bird.png',
+        imageUrl: '/images/bird.jpeg',
         incorrectMemeUrl: '/images/bird-meme.gif'
     },
     cat: {
@@ -23,7 +23,7 @@ export const characterData: Record<Characters, {
         correctInstr: 'cl',
         correctMemeUrl: '/images/cat-yay.gif',
         audioUrl: '/audio/cat-theme.mp3',
-        imageUrl: '/images/cat.png',
+        imageUrl: '/images/cat.jpeg',
         incorrectMemeUrl: '/images/cat-meme.png'
     },
     duck: {
@@ -31,7 +31,7 @@ export const characterData: Record<Characters, {
         correctInstr: 'ob',
         correctMemeUrl: '/images/duck-yay.gif',
         audioUrl: '/audio/duck-theme.mp3',
-        imageUrl: '/images/duck.png',
+        imageUrl: '/images/duck.jpeg',
         incorrectMemeUrl: '/images/duck-meme.png'
     },
     grandpa: {
@@ -39,7 +39,7 @@ export const characterData: Record<Characters, {
         correctInstr: 'bsn',
         correctMemeUrl: '/images/grandpa-yay.gif',
         audioUrl: '/audio/grandpa-theme.mp3',
-        imageUrl: '/images/grandpa.png',
+        imageUrl: '/images/grandpa.jpeg',
         incorrectMemeUrl: '/images/grandpa-meme.png'
     },
     hunters: {
@@ -47,7 +47,7 @@ export const characterData: Record<Characters, {
         correctInstr: 'obtimp',
         correctMemeUrl: '/images/hunters-yay.gif',
         audioUrl: '/audio/hunters-theme.mp3',
-        imageUrl: '/images/hunters.png',
+        imageUrl: '/images/hunters.jpeg',
         incorrectMemeUrl: '/images/hunters-meme.png'
     },
     peter: {
@@ -55,7 +55,7 @@ export const characterData: Record<Characters, {
         correctInstr: 'str',
         correctMemeUrl: '/images/peter-yay.gif',
         audioUrl: '/audio/peter-theme.mp3',
-        imageUrl: '/images/peter.png',
+        imageUrl: '/images/peter.jpeg',
         incorrectMemeUrl: '/images/peter-meme.png'
     },
     wolf: {
@@ -63,7 +63,7 @@ export const characterData: Record<Characters, {
         correctInstr: 'hn',
         correctMemeUrl: '/images/wolf-yay.gif',
         audioUrl: '/audio/wolf-theme.mp3',
-        imageUrl: '/images/wolf.png',
+        imageUrl: '/images/wolf.jpeg',
         incorrectMemeUrl: '/images/wolf-meme.png'
     },
 }
