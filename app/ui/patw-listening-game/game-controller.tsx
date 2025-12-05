@@ -21,7 +21,6 @@ export default function GameController() {
     const [currentCharacter, setCurrentCharacter] = useState<Characters>('peter');
     const [results, setResults] = useState(false);
     const [isCorrect, setIsCorrect] = useState(false);
-    const [selectedInstrument, setSelectedInstrument] = useState<Instruments | null>(null);
 
     // Current character data and index
     const character = characterData[currentCharacter];
@@ -29,7 +28,6 @@ export default function GameController() {
 
     // Handle instrument selection - instant feedback (no submit needed)
     const handleInstrumentSelect = (instrument: Instruments) => {
-        setSelectedInstrument(instrument);
         const correct = instrument === character.correctInstr;
         setIsCorrect(correct);
         setResults(true);
@@ -38,7 +36,6 @@ export default function GameController() {
     // Move to next character
     const handleNext = () => {
         setResults(false);
-        setSelectedInstrument(null);
 
         if (currentIndex < allCharacters.length - 1) {
             setCurrentCharacter(allCharacters[currentIndex + 1]);
@@ -51,7 +48,6 @@ export default function GameController() {
     // Try the same character again
     const handleTryAgain = () => {
         setResults(false);
-        setSelectedInstrument(null);
     };
 
     return (
@@ -63,27 +59,15 @@ export default function GameController() {
                 </p>
             </div>
 
-            {/* Audio Player */}
-            <div className='flex flex-col gap-4 rounded-lg bg-gray-50 p-6 md:px-10 mt-4'>
-                <h2 className='text-lg font-semibold text-gray-800'>
-                    Listen to the {character.name}&apos;s Theme
-                </h2>
-                <audio
-                    controls
-                    src={character.audioUrl}
-                    className='w-full'
-                >
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-
             {/* Form or Results */}
             <div className='mt-4'>
                 {!results ? (
-                    <div className='flex flex-col justify-center gap-6 rounded-lg bg-thyme-100 px-6 py-10'>
+                    <div className='flex flex-col justify-center gap-6 rounded-lg bg-transparent px-6 py-10'>
                         <PatwListenForm
                             currentCharacter={currentCharacter}
                             characterImageUrl={character.imageUrl}
+                            audioUrl={character.audioUrl}
+                            characterName={character.name}
                             onInstrumentClick={handleInstrumentSelect}
                             instantFeedback={true}
                         />

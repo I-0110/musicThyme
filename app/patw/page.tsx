@@ -11,7 +11,7 @@ export default function Page() {
             <div className="mt-4 flex grow flex-col gap-4 md:flex-row">
                 <div className='flex flex-col justify-center gap-4 rounded-lg bg-thyme-100 p-6 md:w-2/5 md:px-10'>
                   <p className={`${teachers.className} text-xl text-thyme-500 md:text-3xl md:leading-normal`}>
-                    <strong>Peter and the Wolf by Sergei Prokofiev</strong>
+                    <strong>Peter and the Wolf<br/> by Sergei Prokofiev</strong>
                     <br/>
                     Learn about the composer, instruments, themes in music, and prove yourself with our interactive game.
                   </p>
