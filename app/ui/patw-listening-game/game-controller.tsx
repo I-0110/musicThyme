@@ -52,15 +52,8 @@ export default function GameController() {
 
     return (
         <>
-            {/* Progress Indicator */}
-            <div className='flex flex-col justify-center gap-4 rounded-lg bg-thyme-100 p-4 md:w-2/5 md:px-10'>
-                <p className='text-sm text-thyme-500'>
-                    Character {currentIndex + 1} of {allCharacters.length}
-                </p>
-            </div>
-
             {/* Form or Results */}
-            <div className='mt-4'>
+            <div>
                 {!results ? (
                     <div className='flex flex-col justify-center gap-6 rounded-lg bg-transparent px-6 py-10'>
                         <PatwListenForm
@@ -70,6 +63,8 @@ export default function GameController() {
                             characterName={character.name}
                             onInstrumentClick={handleInstrumentSelect}
                             instantFeedback={true}
+                            currentIndex={currentIndex}
+                            totalCharacters={allCharacters.length}
                         />
                     </div>
                 ) : (

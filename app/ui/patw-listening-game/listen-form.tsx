@@ -12,6 +12,8 @@ export interface PatwListenFormProps {
     characterName: string;
     onInstrumentClick: (selectedInstrument: Instruments) => void;
     instantFeedback?: boolean;
+    currentIndex: number;
+    totalCharacters: number;
 }
 
 export default function PatwListenForm({
@@ -20,7 +22,9 @@ export default function PatwListenForm({
     audioUrl,
     characterName,
     onInstrumentClick,
-    instantFeedback = true
+    instantFeedback = true,
+    currentIndex,
+    totalCharacters,
 }: PatwListenFormProps) {
   const [instruments, setInstruments] = useState<Instruments | ''>('');
   
@@ -36,6 +40,16 @@ export default function PatwListenForm({
     { label: 'oboe and timpani', value: 'obtimp' },
     { label: 'french horn', value: 'hn' },
   ];
+
+  const instrumentImages = {
+    bsn: '/images/bassoon.jpg',
+    cl: '/images/clarinet.png',
+    fl: '/images/flute.png',
+    hn: '/images/frenchhorn.png',
+    ob: '/images/oboe.png',
+    str: '/images/string.png',
+    obtimp: '/images/timpani.png',
+  }
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -64,7 +78,7 @@ export default function PatwListenForm({
         { type: 'audio' as const, position: 1 },
         { type: 'instrument' as const, position: 2, instrument: instrumentsOptions[1] },
         { type: 'instrument' as const, position: 3, instrument: instrumentsOptions[2] },
-        { type: 'character' as const, position: 1 && 4},
+        { type: 'character' as const, position: 4},
         { type: 'instrument' as const, position: 5, instrument: instrumentsOptions[3] },
         { type: 'instrument' as const, position: 6, instrument: instrumentsOptions[4] },
         { type: 'instrument' as const, position: 7, instrument: instrumentsOptions[5] },
@@ -72,15 +86,15 @@ export default function PatwListenForm({
     ]
 
   return (
-    <div className="w-full max-w-4xl mx-auto">
-        <form onSubmit={handleSubmit}>
+    <div className="w-full h-full flex items-center justify-center">
+        <form onSubmit={handleSubmit} className='w-full'>
         {/* Desktop: 3x3 Grid */}
-        <div className="hidden md:grid md:grid-cols-3 gap-4 mb-4">
+        <div className="hidden md:grid md:grid-cols-3 gap-4 max-w-2xl mx-auto">
           {gridItems.map((item, index) => (
-            <div key={index} className="aspect-square">
+            <div key={index} className="w-full">
               {item.type === 'audio' && (
-                <div className="w-full h-full rounded-lg flex flex-col items-center justify-center p-4 text-center">
-                  <h2 className='text-lg font-semibold text-gray-800'>
+                <div className="w-full h-full rounded-lg bg-thyme-100/75 flex flex-col items-center justify-center p-3 text-center">
+                  <h2 className='text-base font-semibold text-thyme-500'>
                     Listen to the {characterName}&apos;s Theme
                   </h2>
                   <audio
@@ -90,40 +104,52 @@ export default function PatwListenForm({
                   >
                       Your browser does not support the audio element.
                   </audio>
+                  {/* Progress Indicator */}
+                  <p className='text-md text-thyme-500 mt-2'>
+                    Character {currentIndex + 1} of {totalCharacters}
+                  </p>
                 </div>
               )}
               
               {item.type === 'character' && (
-                <div className="w-full h-full rounded-lg bg-transparent border-2 border-thyme-400 flex flex-col items-center justify-center p-2">
+                <div className="w-full h-full rounded-lg bg-thyme-100/75 flex flex-col items-center justify-center p-2">
                   {characterImageUrl ? (
                     <Image 
                       src={characterImageUrl} 
                       alt={currentCharacter}
-                      width={120}
-                      height={120}
+                      width={80}
+                      height={80}
                       className="object-contain mb-2"
                       priority
                     />
                   ) : null}
-                  <p className="text-xl font-bold capitalize text-center">
+                  <p className="text-lg text-thyme-500 font-bold capitalize text-center">
                     {currentCharacter}
                   </p>
                 </div>
               )}
               
               {item.type === 'instrument' && item.instrument && (
-                <button
-                  type="button"
-                  onClick={() => handleInstrumentClick(item.instrument.value)}
-                  className={`w-full h-full border-2 rounded-lg flex items-center justify-center p-4 text-center font-medium transition-all ${
-                    instruments === item.instrument.value
-                      ? 'border-green-500 bg-thyme-100'
-                      : 'border-thyme-100 hover:border-thyme-400 hover:bg-transparent'
-                  }`}
-                >
-                  {item.instrument.label}
-                </button>
-              )}
+              <button
+                type="button"
+                onClick={() => handleInstrumentClick(item.instrument.value)}
+                className={`w-full h-full rounded-lg bg-thyme-200/75 flex flex-col items-center justify-center p-4 text-center transition-all ${
+                  instruments === item.instrument.value
+                    ? 'border-thyme-500'
+                    : 'border-thyme-200 hover:border-thyme-400 hover:bg-thyme-400/75'
+                }`}
+              >
+                <Image 
+                  src={instrumentImages[item.instrument.value]}
+                  alt={item.instrument.label}
+                  width={80}
+                  height={80}
+                  className="object-contain mb-2"
+                  priority
+                />
+                <strong className="text-md text-thyme-100">{item.instrument.label}</strong>
+              </button>
+            )}
             </div>
           ))}
         </div>
@@ -131,7 +157,7 @@ export default function PatwListenForm({
         {/* Mobile: Character on top + Dropdown */}
         <div className="md:hidden space-y-6 mb-6">
           {/* Character Display */}
-          <div className="border-4 border-thyme-500 rounded-lg bg-transparent flex flex-col items-center justify-center p-4">
+          <div className="rounded-lg bg-thyme-100/75 flex flex-col items-center p-3">
             {characterImageUrl ? (
               <Image 
                 src={characterImageUrl} 
@@ -148,8 +174,8 @@ export default function PatwListenForm({
           </div>
 
           {/* Audio Player */}
-          <div className="bg-gray-50 rounded-lg p-4">
-            <h2 className='text-lg font-semibold text-gray-800 mb-3'>
+          <div className="bg-gray-50 rounded-lg p-3">
+            <h2 className='text-lg font-semibold text-gray-800 mb-0'>
               Listen to the {characterName}&apos;s Theme
             </h2>
             <audio
@@ -162,7 +188,7 @@ export default function PatwListenForm({
           </div>
 
           {/* Dropdown Selection */}
-          <div>
+          <div className='bg-thyme-100/75'>
             <select
               id="instrument-select"
               value={instruments}
@@ -174,7 +200,7 @@ export default function PatwListenForm({
                 }
                 setErrorMessage('');
               }}
-              className="w-full px-4 py-3 border-2 border-thyme-300 rounded-lg focus:border-thyme-500 focus:outline-none text-lg"
+              className="w-full px-2 py-3 border-2 border-thyme-300 rounded-lg focus:border-thyme-500 text-lg text-thyme-500"
             >
               <option value="">Choose an instrument...</option>
               {instrumentsOptions.map((option) => (
