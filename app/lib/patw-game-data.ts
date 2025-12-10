@@ -24,7 +24,7 @@ export const characterData: Record<Characters, {
         correctMemeUrl: '/images/cat-yay.gif',
         audioUrl: '/audio/cat-theme.mp3',
         imageUrl: '/images/cat.jpeg',
-        incorrectMemeUrl: '/images/cat-meme.png'
+        incorrectMemeUrl: '/images/cat-meme.gif'
     },
     duck: {
         name: 'Duck',
@@ -32,7 +32,7 @@ export const characterData: Record<Characters, {
         correctMemeUrl: '/images/duck-yay.gif',
         audioUrl: '/audio/duck-theme.mp3',
         imageUrl: '/images/duck.jpeg',
-        incorrectMemeUrl: '/images/duck-meme.png'
+        incorrectMemeUrl: '/images/duck-meme.gif'
     },
     grandpa: {
         name: 'Grandpa',
@@ -40,7 +40,7 @@ export const characterData: Record<Characters, {
         correctMemeUrl: '/images/grandpa-yay.gif',
         audioUrl: '/audio/grandpa-theme.mp3',
         imageUrl: '/images/grandpa.jpeg',
-        incorrectMemeUrl: '/images/grandpa-meme.png'
+        incorrectMemeUrl: '/images/grandpa-meme.gif'
     },
     hunters: {
         name: 'Hunters',
@@ -48,7 +48,7 @@ export const characterData: Record<Characters, {
         correctMemeUrl: '/images/hunters-yay.gif',
         audioUrl: '/audio/hunters-theme.mp3',
         imageUrl: '/images/hunters.jpeg',
-        incorrectMemeUrl: '/images/hunters-meme.png'
+        incorrectMemeUrl: '/images/hunters-meme.gif'
     },
     peter: {
         name: 'Peter',
@@ -56,7 +56,7 @@ export const characterData: Record<Characters, {
         correctMemeUrl: '/images/peter-yay.gif',
         audioUrl: '/audio/peter-theme.mp3',
         imageUrl: '/images/peter.jpeg',
-        incorrectMemeUrl: '/images/peter-meme.png'
+        incorrectMemeUrl: '/images/peter-meme.gif'
     },
     wolf: {
         name: 'Wolf',
@@ -64,6 +64,6 @@ export const characterData: Record<Characters, {
         correctMemeUrl: '/images/wolf-yay.gif',
         audioUrl: '/audio/wolf-theme.mp3',
         imageUrl: '/images/wolf.jpeg',
-        incorrectMemeUrl: '/images/wolf-meme.png'
+        incorrectMemeUrl: '/images/wolf-meme.gif'
     },
 }

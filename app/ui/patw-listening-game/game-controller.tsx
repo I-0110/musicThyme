@@ -106,6 +106,7 @@ export default function GameController() {
                                             width={256}
                                             height={256}
                                             priority
+                                            unoptimized
                                         />   
                                     )}
                                     <p className='text-lg text-red-800'>
