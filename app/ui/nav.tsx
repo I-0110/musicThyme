@@ -25,9 +25,13 @@ export default function Nav() {
             href: 'flutists', 
             label: 'Flutists' 
         },
-                { 
+        { 
             href: 'patw', 
             label: 'Peter and the Wolf' 
+        },
+        {
+          href: 'cota',
+          label: 'The Carnival of the Animals'
         },
     ]
 

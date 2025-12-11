@@ -13,57 +13,57 @@ export const characterData: Record<Characters, {
     bird: {
         name: 'Bird',
         correctInstr: 'fl',
-        correctMemeUrl: '/images/bird-yay.gif',
-        audioUrl: '/audio/bird-theme.mp3',
-        imageUrl: '/images/bird.jpeg',
-        incorrectMemeUrl: '/images/bird-meme.gif'
+        correctMemeUrl: '/patw/images/bird-yay.gif',
+        audioUrl: '/patw/audio/bird-theme.mp3',
+        imageUrl: '/patw/images/bird.jpeg',
+        incorrectMemeUrl: '/patw/images/bird-meme.gif'
     },
     cat: {
         name: 'Cat',
         correctInstr: 'cl',
-        correctMemeUrl: '/images/cat-yay.gif',
-        audioUrl: '/audio/cat-theme.mp3',
-        imageUrl: '/images/cat.jpeg',
-        incorrectMemeUrl: '/images/cat-meme.gif'
+        correctMemeUrl: '/patw/images/cat-yay.gif',
+        audioUrl: '/patw/audio/cat-theme.mp3',
+        imageUrl: '/patw/images/cat.jpeg',
+        incorrectMemeUrl: '/patw/images/cat-meme.gif'
     },
     duck: {
         name: 'Duck',
         correctInstr: 'ob',
-        correctMemeUrl: '/images/duck-yay.gif',
-        audioUrl: '/audio/duck-theme.mp3',
-        imageUrl: '/images/duck.jpeg',
-        incorrectMemeUrl: '/images/duck-meme.gif'
+        correctMemeUrl: '/patw/images/duck-yay.gif',
+        audioUrl: '/patw/audio/duck-theme.mp3',
+        imageUrl: '/patw/images/duck.jpeg',
+        incorrectMemeUrl: '/patw/images/duck-meme.gif'
     },
     grandpa: {
         name: 'Grandpa',
         correctInstr: 'bsn',
-        correctMemeUrl: '/images/grandpa-yay.gif',
-        audioUrl: '/audio/grandpa-theme.mp3',
-        imageUrl: '/images/grandpa.jpeg',
-        incorrectMemeUrl: '/images/grandpa-meme.gif'
+        correctMemeUrl: '/patw/images/grandpa-yay.gif',
+        audioUrl: '/patw/audio/grandpa-theme.mp3',
+        imageUrl: '/patw/images/grandpa.jpeg',
+        incorrectMemeUrl: '/patw/images/grandpa-meme.gif'
     },
     hunters: {
         name: 'Hunters',
         correctInstr: 'obtimp',
-        correctMemeUrl: '/images/hunters-yay.gif',
-        audioUrl: '/audio/hunters-theme.mp3',
-        imageUrl: '/images/hunters.jpeg',
-        incorrectMemeUrl: '/images/hunters-meme.gif'
+        correctMemeUrl: '/patw/images/hunters-yay.gif',
+        audioUrl: '/patw/audio/hunters-theme.mp3',
+        imageUrl: '/patw/images/hunters.jpeg',
+        incorrectMemeUrl: '/patw/images/hunters-meme.gif'
     },
     peter: {
         name: 'Peter',
         correctInstr: 'str',
-        correctMemeUrl: '/images/peter-yay.gif',
-        audioUrl: '/audio/peter-theme.mp3',
-        imageUrl: '/images/peter.jpeg',
-        incorrectMemeUrl: '/images/peter-meme.gif'
+        correctMemeUrl: '/patw/images/peter-yay.gif',
+        audioUrl: '/patw/audio/peter-theme.mp3',
+        imageUrl: '/patw/images/peter.jpeg',
+        incorrectMemeUrl: '/patw/images/peter-meme.gif'
     },
     wolf: {
         name: 'Wolf',
         correctInstr: 'hn',
-        correctMemeUrl: '/images/wolf-yay.gif',
-        audioUrl: '/audio/wolf-theme.mp3',
-        imageUrl: '/images/wolf.jpeg',
-        incorrectMemeUrl: '/images/wolf-meme.gif'
+        correctMemeUrl: '/patw/images/wolf-yay.gif',
+        audioUrl: '/patw/audio/wolf-theme.mp3',
+        imageUrl: '/patw/images/wolf.jpeg',
+        incorrectMemeUrl: '/patw/images/wolf-meme.gif'
     },
 }

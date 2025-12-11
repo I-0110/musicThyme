@@ -17,6 +17,17 @@
   --color-thyme-300: #588157; /* accent colors (buttons, highlights, hover) */
   --color-thyme-400: #3a5a40; /* borders, subtle dividers, disable states */
   --color-thyme-500: #344e41; /* light mode text, dark mode background */
+
+  --color-carnival-100: #fef6e8; /* soft cream/vanilla - lightmode bg */
+  --color-carnival-200: #f4a261; /* warm golden orange - primary brand */
+  --color-carnival-300: #e76f51; /* coral red - accent/buttons */
+  --color-carnival-400: #8b4b8c; /* deep purple - borders/secondary */
+  --color-carnival-500: #2b1f3d; /* deep plum/navy - text/dark mode bg */
+  
+  /* Additional accent colors from the tent stripes */
+  --color-carnival-blue: #5ba3c4; /* sky blue - for variety */
+  --color-carnival-yellow: #ffd166; /* bright yellow - celebrations */
+  --color-carnival-pink: #d95980; /* pink stripe - playful accent */
 }
 
 @media (prefers-color-scheme: dark) {
