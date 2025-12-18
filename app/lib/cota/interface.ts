@@ -1,43 +1,57 @@
-import { Tempo, Mood, Movements, InstrumentFamily, Dynamics, Instruments } from '@/app/lib/cota/types';
+import { Tempo, Mood, Moves, InstrumentFamily, Dynamics, Instruments } from '@/app/lib/cota/types';
 
-export interface QuizOption {
-    id: string;
-    label: string;
-    type: 'tempo' | 'mood' | 'movement' | 'instrument' | 'dynamics';
+export interface VideoSource {
+    youtube?: string; // YouTube URI
 }
 
-export interface AudioSource {
-    spotify?: string; // Spotify track ID or URI
-    startTime?: number; // Start time in seconds for the clip (20 to 30s)
-    endTime?: number; // End time in seconds for the clip
+export interface Vocabulary {
+    term: string,
+    definition: string,
+    example: string
 }
 
-export interface CharacterOrder {
+export interface Character {
     id: string;
     title: string;
     characterName: string;
     orderNumber: number;
 
-    // Audio sources
-    audio: AudioSource;
-
-    // Correct answers and details for each character
-    correctAnswers: {
-        tempo: Tempo;
-        mood: Mood;
-        movement: Movements[];
-        mainFamily: InstrumentFamily[];
-        instruments: Instruments[];
-        dynamics: Dynamics[];
-    };
-
-    // Educational content
-    description: string;
-    musicalFacts: string[];
-    funFacts: string;
+    // Video sources
+    video: VideoSource;
 
     // Character Image
     imageUrl?: string;
+}
+
+export interface Details {
+    // Correct answers and details for each character
+    mood: Mood[];
+    tempo: Tempo;
+    dynamics: Dynamics[];
+    mainFamily: InstrumentFamily[];
+    instruments: Instruments[];
+    vocabulary: Vocabulary[];
+    moves: Moves[];
+}
+
+export interface Content {
+    // Educational content
+    description: string;
+    musicalFacts: string[];
+    funFacts: string[];
+    performanceVideo: string[];
+}
+
+export interface LessonPlan {
+    // Teacher content
+    activitiesVideo: string[];
+    activities: string[];
+}
+
+export interface QuizOption {
+    id: string;
+    label: string;
+    type: 'tempo' | 'mood' | 'movement' | 'instrument' | 'dynamics';
 }
 
 export interface QuizQuestion {

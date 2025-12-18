@@ -1,8 +1,10 @@
 import Nav from '@/app/ui/nav';
 import { teachers } from '@/app/ui/fonts';
-import GameController from '@/app/ui/patw-listening-game/game-controller'; 
+import BoardMap  from '@/app/ui/cota/map/boardmap';
+import { carnivalCharacters } from '@/app/lib/cota/data';
 
 export default function Page() {
+
   return (
     <div className="flex flex-col">
         <Nav />
@@ -14,8 +16,10 @@ export default function Page() {
                     </p>
                 </div>
             </div>
-            <div>
-                <GameController />
+            <div className='mt-6'>
+                <BoardMap 
+                    characters={carnivalCharacters}
+                />
             </div>
         </div>
     </div>

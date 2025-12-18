@@ -1,0 +1,65 @@
+// Helper functions
+import { Character } from "./interface";
+// Please add QuizQuestion to import { Character } from "./interface";
+
+// import { carnivalMovements, quizQuestions } from "./data";
+
+// export const getQuestionByMovementId = (movementId: string): QuizQuestion | undefined => {
+//     return quizQuestions.find(q => q.movementId === movementId);
+// };
+
+// export const getMovementById = (movementId: string): Character | undefined => {
+//     return carnivalMovements.find(m => m.id === movementId);
+// };
+
+// Shuffle Questions Array 
+export const shuffleArray = <T,>(array: T[]): T[] => {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+}
+
+// Grid position for a character based on their index (0 - 13), 5x4 grid
+export const getGrid = (index: number): { row: number; col: number} => {
+    // Layout for 14 characters in 5x4 grid (border pattern)
+    const positions = [
+        // Top row: 0 - 4
+        { row: 0, col: 0}, 
+        { row: 0, col: 1}, 
+        { row: 0, col: 2},
+        { row: 0, col: 3}, 
+        { row: 0, col: 4},
+        // Right col (2 middle positions, 5 - 6)
+        { row: 1, col: 4}, 
+        { row: 2, col: 4},
+        // Bottom row (5 positions, right to left, 7 - 11)
+        { row: 3, col: 4}, 
+        { row: 3, col: 3}, 
+        { row: 3, col: 2},
+        { row: 3, col: 1}, 
+        { row: 3, col: 0},
+        // Left col (2 middle positions, bottom to top, 12 - 13)
+        { row: 2, col: 0}, 
+        { row: 1, col: 0},
+    ];
+
+    return positions[index] || { row: 0, col: 0 };
+}
+
+// Characters on the map grid
+export const mapPath = (characters: Character[]) => {
+    const sorted = [...characters].sort((a, b) => a.orderNumber - b.orderNumber);
+
+    return {
+        topRow: sorted.slice(0, 5),
+        rightColumn: sorted.slice(5, 8),
+        bottomRow: sorted.slice(8, 13).reverse(),
+        leftColumn: sorted.slice(13, 14)
+    };
+};
+
+
+
