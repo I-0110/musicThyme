@@ -17,7 +17,7 @@ export default function InfoPanel() {
   const allCharacters: Character[] = [];
 
   // State management
-  const [character, setCharacter] = useState<Character>(characterName: 'lion');
+  const [character, setCharacter] = useState<Character>();
   const [hover, setHover] = useState<number | null>(null);
   const [expand, setExpand] = useState<number | null>(null);
 
@@ -29,7 +29,7 @@ export default function InfoPanel() {
 
   return (
     {expand === null ? (
-      <div className='
+      <div className=''>
       </div>
     )}
   )

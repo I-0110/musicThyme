@@ -4,7 +4,7 @@ export type Tempo = 'very slow = largo' | 'slow = andante' | 'moderate = moderat
 
 export type Mood = 'majestic' | 'playful' | 'elegant' | 'heavy' | 'mysterious' | 'delicate' | 'humorius' | 'graceful' | 'clumsy' | 'energetic';
 
-export type Moves = 'walk' | 'hop' | 'stomp' | 'swim' | 'tip-toe' | 'crawl' | 'jog' | 'gallop';
+export type Moves = 'walk' | 'hop' | 'stomp' | 'swim' | 'tip-toe' | 'crawl' | 'jog' | 'gallop' | 'march';
 
 export type InstrumentFamily = 'strings' | 'woodwinds' | 'brass' | 'percussion';
 

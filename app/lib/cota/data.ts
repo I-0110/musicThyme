@@ -1,4 +1,4 @@
-import { Character } from "./interface";
+import { Character, Details } from "./interface";
 // Please add QuizQuestion to import { Character } from "./interface";
 
 export const carnivalCharacters: Character[] = [
@@ -143,6 +143,51 @@ export const carnivalCharacters: Character[] = [
         imageUrl: '/circus.jpg'
     },
 ];
+
+export const characterDetails: Details[] = [
+    {
+        characterId: '1',
+        mood: ['majestic', 'mysterious'], 
+        tempo: 'moderate = moderato', 
+        dynamics: ['soft to loud = crescendo', 'loud to soft = descrecendo', 'medium-soft = mezzo-piano'],
+        mainFamily: ['strings', 'percussion'],
+        instruments: ['piano', 'violin', 'viola', 'double bass', 'cello'],
+        vocabulary: [
+            {
+                term: 'Crescendo',
+                definition: 'Performers will play their instruments soft and gradually will play louder',
+                example: 'When we listen the Introduction and Royal March of the Lion, you can hear the lion roaring. This is possible because we use crescendo and descrescendo.'
+            },
+            {
+                term: 'Descrescendo',
+                definition: 'Performers will play their instruments loud and gradually will play soft.',
+                example: 'When we listen the Introduction and Royal March of the Lion, you can hear the lion roaring. This is possible because we use crescendo and descrescendo.'
+            },
+         ],
+        moves: ['march', 'walk'],
+    },
+    {
+        characterId: '2',
+        mood: ['majestic', 'mysterious'], 
+        tempo: 'moderate = moderato', 
+        dynamics: ['soft to loud = crescendo', 'loud to soft = descrecendo', 'medium-soft = mezzo-piano'],
+        mainFamily: ['strings', 'percussion'],
+        instruments: ['piano', 'violin', 'viola', 'clarinet'],
+        vocabulary: [
+            {
+                term: 'Staccato',
+                definition: 'Performers will play the notes shorter.',
+                example: 'When we listen the Introduction and Royal March of the Lion, you can hear the lion roaring. This is possible because we use crescendo and descrescendo.'
+            },
+            {
+                term: 'Glissando',
+                definition: 'Performers will play',
+                example: 'When we listen the Introduction and Royal March of the Lion, you can hear the lion roaring. This is possible because we use crescendo and descrescendo.'
+            },
+         ],
+        moves: ['march', 'walk'],
+    },
+]
 
 
 

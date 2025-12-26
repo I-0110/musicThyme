@@ -136,7 +136,7 @@ export default function BoardMap({
 
                     {/* Read More Button */}
                     <button
-                      className='flex items-center gap-2 text-carnival-500 hover:underline hover:text-carnival-400 text-sm font-semibold'
+                      className='flex items-center gap-2 text-carnival-500 hover:font-extrabold hover:text-carnival-400 text-sm font-semibold'
                       onClick={() => console.log('Read more clicked for:', selected.id)}
                     >
                       Read More

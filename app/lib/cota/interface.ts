@@ -25,6 +25,7 @@ export interface Character {
 
 export interface Details {
     // Correct answers and details for each character
+    characterId: string;
     mood: Mood[];
     tempo: Tempo;
     dynamics: Dynamics[];
@@ -36,6 +37,7 @@ export interface Details {
 
 export interface Content {
     // Educational content
+    characterId: string;
     description: string;
     musicalFacts: string[];
     funFacts: string[];
@@ -44,6 +46,7 @@ export interface Content {
 
 export interface LessonPlan {
     // Teacher content
+    characterId: string;
     activitiesVideo: string[];
     activities: string[];
 }
