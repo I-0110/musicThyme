@@ -23,6 +23,11 @@ export interface Character {
     imageUrl?: string;
 }
 
+export interface CharacterSection {
+    slug: string;
+    title: string;
+}
+
 export interface Details {
     // Correct answers and details for each character
     characterId: string;

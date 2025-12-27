@@ -1,5 +1,6 @@
 // Helper functions
 import { Character } from "./interface";
+import { carnivalCharacters } from "./data";
 // Please add QuizQuestion to import { Character } from "./interface";
 
 // import { carnivalMovements, quizQuestions } from "./data";
@@ -60,6 +61,11 @@ export const mapPath = (characters: Character[]) => {
         leftColumn: sorted.slice(13, 14)
     };
 };
+
+// Find Character by Id, so user can access individual page with more information
+export function getCharacterById(id: string): Character | undefined {
+    return carnivalCharacters.find(char => char.id === id);
+}
 
 
 

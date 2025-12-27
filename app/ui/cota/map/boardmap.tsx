@@ -5,6 +5,7 @@ import { ArrowRightIcon, HomeIcon, XMarkIcon } from '@heroicons/react/24/outline
 import Image from 'next/image';
 import { Character } from '@/app/lib/cota/interface';
 import { getGrid } from '@/app/lib/cota/functions';
+import Link from 'next/link';
 
 interface BoardMapProps {
   characters: Character[];
@@ -135,13 +136,14 @@ export default function BoardMap({
                     )}
 
                     {/* Read More Button */}
-                    <button
+                    <Link
+                      href={`/cota/interactive-map/${selected.id}/activities`}
                       className='flex items-center gap-2 text-carnival-500 hover:font-extrabold hover:text-carnival-400 text-sm font-semibold'
-                      onClick={() => console.log('Read more clicked for:', selected.id)}
+                      onClick={() => console.log('Character ID:', selected.id, 'Full URL:', `/cota/interactive-map/${selected.id}/activities`)}
                     >
                       Read More
                       <ArrowRightIcon className='w-4 h-4' />
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>

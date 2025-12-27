@@ -1,9 +1,16 @@
-import { Character, Details } from "./interface";
+import { Character, CharacterSection, Details } from "./interface";
 // Please add QuizQuestion to import { Character } from "./interface";
+
+export const sections: CharacterSection[] = [
+    { slug: 'overview', title: 'Overview' },
+    { slug: 'content', title: 'Content' },
+    { slug: 'vocabulary', title: 'Vocabulary' },
+    { slug: 'activities', title: 'Activities' },
+]
 
 export const carnivalCharacters: Character[] = [
     {
-        id: '1',
+        id: 'lion',
         title: 'Introduction and Royal March of the Lion',
         characterName: 'Lion',
         orderNumber: 1,
@@ -13,7 +20,7 @@ export const carnivalCharacters: Character[] = [
         imageUrl: '/cota/images/lion.jpg'
     },
     {
-        id: '2',
+        id: 'rooster',
         title: 'Hens and Roosters',
         characterName: 'Rooster',
         orderNumber: 2,
@@ -23,7 +30,7 @@ export const carnivalCharacters: Character[] = [
         imageUrl: '/cota/images/rooster.png'
     },
     {
-        id: '3',
+        id: 'horse',
         title: 'Wild Horses',
         characterName: 'Horse',
         orderNumber: 3,
@@ -33,7 +40,7 @@ export const carnivalCharacters: Character[] = [
         imageUrl: '/cota/images/horse.png'
     },
     {
-        id: '4',
+        id: 'tortoise',
         title: 'Tortoise',
         characterName: 'Tortoise',
         orderNumber: 4,
@@ -43,7 +50,7 @@ export const carnivalCharacters: Character[] = [
         imageUrl: '/cota/images/tortoise.png'
     },
     {
-        id: '5',
+        id: 'elephant',
         title: 'Elephant',
         characterName: 'Elephant',
         orderNumber: 5,
@@ -53,7 +60,7 @@ export const carnivalCharacters: Character[] = [
         imageUrl: '/cota/images/elephant.png'
     },
     {
-        id: '6',
+        id: 'kangaroo',
         title: 'Kangaroos',
         characterName: 'Kangaroo',
         orderNumber: 6,
@@ -63,7 +70,7 @@ export const carnivalCharacters: Character[] = [
         imageUrl: '/cota/images/kangaroo.png'
     },
     {
-        id: '7',
+        id: 'fishes',
         title: 'Aquarium',
         characterName: 'Fishes',
         orderNumber: 7,
@@ -73,7 +80,7 @@ export const carnivalCharacters: Character[] = [
         imageUrl: '/cota/images/fish.png'
     },
     {
-        id: '8',
+        id: 'donkey',
         title: 'Personnages with Long Ears',
         characterName: 'Donkey',
         orderNumber: 8,
@@ -83,7 +90,7 @@ export const carnivalCharacters: Character[] = [
         imageUrl: '/cota/images/donkey.png'
     },
     {
-        id: '9',
+        id: 'cuckoo',
         title: 'The Cuckoo in the Heart of the Woods',
         characterName: 'Cuckoo',
         orderNumber: 9,
@@ -93,7 +100,7 @@ export const carnivalCharacters: Character[] = [
         imageUrl: '/cota/images/cuckoo.png'
     },
     {
-        id: '10',
+        id: 'bird',
         title: 'Aviary',
         characterName: 'Birds',
         orderNumber: 10,
@@ -103,7 +110,7 @@ export const carnivalCharacters: Character[] = [
         imageUrl: '/cota/images/birds.png'
     },
     {
-        id: '11',
+        id: 'pianists',
         title: 'Pianists',
         characterName: 'Pianists',
         orderNumber: 11,
@@ -113,7 +120,7 @@ export const carnivalCharacters: Character[] = [
         imageUrl: '/cota/images/pianist.png'
     },
     {
-        id: '12',
+        id: 'fossil',
         title: 'Fossils',
         characterName: 'Fossils',
         orderNumber: 12,
@@ -123,7 +130,7 @@ export const carnivalCharacters: Character[] = [
         imageUrl: '/cota/images/fossil.png'
     },
     {
-        id: '13',
+        id: 'swan',
         title: 'The Swan',
         characterName: 'Swan',
         orderNumber: 13,
@@ -133,7 +140,7 @@ export const carnivalCharacters: Character[] = [
         imageUrl: '/cota/images/swan.png'
     },
     {
-        id: '14',
+        id: 'finale',
         title: 'Finale',
         characterName: 'Finale',
         orderNumber: 14,
