@@ -16,7 +16,7 @@ export default function Breadcrumb({ characterId, characterName, currentSection 
         },
         {
             label: characterName,
-            href: `/cota/interactive-map/${characterId}/activities`,
+            href: `/cota/interactive-map/${characterId}/overview`,
             active: false
         },
         {

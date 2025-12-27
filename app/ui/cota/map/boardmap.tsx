@@ -137,7 +137,7 @@ export default function BoardMap({
 
                     {/* Read More Button */}
                     <Link
-                      href={`/cota/interactive-map/${selected.id}/activities`}
+                      href={`/cota/interactive-map/${selected.id}/overview`}
                       className='flex items-center gap-2 text-carnival-500 hover:font-extrabold hover:text-carnival-400 text-sm font-semibold'
                       onClick={() => console.log('Character ID:', selected.id, 'Full URL:', `/cota/interactive-map/${selected.id}/activities`)}
                     >
