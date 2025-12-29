@@ -2,7 +2,13 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Bars3Icon, XMarkIcon, MagnifyingGlassIcon, UserIcon, PencilSquareIcon } from '@heroicons/react/24/outline';
+import { 
+  Bars3Icon, 
+  XMarkIcon, 
+  // MagnifyingGlassIcon, 
+  // UserIcon, 
+  // PencilSquareIcon 
+} from '@heroicons/react/24/outline';
 import MusicLogo from './music-logo';
 
 export default function Nav() {
@@ -75,8 +81,8 @@ export default function Nav() {
             </div>
           </div>
 
-          {/* Right side icons */}
-          <div className="flex items-center space-x-4">
+          {/* Right side icons: TODO uncomment when buttons are working */}
+          {/* <div className="flex items-center space-x-4">
             <button className="p-2 text-thyme-200 hover:text-thyme-100" aria-label="Search">
               <MagnifyingGlassIcon className="w-6 h-6" />
             </button>
@@ -86,7 +92,7 @@ export default function Nav() {
             <button className="p-2 text-thyme-200 hover:text-thyme-100 relative" aria-label="Practice Log">
               <PencilSquareIcon className="w-6 h-6" />
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
 

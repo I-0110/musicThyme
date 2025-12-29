@@ -15,12 +15,7 @@ export default function Breadcrumb({ characterId, characterName, currentSection 
             active: false
         },
         {
-            label: characterName,
-            href: `/cota/interactive-map/${characterId}/overview`,
-            active: false
-        },
-        {
-            label: currentSection.charAt(0).toUpperCase() + currentSection.slice(1),
+            label: characterName + `'s` + ' ' + currentSection.charAt(0).toUpperCase() + currentSection.slice(1),
             href: `/cota/interactive-map/${characterId}/${currentSection}`,
             active: true
         }

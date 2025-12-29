@@ -1,6 +1,6 @@
 // Helper functions
-import { Character } from "./interface";
-import { carnivalCharacters } from "./data";
+import { Character, Details, Vocabulary, Content, LessonPlan, Instrumentation } from "./interface";
+import { carnivalCharacters, characterDetails, characterContent, characterInstruments, characterLesson, vocabulary } from "./data";
 // Please add QuizQuestion to import { Character } from "./interface";
 
 // import { carnivalMovements, quizQuestions } from "./data";
@@ -67,5 +67,28 @@ export function getCharacterById(id: string): Character | undefined {
     return carnivalCharacters.find(char => char.id === id);
 }
 
+// Get Details by characterId
+export function getCharacterDetails(characterId: string): Details | undefined {
+    return characterDetails.find(d => d.characterId === characterId);
+}
 
+// Get Content by characterId START HERE
+export function getCharacterContent(characterId: string): Content | undefined {
+    return characterContent.find(content => content.characterId === characterId);
+}
+
+// Get Instrumentation
+export function getCharacterInstruments(characterId: string): Instrumentation | undefined {
+    return characterInstruments.find(instr => instr.characterId === characterId);
+}
+
+// Get Lesson Plan
+export function getCharacterLessonPlan(characterId: string): LessonPlan | undefined {
+    return characterLesson.find(lesson => lesson.characterId === characterId);
+}
+
+// Get Vocabulary
+export function getVocabulary(characterId: string): Vocabulary[] {
+    return vocabulary.filter(vocab => vocab.characterId === characterId);
+}
 

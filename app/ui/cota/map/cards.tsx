@@ -12,7 +12,7 @@ export default function Card({ characterId }: Card) {
     const pathname = usePathname();
 
     return (
-        <nav className='flex space-x-1 border-b mb-8'>
+        <nav className='flex space-x-1 mb-8'>
             {sections.map((section) => {
                 const href = `/cota/interactive-map/${characterId}/${section.slug}`;
                 const isActive = pathname === href;
@@ -21,13 +21,13 @@ export default function Card({ characterId }: Card) {
                     <Link
                         key={section.slug}
                         href={href}
-                        className={`px-4 py-2 font-medium transition-colors ${
+                        className={`card px-4 py-2 font-medium transition-colors ${
                             isActive
                             ? 'border-b-2 border-carnival-300 text-carnival-300 dark:text-carnival-pink'
                             : 'text-carnival-500 dark:text-carnival-100  hover:text-carnival-400'
                         }`}
                     >
-                        {section.title}
+                            {section.title}
                     </Link>
                 )
             })}

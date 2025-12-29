@@ -1,4 +1,4 @@
-import { Character, CharacterSection, Details } from "./interface";
+import { Character, CharacterSection, Details, Instrumentation, Content, LessonPlan, Vocabulary } from "./interface";
 // Please add QuizQuestion to import { Character } from "./interface";
 
 export const sections: CharacterSection[] = [
@@ -153,46 +153,105 @@ export const carnivalCharacters: Character[] = [
 
 export const characterDetails: Details[] = [
     {
-        characterId: '1',
+        characterId: 'lion',
         mood: ['majestic', 'mysterious'], 
         tempo: 'moderate = moderato', 
         dynamics: ['soft to loud = crescendo', 'loud to soft = descrecendo', 'medium-soft = mezzo-piano'],
-        mainFamily: ['strings', 'percussion'],
-        instruments: ['piano', 'violin', 'viola', 'double bass', 'cello'],
-        vocabulary: [
-            {
-                term: 'Crescendo',
-                definition: 'Performers will play their instruments soft and gradually will play louder',
-                example: 'When we listen the Introduction and Royal March of the Lion, you can hear the lion roaring. This is possible because we use crescendo and descrescendo.'
-            },
-            {
-                term: 'Descrescendo',
-                definition: 'Performers will play their instruments loud and gradually will play soft.',
-                example: 'When we listen the Introduction and Royal March of the Lion, you can hear the lion roaring. This is possible because we use crescendo and descrescendo.'
-            },
-         ],
         moves: ['march', 'walk'],
     },
     {
-        characterId: '2',
+        characterId: 'rooster',
         mood: ['majestic', 'mysterious'], 
         tempo: 'moderate = moderato', 
         dynamics: ['soft to loud = crescendo', 'loud to soft = descrecendo', 'medium-soft = mezzo-piano'],
+        moves: ['march', 'walk'],
+    },
+]
+
+export const characterInstruments: Instrumentation[] = [
+    {
+        characterId: 'lion',
+        mainFamily: ['strings', 'percussion'],
+        instruments: ['piano', 'violin', 'viola', 'cello', 'double bass'],
+        imageUrl: '/patw/images/string.png',
+        video:{
+            youtube: 'e3Kk6b6_eZMWPB8g', //piano
+        },
+    },
+    {
+        characterId: 'rooster',
         mainFamily: ['strings', 'percussion'],
         instruments: ['piano', 'violin', 'viola', 'clarinet'],
-        vocabulary: [
-            {
-                term: 'Staccato',
-                definition: 'Performers will play the notes shorter.',
-                example: 'When we listen the Introduction and Royal March of the Lion, you can hear the lion roaring. This is possible because we use crescendo and descrescendo.'
-            },
-            {
-                term: 'Glissando',
-                definition: 'Performers will play',
-                example: 'When we listen the Introduction and Royal March of the Lion, you can hear the lion roaring. This is possible because we use crescendo and descrescendo.'
-            },
-         ],
-        moves: ['march', 'walk'],
+        imageUrl: '/patw/images/clarinet.png',
+        video:{
+            youtube: 'iatqzl553i1NQFr6', //clarinet
+        },
+    },
+]
+
+export const characterContent: Content[] = [
+    {
+        characterId: 'lion',
+        description: 'The king of the jungle makes a grand entrance with powerful chords and bold melodies.',
+        musicalFacts: [
+            'Features strong piano chords representing the lion\'s roar',
+            'Uses tremolo strings to create a sense of majesty',
+            'The tempo is steady and regal, like a royal march'
+        ],
+        funFacts: 'The piano plays big, crashing chords that sound like a lion\'s mighty roar!',
+        performanceVideo: ['Q7LctOkceuo?si=e3Kk6b6_eZMWPB8g'],
+    },
+]
+
+export const characterLesson: LessonPlan[] = [
+    {
+        characterId: 'lion',
+        video: {
+            youtube: 'fooaErPxIgY?si=zhSInGKhqQD8ijnt&amp;start=5'
+        },
+        activities: [
+            'Pretend to be a lion. First, there is a march and then, you are a lion pretending to roar.',
+            'Draw a lion or print a free lion coloring.'
+        ]
+    },
+]
+
+export const vocabulary: Vocabulary[] = [
+    { 
+        characterId: 'lion',
+        term: 'Crescendo', 
+        definition: 'Getting gradually louder', 
+        example: 'The lion\'s roar grows from soft to LOUD!' 
+    },
+    { 
+        characterId: 'lion',
+        term: 'Decrescendo', 
+        definition: 'Getting gradually softer', 
+        example: 'The roar fades away as the lion walks past' 
+    },
+    { 
+        characterId: 'lion',
+        term: 'Forte', 
+        definition: 'Play loudly', 
+        example: 'The lion\'s theme is played forte - strong and powerful' 
+    },
+    { 
+        characterId: 'lion',
+        term: 'Tremolo', 
+        definition: 'A wavering effect by repeating two notes.', 
+        example: 'The tremolo awakes the lion like an old alarm!' 
+    },
+    {
+        characterId: 'rooster',
+        term: 'Staccato',
+        definition: 'Performers will play the notes shorter.',
+        example: 'When we listen the Introduction and Royal March of the Lion, you can hear the lion roaring. This is possible because we use crescendo and descrescendo.'
+    },
+    {
+        characterId: 'rooster',
+        term: 'Glissando',
+        definition: 'Performers will play',
+        example: 'When we listen the Introduction and Royal March of the Lion, you can hear the lion roaring. This is possible because we use crescendo and descrescendo.'
     },
 ]
 
@@ -220,19 +279,9 @@ export const characterDetails: Details[] = [
 //                 'soft to loud = crescendo', 'loud to soft = descrecendo'
 //             ]
 //         },
-//         description: 'The king of the jungle makes a grand entrance with powerful chords and bold melodies.',
-//         musicalFacts: [
-//             'Features strong piano chords representing the lion\'s roar',
-//             'Uses tremolo strings to create a sense of majesty',
-//             'The tempo is steady and regal, like a royal march'
-//         ],
-//         funFacts: 'The piano plays big, crashing chords that sound like a lion\'s mighty roar!',
 //         performanceVideo: ['replace for actual link'],
 //         vocabulary: [
-//             { term: 'Crescendo', definition: 'Getting gradually louder', example: 'The lion\'s roar grows from soft to LOUD!' },
-//             { term: 'Decrescendo', definition: 'Getting gradually softer', example: 'The roar fades away as the lion walks past' },
-//             { term: 'Forte', definition: 'Play loudly', example: 'The lion\'s theme is played forte - strong and powerful' }
-//         ],
+//             
 //         activitiesVideo: ['replace'],
 //         activities: [
 //             'March around the room like a king when you hear the bold chords',

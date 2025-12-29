@@ -46,6 +46,38 @@
   transform: scale(1.05);
 }
 
+/* Keyframe animations for messy stack of cards */
+@keyframes rotate-clockwise {
+  to {
+    transform: rotate(5deg);
+    scale: 0.75;
+  }
+}
+
+@keyframes rotate-counter-clockwise {
+  to {
+    transform: rotate(-2deg);
+    scale: 0.75;
+  }
+}
+
+.card_content {
+  position: sticky;
+  top: 20vh;
+  animation-timeline: view();
+  animation-range: entry 25vh cover 80vh;
+  animation-fill-mode: forwards;
+  animation-duration: 1ms;
+}
+
+.card:nth-child(odd) .card_content {
+  animation-name: rotate-clockwise;
+}
+
+.card:nth-child(even) .card_content {
+  animation-name: rotate-counter-clockwise;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);

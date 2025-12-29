@@ -4,7 +4,8 @@ export interface VideoSource {
     youtube?: string; // YouTube URI
 }
 
-export interface Vocabulary {
+export interface Vocabulary { // Use this for Vocabulary Section
+    characterId: string,
     term: string,
     definition: string,
     example: string
@@ -12,15 +13,15 @@ export interface Vocabulary {
 
 export interface Character {
     id: string;
-    title: string;
-    characterName: string;
-    orderNumber: number;
+    title: string; // Use this for Overview Card: 1
+    characterName: string; // Use this for Overview Card: 1
+    orderNumber: number; // Use this for Overview Card: 1
 
     // Video sources
-    video: VideoSource;
+    video: VideoSource; // Use this for Overview Card: 2
 
     // Character Image
-    imageUrl?: string;
+    imageUrl?: string; // Use this for Overview Card: 1
 }
 
 export interface CharacterSection {
@@ -30,30 +31,39 @@ export interface CharacterSection {
 
 export interface Details {
     // Correct answers and details for each character
-    characterId: string;
-    mood: Mood[];
-    tempo: Tempo;
-    dynamics: Dynamics[];
-    mainFamily: InstrumentFamily[];
-    instruments: Instruments[];
-    vocabulary: Vocabulary[];
-    moves: Moves[];
+    characterId: string; 
+    mood: Mood[]; // Use this for Overview Card: 3
+    tempo: Tempo; // Use this for Overview Card: 3
+    dynamics: Dynamics[]; // Use this for Overview Card: 3
+    moves: Moves[]; // Use this for Overview Card: 4
 }
 
-export interface Content {
-    // Educational content
+export interface Instrumentation { // Use this for Content Card: 2
     characterId: string;
-    description: string;
-    musicalFacts: string[];
-    funFacts: string[];
-    performanceVideo: string[];
+    mainFamily: InstrumentFamily[]; 
+    instruments: Instruments[];
+
+    // Instrument Image
+    imageUrl?: string;
+
+    // Video sources
+    video: VideoSource;
+}
+
+export interface Content { 
+    // Educational content
+    characterId: string; // Use this for Content Card: 1
+    description: string; // Use this for Content Card: 1
+    musicalFacts: string[]; // Use this for Content Card: 1
+    funFacts: string; // Use this for Content Card: 3
+    performanceVideo: string[]; // Use this for Content Card: 4
 }
 
 export interface LessonPlan {
     // Teacher content
-    characterId: string;
-    activitiesVideo: string[];
-    activities: string[];
+    characterId: string; // Use this for Content Card: 5
+    video: VideoSource; // Use this for Content Card: 5
+    activities: string[]; // Use this for Content Card: 5
 }
 
 export interface QuizOption {
