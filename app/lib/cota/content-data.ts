@@ -10,8 +10,8 @@ export const characterContent: Content[] = [
         ],
         funFacts: 'The piano plays crescendos and descrescendos that sound like a lion\'s mighty roar!',
         performanceVideo: {
-            youtube: 'Q7LctOkceuo?si=e3Kk6b6_eZMWPB8g'
-        },
+            youtube: 'Gz-SV40cCY0?si=SXaMWU7yYRi5H9Dl&amp;start=113'
+        }
     },
     {
         characterId: 'rooster',
