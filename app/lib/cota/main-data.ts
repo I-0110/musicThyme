@@ -120,7 +120,7 @@ export const carnivalCharacters: Character[] = [
         imageUrl: '/cota/images/pianist.png'
     },
     {
-        id: 'fossil',
+        id: 'fossils',
         title: 'Fossils',
         characterName: 'Fossils',
         orderNumber: 12,

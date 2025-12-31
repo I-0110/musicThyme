@@ -59,7 +59,8 @@ export interface Content {
     description: string; // Use this for Content Card: 1
     musicalFacts: string[]; // Use this for Content Card: 1
     funFacts: string; // Use this for Content Card: 3
-    performanceVideo: VideoSource; // Use this for Content Card: 4
+    // Video sources
+    video: VideoSource; // Use this for Content Card: 4
 }
 
 export interface Credits {

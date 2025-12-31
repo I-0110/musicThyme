@@ -79,12 +79,12 @@ export default async function Page({
                 <div className='card w-full max-w-4xl'>
                     <div className='card_content sticky top-[20vh] bg-white rounded-xl shadow-lg p-6 border-2 border-carnival-300'>
                         <h2 className="text-2xl font-bold text-carnival-500 mb-4 text-center">Watch & Listen</h2>
-                        {content?.performanceVideo && (
+                        {content?.video.youtube && (
                             <div className='w-full'>
                                 <div className='relative w-full aspect-video'>
                                     <iframe 
-                                        src={`https://www.youtube.com/embed/${content.performanceVideo}`}
-                                        title={`${content.characterId} - YouTube video player`}
+                                        src={`https://www.youtube.com/embed/${content?.video.youtube}`}
+                                        title={`${character.characterName} - YouTube video player`}
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                                         referrerPolicy="strict-origin-when-cross-origin" 
                                         allowFullScreen

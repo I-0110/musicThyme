@@ -9,8 +9,8 @@ export const characterContent: Content[] = [
             'The tempo in the fanfare section is steady, like a royal march.',
         ],
         funFacts: 'The piano plays crescendos and descrescendos that sound like a lion\'s mighty roar!',
-        performanceVideo: {
-            youtube: 'Gz-SV40cCY0?si=SXaMWU7yYRi5H9Dl&amp;start=113'
+        video: {
+            youtube: '3HgpYA5M07w'
         }
     },
     {
@@ -22,8 +22,8 @@ export const characterContent: Content[] = [
             'Clarinet can create sounds like a rooster call'
         ],
         funFacts: 'Listen carefully and you can hear the chickens clucking and pecking for food!',
-        performanceVideo: {
-            youtube: 'add some emded code'
+        video: {
+            youtube: 'UOPgdE_HLdE?si=Za5iawj0ZcjXgo8Y&amp;start=37'
         },
     },
     {
@@ -35,8 +35,8 @@ export const characterContent: Content[] = [
             'One of the fastest movements in the suite'
         ],
         funFacts: 'The two pianos sound like they\'re having a race, just like wild horses running free!',   
-        performanceVideo: {
-            youtube: 'add some emded code'
+        video: {
+            youtube: 'cGf4SalMlcI?si=CtOOCT63CA9cdnOM'
         },   
     },
     {
@@ -48,8 +48,8 @@ export const characterContent: Content[] = [
             'One of the slowest movements in the suite'
         ],
         funFacts: 'Tortoises are so slow that is hard to tell if they ever move.',   
-        performanceVideo: {
-            youtube: 'add some emded code'
+        video: {
+            youtube: 'fR84Ayzcb9s?si=_pGv1WIaNy54yafy'
         },   
     },
     {
@@ -61,8 +61,8 @@ export const characterContent: Content[] = [
             'The double bass is so big that the player needs to play standing or seating in a tall stool.'
         ],
         funFacts: 'The double bass and the elephant are both big and fat!',   
-        performanceVideo: {
-            youtube: 'add some emded code'
+        video: {
+            youtube: 'OcTDz4_Tv7o?si=beK2MxshV8Peow5x'
         },   
     },
     {
@@ -74,12 +74,12 @@ export const characterContent: Content[] = [
             'The legato creates the effect of looking in the distance.',
         ],
         funFacts: 'Kangaroos can hop incredible distances (up to 25 ft).',   
-        performanceVideo: {
-            youtube: 'add some emded code'
+        video: {
+            youtube: 'Lu0zLxzV2Jc?si=EVyY4znxaCtLcySs'
         },   
     },
     {
-        characterId: 'fish',
+        characterId: 'fishes',
         description: 'What wonders hide the deep ocean? Corals, big and tiny fishes, and other creatures share this amazing habital.',
         musicalFacts: [
             'The flute and the strings play the melody for the sea animals.',
@@ -87,8 +87,8 @@ export const characterContent: Content[] = [
             'The glass harmonica or glockenspiel creates glissandos.'
         ],
         funFacts: '\'Aquarium\' was inspiration for Hedwig\'s Theme in the Harry Potter films.',   
-        performanceVideo: {
-            youtube: 'add some emded code'
+        video: {
+            youtube: '1NEdFFGjS7o?si=J0Gh5Q_P7CejPlX6'
         },   
     },
     {
@@ -99,8 +99,8 @@ export const characterContent: Content[] = [
             'Some \'Hee -Haws\' are loud and some other are quieter.'
         ],
         funFacts: 'Some critics thought Saint-Saëns wrote this music thinking critics were the donkeys.',   
-        performanceVideo: {
-            youtube: 'add some emded code'
+        video: {
+            youtube: '9Ir0NGu2lW8?si=XXdLT4n8Td1nUwGD'
         },   
     },
     {
@@ -111,12 +111,12 @@ export const characterContent: Content[] = [
             'The piano provides a soft, steady chords.'
         ],
         funFacts: 'How many \'cuckoo\' sound did you hear in the music?',   
-        performanceVideo: {
-            youtube: 'add some emded code'
+        video: {
+            youtube: 'vXqz2f8uE5E?si=v3X1fcQeySBmmrGq'
         },   
     },
     {
-        characterId: 'birds',
+        characterId: 'bird',
         description: 'The flute represent the birds in this suite as other pieces like Peter and the Wolf.',
         musicalFacts: [
             'Fast notes represents the birds singing in the morning.',
@@ -124,19 +124,19 @@ export const characterContent: Content[] = [
             'One of the fastest movements in the suite'
         ],
         funFacts: 'The flute sound like they\'re flying and singing.',   
-        performanceVideo: {
-            youtube: 'add some emded code'
+        video: {
+            youtube: 'aKXw5_eNr74?si=s9K8tuZy7NEsqndX'
         },   
     },
     {
-        characterId: 'pianist',
+        characterId: 'pianists',
         description: 'Two pianos pretend to be practicing scales. This piece is a representation of how an individual practice looks like.',
         musicalFacts: [
             'Uses two pianos playing ascending and descending scales',
         ],
         funFacts: 'Pianists are not animals.Saint-Saëns composed this as a joke.',   
-        performanceVideo: {
-            youtube: 'add some emded code'
+        video: {
+            youtube: 'FZN2ebwoTPY?si=81BNpgZr1aFE5rzi'
         },   
     },
     {
@@ -146,8 +146,8 @@ export const characterContent: Content[] = [
             'Saint-Saëns used his own work, Dance Macabre and old tunes like Twinkle, Twinkle Little Star.',
         ],
         funFacts: 'Saint-Saëns tries to set a message about how old the tunes he quoted are.',   
-        performanceVideo: {
-            youtube: 'add some emded code'
+        video: {
+            youtube: 'eJfc0ON4474?si=IOdYgIg4qsbgs5C3'
         },   
     },
     {
@@ -157,8 +157,8 @@ export const characterContent: Content[] = [
             'A beautiful and smooth tune worth to listen.',
         ],
         funFacts: 'One of the most famous tunes for the cello, and being played by famous cellists.',   
-        performanceVideo: {
-            youtube: 'add some emded code'
+        video: {
+            youtube: '3qrKjywjo7Q?si=rswRa7lFG8ZdtvnR'
         },   
     },
     {
@@ -168,8 +168,8 @@ export const characterContent: Content[] = [
             'Includes some of the tunes from Introduction and March of the Lion, Hens and Rooster, Kangaroo, The Pianist, and Personnage With Long Ears.',
         ],
         funFacts: 'Saint-Saëns picks his favorite tunes from the suite and place it in this own tune.',   
-        performanceVideo: {
-            youtube: 'add some emded code'
+        video: {
+            youtube: 'b43tnmCxFMY?si=IHTGr3zu2CEfe98L'
         },   
     },
 ];
