@@ -3,7 +3,7 @@ import { LessonPlan } from "./interface";
 export const characterLesson: LessonPlan[] = [
     {
         characterId: 'lion',
-        video1: {
+        video: {
             youtube: 'fooaErPxIgY?si=zhSInGKhqQD8ijnt&amp;start=5'
         },
         activities: [
@@ -14,7 +14,7 @@ export const characterLesson: LessonPlan[] = [
     },
         {
         characterId: 'rooster',
-        video1: {
+        video: {
             youtube: 'change to emded code'
         },
         activities: [

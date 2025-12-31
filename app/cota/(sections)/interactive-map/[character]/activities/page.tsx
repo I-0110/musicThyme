@@ -76,11 +76,11 @@ export default async function Page({
                 <div className='card w-full max-w-4xl'>
                     <div className='card_content bg-white rounded-xl shadow-lg p-6 border-2 border-carnival-300'>
                         <h2 className="text-2xl font-bold text-carnival-500 mb-4 text-center">Activity&apos;s Example</h2>
-                        {lesson?.video1.youtube && (
+                        {lesson?.video.youtube && (
                             <div className='w-full'>
                                 <div className='relative w-full aspect-video'>
                                     <iframe 
-                                        src={`https://www.youtube.com/embed/${lesson.video1.youtube}`}
+                                        src={`https://www.youtube.com/embed/${lesson.video.youtube}`}
                                         title={`${lesson.characterId} - YouTube video player`}
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                                         referrerPolicy="strict-origin-when-cross-origin" 

@@ -72,7 +72,7 @@ export interface Credits {
 export interface LessonPlan {
     // Teacher content
     characterId: string; // Use this for Content Card: 5
-    video1?: VideoSource; // Use this for Content Card: 5
+    video: VideoSource; // Use this for Content Card: 5
     video2?: VideoSource; // Use this for Content Card: 6
     activities: string[]; // Use this for Content Card: 5
     credits?: Credits;
