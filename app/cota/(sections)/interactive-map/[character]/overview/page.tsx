@@ -97,7 +97,7 @@ export default async function Page({
                 {details && (
                     <div className='card_content bg-white rounded-xl shadow-lg p-6 border-2 border-carnival-300'>
                         <h2 className="text-2xl font-bold text-carnival-500 mb-4 text-center">
-                            {character.characterName}&apos;s Musical Elements
+                            {character.characterName}&apos;s Music&apos;s Mood
                         </h2>
                         
                         {/* Mood */}
@@ -107,32 +107,52 @@ export default async function Page({
                                     <FaceSmileIcon className="w-8 h-8" />
                                     Mood:
                                 </h3>
-                                    <div className="flex flex-wrap gap-2">
-                                        {details.mood.map((mood, index) => (
-                                            <span key={index} className="bg-carnival-200 text-carnival-500 px-4 py-2 rounded-full text-lg font-semibold capitalize">
-                                                {mood}
-                                            </span>
-                                        ))}
-                                    </div>
+                                <div className="flex flex-wrap gap-2">
+                                    {details.mood.map((mood, index) => (
+                                        <span key={index} className="bg-carnival-200 text-carnival-500 px-4 py-2 rounded-full text-lg font-semibold capitalize">
+                                            {mood}
+                                        </span>
+                                    ))}
                                 </div>
-                            )}
-                            
-                            {/* Tempo */}
-                            {details.tempo && (
-                                <div className="mb-6">
-                                    <h3 className="text-xl font-bold text-carnival-500 mb-3">
-                                        <ForwardIcon className="w-8 h-8" />
-                                        Tempo:
-                                    </h3>
-                                    <div className="bg-carnival-200 text-carnival-500 px-4 py-2 rounded-full text-lg font-semibold capitalize">
-                                        <p className="text-lg font-semibold capitalize">{details.tempo}</p>
-                                    </div>
+                            </div>
+                        )}
+                    </div>
+                )}
+
+                {/* Card 4: Musical Elements (Mood, Tempo, Dynamics) */}
+                {details && (
+                    <div className='card_content bg-white rounded-xl shadow-lg p-6 border-2 border-carnival-300'>
+                        <h2 className="text-2xl font-bold text-carnival-500 mb-4 text-center">
+                            {character.characterName}&apos;s Music&apos;s Tempo
+                        </h2>            
+                        {/* Tempo */}
+                        {details.tempo && (
+                            <div className="mb-6">
+                                <h3 className="text-xl font-bold text-carnival-500 mb-3">
+                                    <ForwardIcon className="w-8 h-8" />
+                                    Tempo:
+                                </h3>
+                                <div className="flex flex-wrap gap-2">
+                                    {details.tempo.map((tempo, index) => (
+                                        <span key={index} className="bg-carnival-200 text-carnival-500 px-4 py-2 rounded-full text-lg font-semibold capitalize">
+                                            {tempo}
+                                        </span>
+                                    ))}
                                 </div>
-                            )}
-                            
+                            </div>
+                        )}
+                    </div>
+                )}
+
+                {/* Card 5: Musical Elements (Mood, Tempo, Dynamics) */}
+                {details && (
+                    <div className='card_content bg-white rounded-xl shadow-lg p-6 border-2 border-carnival-300'>
+                        <h2 className="text-2xl font-bold text-carnival-500 mb-4 text-center">
+                            {character.characterName}&apos;s Music&apos;s Dynamics
+                        </h2> 
                             {/* Dynamics */}
                             {details.dynamics && details.dynamics.length > 0 && (
-                                <div>
+                                <div className="mb-6">
                                     <h3 className="text-xl font-bold text-carnival-500 mb-3">
                                         <ChartBarIcon className="w-8 h-8" />
                                         Dynamics:</h3>
@@ -149,7 +169,7 @@ export default async function Page({
                     </div>
                 )}
 
-                {/* Card 4: Movement Activities */}
+                {/* Card 6: Movement Activities */}
                 {details?.moves && details.moves.length > 0 && (
                     <div className='card w-full max-w-3xl'>
                         <div className='card_content bg-carnival-blue rounded-xl shadow-lg p-6 border-2 border-carnival-blue'>
@@ -171,7 +191,7 @@ export default async function Page({
                     </div>
                 )}
 
-                {/* Card 5: Discover More */}
+                {/* Card 7: Discover More */}
                 <div className='card w-full max-w-4xl'>
                     <div className='card_content bg-white rounded-xl shadow-lg p-6 border-2 border-carnival-300'>
                         <div className="flex flex-col items-center gap-4">

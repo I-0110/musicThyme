@@ -1,7 +1,7 @@
 import Nav from '@/app/ui/nav';
 import { teachers } from '@/app/ui/fonts';
 import BoardMap  from '@/app/ui/cota/map/boardmap';
-import { carnivalCharacters } from '@/app/lib/cota/data';
+import { carnivalCharacters } from '@/app/lib/cota/main-data';
 
 export default function Page() {
 

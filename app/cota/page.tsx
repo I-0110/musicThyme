@@ -11,7 +11,7 @@ export default function Page() {
             <div className="mt-4 flex grow flex-col gap-4 md:flex-row">
                 <div className='flex flex-col justify-center gap-4 rounded-lg bg-carnival-100 p-6 md:w-2/5 md:px-10'>
                   <p className={`${teachers.className} text-xl text-carnival-500 md:text-3xl md:leading-normal`}>
-                    <strong>The Carnival of the Animals<br/> by Camille Saint-Saens</strong>
+                    <strong>The Carnival of the Animals<br/> by Camille Saint-Saëns</strong>
                     <br/>
                     Learn about the composer, instruments, themes in music, and prove yourself with our interactive game.
                   </p>

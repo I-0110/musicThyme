@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { sections } from '@/app/lib/cota/data';
+import { sections } from '@/app/lib/cota/main-data';
 
 interface Card { 
     characterId: string;

@@ -1,0 +1,115 @@
+import { Details } from '@/app/lib/cota/interface';
+
+export const characterDetails: Details[] = [
+    {
+        characterId: 'lion',
+        mood: ['majestic', 'mysterious'], 
+        tempo: ['moderate = moderato'], 
+        dynamics: ['soft to loud = crescendo', 'loud to soft = descrecendo', 'medium-soft = mezzo-piano'],
+        moves: ['march', 'creep'],
+    },
+    {
+        characterId: 'rooster',
+        mood: ['playful'], 
+        articulation: ['bumpy = staccato'],
+        tempo: ['fast = allegro'], 
+        dynamics: [
+                'loud = forte',
+                'soft to loud = crescendo'
+            ],
+        moves: ['tip-toe','jog'],
+    },
+    {
+        characterId: 'horse',
+        mood: ['energetic'],
+        tempo: ['very fast = presto'],
+        dynamics: ['loud = forte'],
+        pitch: ['high pitch sound','low pitch sound'],
+        moves: ['gallop'],
+    },
+    {
+        characterId: 'tortoise',
+        mood: ['elegant', 'delicate'],
+        tempo: ['very slow = largo'],
+        timeSignature: 'waltz = 3/4',
+        dynamics: ['medium-soft = mezzo-piano'],
+        pitch: ['low pitch sound'],
+        moves: ['walk'],
+    },
+    {
+        characterId: 'elephant',
+        mood: ['heavy'],
+        tempo: ['slow = andante'],
+        dynamics: ['medium-soft = mezzo-piano'],
+        moves: ['stomp'],
+    },
+    {
+        characterId: 'kangaroo',
+        mood: ['playful', 'mysterious'],
+        articulation: ['smooth = legato','bumpy = staccato'],
+        tempo: ['fast = allegro', 'slow = andante'],
+        dynamics: ['medium-loud = mezzo-forte'],
+        pitch: ['high pitch sound','low pitch sound'],
+        moves: ['hop'],
+    },
+    {
+        characterId: 'fish',
+        mood: ['mysterious'],
+        articulation: ['smooth = legato'],
+        tempo: ['moderate = moderato'],
+        dynamics: ['medium-loud = mezzo-forte','loud = forte','soft = piano'],
+        moves: ['swim'],
+    },
+    {
+        characterId: 'donkey',
+        mood: ['clumsy','humorius'],
+        tempo: ['moderate = moderato'],
+        dynamics: ['medium-loud = mezzo-forte','loud = forte','soft = piano'],
+        pitch: ['high pitch sound','low pitch sound'],
+        moves:['hop'],
+    },
+    {
+        characterId: 'cuckoo',
+        mood: ['mysterious','playful'],
+        articulation: ['bumpy = staccato', 'smooth = legato'],
+        tempo: ['slow = andante'],
+        dynamics: ['soft = piano'],
+        pitch:['high pitch sound','low pitch sound'],
+        moves:['tip-toe','walk'],
+    },
+    {
+        characterId: 'birds',
+        mood: ['graceful','humorius','energetic'],
+        tempo: ['very fast = presto'],
+        dynamics: ['soft to loud = crescendo','loud to soft = descrecendo','medium-loud = mezzo-forte'],
+        moves: ['tip-toe'],
+    },
+    {
+        characterId: 'pianist',
+        mood: ['elegant','playful'],
+        tempo: ['moderate = moderato','increasing speed = accelerando'],
+        dynamics: ['soft to loud = crescendo','medium-loud = mezzo-forte'],
+        moves: ['walk'],
+    },
+    {
+        characterId: 'fossil',
+        mood: ['energetic','humorius'],
+        tempo: ['moderate = moderato'],
+        dynamics: ['soft to loud = crescendo','loud = forte'],
+        moves: ['march','walk'],
+    },
+    {
+        characterId: 'swan',
+        mood: ['delicate','elegant','graceful'],
+        tempo: ['slow = andante'],
+        dynamics: ['soft = piano','loud to soft = descrecendo'],
+        moves: ['swim','walk'],
+    },
+    {
+        characterId: 'finale',
+        mood: ['mysterious','majestic','clumsy','humorius','playful'],
+        tempo: ['moderate = moderato'],
+        dynamics:['medium-loud = mezzo-forte','soft = piano','soft to loud = crescendo','loud = forte'],
+        moves: ['walk','hop']
+    }
+]

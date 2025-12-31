@@ -78,7 +78,7 @@ export default function BoardMap({
         
         {/* Center without characters */}
         <div className='col-start-2 col-span-3 row-start-2 row-span-2
-        bg-carnival-yellow rounded-lg
+        bg-carnival-yellow/75 rounded-lg
         flex items-center justify-center text-center p-4'
         >
           {!selected ? (

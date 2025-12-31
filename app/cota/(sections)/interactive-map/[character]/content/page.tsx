@@ -64,10 +64,10 @@ export default async function Page({
                             <div>
                                 <p className="text-lg font-bold text-carnival-500 mb-3">
                                     Musical Facts:</p>
-                                <ul className="space-y-2">
+                                <ul className="space-y-2 text-sm">
                                     {content.musicalFacts.map((mf, index) => (
-                                        <li key={index} className="flex items-center gap-3 bg-carnival-200 text-carnival-500 px-4 py-2 rounded-full text-lg font-semibold capitalize">
-                                            <span className="text-lg capitalize">{mf}</span>
+                                        <li key={index} className="flex items-center gap-3 bg-carnival-200 text-carnival-500 px-6 py-4 rounded-full text-sm ">
+                                            <span className="text-lg">{mf}</span>
                                         </li>
                                     ))}
                                 </ul>

@@ -1,6 +1,12 @@
 // Helper functions
 import { Character, Details, Vocabulary, Content, LessonPlan, Instrumentation } from "./interface";
-import { carnivalCharacters, characterDetails, characterContent, characterInstruments, characterLesson, vocabulary } from "./data";
+import { carnivalCharacters } from "./main-data";
+import { characterDetails } from './detailed-data';
+import { characterInstruments } from "./instruments-data";
+import { characterContent } from "./content-data";
+import { characterLesson } from "./lesson-data";
+import { vocabulary } from "./vocab-data";
+
 // Please add QuizQuestion to import { Character } from "./interface";
 
 // import { carnivalMovements, quizQuestions } from "./data";

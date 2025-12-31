@@ -63,7 +63,7 @@ export default async function Page({
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     {lesson.activities.map((act, index) => (
                                         <div key={index} className="bg-carnival-yellow p-4 rounded-lg text-center shadow-md hover:bg-carnival-100 transition-transform">
-                                            <span className="text-lg font-bold capitalize text-carnival-500">{act}</span>
+                                            <span className="text-lg font-bold text-carnival-500">{act}</span>
                                         </div>
                                     ))}
                                 </div>
@@ -76,11 +76,11 @@ export default async function Page({
                 <div className='card w-full max-w-4xl'>
                     <div className='card_content bg-white rounded-xl shadow-lg p-6 border-2 border-carnival-300'>
                         <h2 className="text-2xl font-bold text-carnival-500 mb-4 text-center">Activity&apos;s Example</h2>
-                        {lesson?.video.youtube && (
+                        {lesson?.video1.youtube && (
                             <div className='w-full'>
                                 <div className='relative w-full aspect-video'>
                                     <iframe 
-                                        src={`https://www.youtube.com/embed/${lesson.video.youtube}`}
+                                        src={`https://www.youtube.com/embed/${lesson.video1.youtube}`}
                                         title={`${lesson.characterId} - YouTube video player`}
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                                         referrerPolicy="strict-origin-when-cross-origin" 

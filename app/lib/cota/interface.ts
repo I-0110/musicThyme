@@ -1,4 +1,4 @@
-import { Tempo, Mood, Moves, InstrumentFamily, Dynamics, Instruments } from '@/app/lib/cota/types';
+import { Articulation, Tempo, Mood, Moves, InstrumentFamily, Dynamics, Instruments, Pitch, Time } from '@/app/lib/cota/types';
 
 export interface VideoSource {
     youtube?: string; // YouTube URI
@@ -33,8 +33,11 @@ export interface Details {
     // Correct answers and details for each character
     characterId: string; 
     mood: Mood[]; // Use this for Overview Card: 3
-    tempo: Tempo; // Use this for Overview Card: 3
+    articulation?: Articulation[];
+    tempo: Tempo[]; // Use this for Overview Card: 3
+    timeSignature?: Time;
     dynamics: Dynamics[]; // Use this for Overview Card: 3
+    pitch?: Pitch[];
     moves: Moves[]; // Use this for Overview Card: 4
 }
 
@@ -56,14 +59,22 @@ export interface Content {
     description: string; // Use this for Content Card: 1
     musicalFacts: string[]; // Use this for Content Card: 1
     funFacts: string; // Use this for Content Card: 3
-    performanceVideo: string[]; // Use this for Content Card: 4
+    performanceVideo: VideoSource; // Use this for Content Card: 4
+}
+
+export interface Credits {
+    videoCreatedBy: string;
+    activitiesCreatedBy: string[];
+    movesIdeasFrom?: string[];
 }
 
 export interface LessonPlan {
     // Teacher content
     characterId: string; // Use this for Content Card: 5
-    video: VideoSource; // Use this for Content Card: 5
+    video1?: VideoSource; // Use this for Content Card: 5
+    video2?: VideoSource; // Use this for Content Card: 6
     activities: string[]; // Use this for Content Card: 5
+    credits?: Credits;
 }
 
 export interface QuizOption {
