@@ -20,9 +20,9 @@ export const carnivalCharacters: Character[] = [
         imageUrl: '/cota/images/lion.jpg'
     },
     {
-        id: 'rooster',
+        id: 'hens',
         title: 'Hens and Roosters',
-        characterName: 'Rooster',
+        characterName: 'Hens',
         orderNumber: 2,
         video: {
             youtube: 'xU4RcRWVGyM?si=-hozXB1NkV33IJA7&amp;start=17',
@@ -30,8 +30,8 @@ export const carnivalCharacters: Character[] = [
         imageUrl: '/cota/images/rooster.png'
     },
     {
-        id: 'horse',
-        title: 'Wild Horses',
+        id: 'donkey',
+        title: 'Wild Donkeys',
         characterName: 'Horse',
         orderNumber: 3,
         video: {
@@ -70,9 +70,9 @@ export const carnivalCharacters: Character[] = [
         imageUrl: '/cota/images/kangaroo.png'
     },
     {
-        id: 'fishes',
+        id: 'aquarium',
         title: 'Aquarium',
-        characterName: 'Fishes',
+        characterName: 'Aquarium',
         orderNumber: 7,
         video: {
             youtube: 'zec-6vxxFTE?si=DldU5DavgI64YupB&amp;start=25',
@@ -80,7 +80,7 @@ export const carnivalCharacters: Character[] = [
         imageUrl: '/cota/images/fish.png'
     },
     {
-        id: 'donkey',
+        id: 'person',
         title: 'Personnages with Long Ears',
         characterName: 'Donkey',
         orderNumber: 8,
@@ -100,7 +100,7 @@ export const carnivalCharacters: Character[] = [
         imageUrl: '/cota/images/cuckoo.png'
     },
     {
-        id: 'bird',
+        id: 'aviary',
         title: 'Aviary',
         characterName: 'Birds',
         orderNumber: 10,

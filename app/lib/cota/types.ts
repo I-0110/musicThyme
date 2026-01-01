@@ -15,6 +15,8 @@ export type Moves = 'walk' | 'hop' | 'stomp' | 'swim' | 'tip-toe' | 'crawl' | 'j
 
 export type InstrumentFamily = 'strings' | 'woodwinds' | 'brass' | 'percussion';
 
-export type Instruments = 'piano' | 'double bass' | 'cello' | 'violin' | 'clarinet' | 'flute' | 'glockenspiel' | 'xylophone' | 'viola';
+export type Instruments = 'piccolo' | 'piano' | 'double bass' | 'cello' | 'violin' | 'viola' | 'clarinet' | 'flute' | 'glockenspiel' | 'xylophone';
+
+export type InstrumentImage = | '/patw/images/flute.png' |'/patw/images/clarinet.png';
 
 

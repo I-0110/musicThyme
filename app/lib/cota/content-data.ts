@@ -14,7 +14,7 @@ export const characterContent: Content[] = [
         }
     },
     {
-        characterId: 'rooster',
+        characterId: 'hens',
         description: 'The chickens in a barnyard are clucking and eating.',
         musicalFacts: [
             'Piano plays rapid, repeated notes like pecking, called "staccato"',
@@ -27,14 +27,14 @@ export const characterContent: Content[] = [
         },
     },
     {
-        characterId: 'horse',
-        description: 'Two pianos race up and down the keyboard, representing wild horses galloping.',
+        characterId: 'donkey',
+        description: 'Two pianos race up and down the keyboard, representing wild donkeys galloping.',
         musicalFacts: [
             'Uses two pianos playing rapid scales',
             'Creates the sound of galloping and braying',
             'One of the fastest movements in the suite'
         ],
-        funFacts: 'The two pianos sound like they\'re having a race, just like wild horses running free!',   
+        funFacts: 'The two pianos sound like they\'re having a race, just like wild donkeys running free!',   
         video: {
             youtube: 'cGf4SalMlcI?si=CtOOCT63CA9cdnOM'
         },   
@@ -79,7 +79,7 @@ export const characterContent: Content[] = [
         },   
     },
     {
-        characterId: 'fishes',
+        characterId: 'aquarium',
         description: 'What wonders hide the deep ocean? Corals, big and tiny fishes, and other creatures share this amazing habital.',
         musicalFacts: [
             'The flute and the strings play the melody for the sea animals.',
@@ -92,7 +92,7 @@ export const characterContent: Content[] = [
         },   
     },
     {
-        characterId: 'donkey',
+        characterId: 'person',
         description: 'Two violins creates the noise that a mule or donkeys do.',
         musicalFacts: [
             'Violins play high and low notes to create a \'Hee - Haw\' sound.',
@@ -116,7 +116,7 @@ export const characterContent: Content[] = [
         },   
     },
     {
-        characterId: 'bird',
+        characterId: 'aviary',
         description: 'The flute represent the birds in this suite as other pieces like Peter and the Wolf.',
         musicalFacts: [
             'Fast notes represents the birds singing in the morning.',
