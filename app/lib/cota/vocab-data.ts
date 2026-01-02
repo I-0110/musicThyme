@@ -26,19 +26,19 @@ export const vocabulary: Vocabulary[] = [
         example: 'The tremolo awakes the lion like an old alarm!' 
     },
     {
-        characterId: 'rooster',
+        characterId: 'hens',
         term: 'Staccato',
         definition: 'Performers will play the notes shorter.',
         example: 'When we listen the Hens and Rooster, you can compare the staccato sound with how fast chickens eat.'
     },
     {
-        characterId: 'rooster',
+        characterId: 'hens',
         term: 'Glissando',
         definition: 'Performers will play going chromatically up or down scales.',
         example: 'When we listen the rooster, the clarinet is playing a glissando to do the effect.'
     },
     { 
-        characterId: 'rooster',
+        characterId: 'hens',
         term: 'Allegro', 
         definition: 'Fast and lively tempo', 
         example: 'Chickens move allegro around the barnyard.' 
