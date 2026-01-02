@@ -7,6 +7,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ChartBarIcon, FaceSmileIcon, ForwardIcon, SparklesIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { MusicalNoteIcon } from "@heroicons/react/16/solid";
+import ScrollToTop from "@/app/ui/scroll-to-top";
 
 export default async function Page({
     params
@@ -213,6 +214,7 @@ export default async function Page({
                         </div>
                     </div>
                 </div>
+                <ScrollToTop />               
             </div>
         </div>
     )

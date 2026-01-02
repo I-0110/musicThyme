@@ -9,7 +9,7 @@ export const characterDetails: Details[] = [
         moves: ['march', 'creep'],
     },
     {
-        characterId: 'rooster',
+        characterId: 'hens',
         mood: ['playful'], 
         articulation: ['bumpy = staccato'],
         tempo: ['fast = allegro'], 
@@ -20,7 +20,7 @@ export const characterDetails: Details[] = [
         moves: ['tip-toe','jog'],
     },
     {
-        characterId: 'horse',
+        characterId: 'donkey',
         mood: ['energetic'],
         tempo: ['very fast = presto'],
         dynamics: ['loud = forte'],
@@ -53,7 +53,7 @@ export const characterDetails: Details[] = [
         moves: ['hop'],
     },
     {
-        characterId: 'fish',
+        characterId: 'aquarium',
         mood: ['mysterious'],
         articulation: ['smooth = legato'],
         tempo: ['moderate = moderato'],
@@ -61,7 +61,7 @@ export const characterDetails: Details[] = [
         moves: ['swim'],
     },
     {
-        characterId: 'donkey',
+        characterId: 'person',
         mood: ['clumsy','humorius'],
         tempo: ['moderate = moderato'],
         dynamics: ['medium-loud = mezzo-forte','loud = forte','soft = piano'],
@@ -78,21 +78,21 @@ export const characterDetails: Details[] = [
         moves:['tip-toe','walk'],
     },
     {
-        characterId: 'birds',
+        characterId: 'aviary',
         mood: ['graceful','humorius','energetic'],
         tempo: ['very fast = presto'],
         dynamics: ['soft to loud = crescendo','loud to soft = descrecendo','medium-loud = mezzo-forte'],
         moves: ['tip-toe'],
     },
     {
-        characterId: 'pianist',
+        characterId: 'pianists',
         mood: ['elegant','playful'],
         tempo: ['moderate = moderato','increasing speed = accelerando'],
         dynamics: ['soft to loud = crescendo','medium-loud = mezzo-forte'],
         moves: ['walk'],
     },
     {
-        characterId: 'fossil',
+        characterId: 'fossils',
         mood: ['energetic','humorius'],
         tempo: ['moderate = moderato'],
         dynamics: ['soft to loud = crescendo','loud = forte'],

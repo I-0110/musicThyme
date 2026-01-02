@@ -5,6 +5,7 @@ import Breadcrumbs from '@/app/ui/cota/map/breadcrumbs';
 import Card from "@/app/ui/cota/map/cards";
 import Link from 'next/link';
 import { LightBulbIcon, SparklesIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import ScrollToTop from "@/app/ui/scroll-to-top";
 
 export default async function Page({
     params
@@ -113,6 +114,7 @@ export default async function Page({
                         </div>
                     </div>
                 )}
+                <ScrollToTop />
             </div>
         </div>
     )

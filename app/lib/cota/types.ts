@@ -1,4 +1,6 @@
 // Data structure types for Map and Quiz
+export type CharacterId = 'lion' | 'hens' | 'donkey' | 'tortoise' | 'elephant' | 'kangaroo' | 'aquarium' | 'person' | 'cuckoo' | 'aviary' | 'pianists' | 'fossils' | 'swan' | 'finale';
+
 export type Articulation = 'smooth = legato' | 'bumpy = staccato';
 
 export type Dynamics = 'soft = piano' | 'medium-soft = mezzo-piano' | 'medium-loud = mezzo-forte' | 'loud = forte' | 'soft to loud = crescendo' | 'loud to soft = descrecendo';
@@ -15,8 +17,6 @@ export type Moves = 'walk' | 'hop' | 'stomp' | 'swim' | 'tip-toe' | 'crawl' | 'j
 
 export type InstrumentFamily = 'strings' | 'woodwinds' | 'brass' | 'percussion';
 
-export type Instruments = 'piccolo' | 'piano' | 'double bass' | 'cello' | 'violin' | 'viola' | 'clarinet' | 'flute' | 'glockenspiel' | 'xylophone';
-
-export type InstrumentImage = | '/patw/images/flute.png' |'/patw/images/clarinet.png';
-
-
+export type Instruments = 'piccolo' | 'piano' | 'double bass' | 'cello' | 'violin' | 'viola' | 'clarinet' | 'flute' | 'glockenspiel' | 'xylophone' | 'glass harmonica';
+ 
+export type LessonCategory = 'rhythm' | 'body percussion' | 'move' | 'play' | 'create' | 'UP Percussion' | 'boomwhackers' | 'circle activity' | 'game' | 'small group';

@@ -6,6 +6,7 @@ import Card from "@/app/ui/cota/map/cards";
 import Link from 'next/link';
 import Image from 'next/image';
 import { SparklesIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import ScrollToTop from "@/app/ui/scroll-to-top";
 
 export default async function Page({
     params
@@ -50,34 +51,64 @@ export default async function Page({
             <div className='flex flex-col items-center'>
                 {/* Card 1: Lesson Plan */}
                 <div className='card_content bg-white p-6'>
-                    {lesson?.activities && lesson.activities.length > 0 && (
+                    {lesson?.activities && (lesson.activities.activity1 || lesson.activities.activity2) && (
                         <div className='w-full max-w-3xl'>
-                            <div className='card_content bg-carnival-pink rounded-xl shadow-lg p-6 border-2 border-carnival-pink'>
-                                <h2 className="text-2xl font-bold text-carnival-100 mb-6 text-center flex items-center justify-center gap-2">
+                            <div className='card_content bg-carnival-pink rounded-xl shadow-lg p-2 border-2 border-carnival-pink'>
+                                <h2 className="text-2xl font-bold text-carnival-100 mb-4 text-center flex items-center justify-center gap-2">
                                     <SparklesIcon className="w-8 h-8" />
                                     Let&apos;s Play!
                                 </h2>
-                                <p className="text-center text-carnival-100 text-lg mb-4 font-semibold">
-                                    Try these movements while listening to {character.characterName}:
+                                <p className="text-center text-carnival-100 text-lg mb-2 font-semibold">
+                                    Try these activities while listening to {character.characterName}&apos;s Theme:
                                 </p>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    {lesson.activities.map((act, index) => (
-                                        <div key={index} className="bg-carnival-yellow p-4 rounded-lg text-center shadow-md hover:bg-carnival-100 transition-transform">
-                                            <span className="text-lg font-bold text-carnival-500">{act}</span>
-                                        </div>
-                                    ))}
-                                </div>
+                                <ul className="grid grid-cols-2 md:grid-rows-2 shrink gap-2">
+                                    {lesson.activities.activity1 && (
+                                        <li className="bg-carnival-pink text-white border-2 border-dotted hover:border-none hover:bg-carnival-yellow hover:text-black hover:shadow-lg p-4 rounded-lg text-center transition-transform">
+                                            <div className="font-semibold">{lesson.activities.activity1}</div>
+                                            <div>
+                                                <p>Categories:</p>
+                                                <p className="italic">
+                                                {lesson.activities.activityCat1.length === 1
+                                                    ? lesson.activities.activityCat1[0].charAt(0).toUpperCase() + 
+                                                    lesson.activities.activityCat1[0].slice(1)
+                                                    : lesson.activities.activityCat1
+                                                        .map(cat => cat.charAt(0).toUpperCase() + cat.slice(1))
+                                                        .join(', ')
+                                                        .replace(/,([^,]*)$/, ' and$1') // Replace last comma with ' and'
+                                                }
+                                                </p>
+                                            </div>
+                                        </li>
+                                    )}
+                                    {lesson.activities.activity2 && (
+                                        <li className="bg-carnival-pink text-white border-2 border-dotted hover:border-none hover:bg-carnival-yellow hover:text-black hover:shadow-lg p-4 rounded-lg text-center transition-transform">
+                                            <div className="font-semibold">{lesson.activities.activity2}</div>
+                                            <div>
+                                                <p>Categories:</p>
+                                                <p className="italic">
+                                                {lesson.activities.activityCat2.length === 1
+                                                    ? lesson.activities.activityCat2[0].charAt(0).toUpperCase() + 
+                                                    lesson.activities.activityCat2[0].slice(1)
+                                                    : lesson.activities.activityCat2
+                                                        .map(cat => cat.charAt(0).toUpperCase() + cat.slice(1))
+                                                        .join(', ')
+                                                        .replace(/,([^,]*)$/, ' and$1') // Replace last comma with ' and'
+                                                }
+                                                </p>
+                                            </div>
+                                        </li>
+                                    )}
+                                </ul>
                             </div>
                         </div>
                     )}
                 </div>
     
-                {/* Card 2: Video - CENTERED with max-width */}
-                <div className='card w-full max-w-4xl'>
-                    <div className='card_content bg-white rounded-xl shadow-lg p-6 border-2 border-carnival-300'>
-                        <h2 className="text-2xl font-bold text-carnival-500 mb-4 text-center">Activity&apos;s Example</h2>
-                        {lesson?.video.youtube && (
-                            <div className='w-full'>
+                {/* Card 2: Activity - Video 1 */}
+                {lesson?.video.youtube && (
+                    <div className='card w-full max-w-4xl'>
+                        <div className='card_content bg-white rounded-xl shadow-lg p-6 border-2 border-carnival-300'>
+                            <h2 className="text-2xl font-bold text-carnival-500 mb-4 text-center">Video Activity</h2>
                                 <div className='relative w-full aspect-video'>
                                     <iframe 
                                         src={`https://www.youtube.com/embed/${lesson.video.youtube}`}
@@ -88,16 +119,60 @@ export default async function Page({
                                         className='absolute top-0 left-0 w-full h-full rounded-lg'
                                     />
                                 </div>
-                            </div>
-                        )}
+                                <p>Categories:</p>
+                                <p className="italic">
+                                {lesson?.videoCat.length === 1
+                                    ? lesson.videoCat[0].charAt(0).toUpperCase() + 
+                                    lesson.videoCat[0].slice(1)
+                                    : lesson?.videoCat
+                                        .map(cat => cat.charAt(0).toUpperCase() + cat.slice(1))
+                                        .join(', ')
+                                        .replace(/,([^,]*)$/, ' and$1') // Replace last comma with ' and'
+                                }
+                                </p>
+                        </div>
                     </div>
-                </div>
+                )}
+
+                {/* Card 2: Activity - Video 2 */}
+                {lesson?.video2?.youtube && (
+                    <div className='card w-full max-w-4xl'>
+                        <div className='card_content bg-white rounded-xl shadow-lg p-6 border-2 border-carnival-300'>
+                            <h2 className="text-2xl font-bold text-carnival-500 mb-4 text-center">Video Activity</h2>
+                            <div className='relative w-full aspect-video'>
+                                <iframe 
+                                    src={`https://www.youtube.com/embed/${lesson.video2.youtube}`}
+                                    title={`${lesson.characterId} - YouTube video player`}
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerPolicy="strict-origin-when-cross-origin" 
+                                    allowFullScreen
+                                    className='absolute top-0 left-0 w-full h-full rounded-lg'
+                                />
+                            </div>
+                            {lesson?.videoCat2 && lesson.videoCat2.length > 0 && (
+                                <>
+                                    <p>Categories:</p>
+                                    <p className="italic">
+                                        {lesson.videoCat2.length === 1
+                                            ? lesson.videoCat2[0].charAt(0).toUpperCase() + 
+                                            lesson.videoCat2[0].slice(1)
+                                            : lesson.videoCat2
+                                                .map(cat => cat.charAt(0).toUpperCase() + cat.slice(1))
+                                                .join(', ')
+                                                .replace(/,([^,]*)$/, ' and$1') // Replace last comma with ' and'
+                                        }
+                                    </p>
+                                </>
+                            )}
+                        </div>
+                    </div>
+                )}
 
                 {/* Card 3: Instrument Check! */}
                 {instrument && (instrument.mainFamily || instrument.instruments) && (
                     <div className='card w-full max-w-3xl'>
                         <div className='card_content sticky top-[20vh] bg-white rounded-xl shadow-lg p-6 border-2 border-carnival-300'>
-                            <h2 className="text-2xl font-bold text-carnival-500 mb-6 text-center">What instruments did you listen on {character.characterName}&apos;s Theme?</h2>
+                            <h2 className="text-2xl font-bold text-carnival-500 mb-6 text-center">What instruments did you hear on {character.characterName}&apos;s Theme?</h2>
                             
                             {/* Main Families */}
                             {instrument.mainFamily && instrument.mainFamily.length > 0 && (
@@ -124,14 +199,14 @@ export default async function Page({
                                             </div>
                                         ))}
                                     </div>
-                                    <div className='relative items-center w-64 h-64'>
-                                        <Image
+                                    {/* <div className='relative items-center w-64 h-64'> */}
+                                        {/* <Image
                                             src={instrument?.imageUrl || '/circus.jpg'}
                                             alt={character.characterName}
                                             fill
                                             className='object-contain rounded-lg' 
                                         />
-                                    </div>
+                                    </div> */}
                                 </div>
                             )}
                         </div>
@@ -182,6 +257,7 @@ export default async function Page({
                         </div>
                     </div>
                 </div>
+                <ScrollToTop />
             </div>
         </div>
     )

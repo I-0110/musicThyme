@@ -6,6 +6,7 @@ import Card from "@/app/ui/cota/map/cards";
 import Link from 'next/link';
 import Image from 'next/image';
 import { XMarkIcon } from "@heroicons/react/24/outline";
+import ScrollToTop from "@/app/ui/scroll-to-top";
 
 export default async function Page({
     params
@@ -127,19 +128,21 @@ export default async function Page({
                                             </div>
                                         ))}
                                     </div>
-                                    <div className='relative w-64 h-64'>
+                                    {/* <div className='relative w-full h-full flex flex-col items-center justify-between p-4'>
                                         <Image
                                             src={instruments?.imageUrl || '/circus.jpg'}
                                             alt={character.characterName}
                                             fill
-                                            className='object-contain rounded-lg' 
+                                            className='w-64 h-64 object-contain' 
                                         />
-                                    </div>
+                                    </div> */}
                                 </div>
                             )}
                         </div>
                     </div>
                 )}
+
+                <ScrollToTop />
             </div>
         </div>
     )

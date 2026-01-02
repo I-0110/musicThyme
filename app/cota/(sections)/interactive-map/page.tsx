@@ -2,6 +2,7 @@ import Nav from '@/app/ui/nav';
 import { teachers } from '@/app/ui/fonts';
 import BoardMap  from '@/app/ui/cota/map/boardmap';
 import { carnivalCharacters } from '@/app/lib/cota/main-data';
+import ScrollToTop from '@/app/ui/scroll-to-top';
 
 export default function Page() {
 
@@ -20,6 +21,7 @@ export default function Page() {
                 <BoardMap 
                     characters={carnivalCharacters}
                 />
+                <ScrollToTop />
             </div>
         </div>
     </div>

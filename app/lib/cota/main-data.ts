@@ -22,7 +22,7 @@ export const carnivalCharacters: Character[] = [
     {
         id: 'hens',
         title: 'Hens and Roosters',
-        characterName: 'Hens',
+        characterName: 'Hens and Rooster',
         orderNumber: 2,
         video: {
             youtube: 'xU4RcRWVGyM?si=-hozXB1NkV33IJA7&amp;start=17',
@@ -32,7 +32,7 @@ export const carnivalCharacters: Character[] = [
     {
         id: 'donkey',
         title: 'Wild Donkeys',
-        characterName: 'Horse',
+        characterName: 'Donkey',
         orderNumber: 3,
         video: {
             youtube: '-aLM7nJB2u4?si=K7cTf9Oyux3_vTxg&amp;start=16',

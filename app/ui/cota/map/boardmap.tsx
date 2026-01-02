@@ -68,7 +68,7 @@ export default function BoardMap({
 
               {/* Character Info */}
               <div className='text-center'>
-                <p className='text-sm font-semibold text-carnival-500 dark:text-shadow-carnival-100'>
+                <p className='text-sm font-semibold text-carnival-500 dark:text-shadow-carnival-100 wrap-break-word'>
                   {character.orderNumber}. {character.title}
                 </p>
               </div>
