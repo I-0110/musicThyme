@@ -43,4 +43,10 @@ export const vocabulary: Vocabulary[] = [
         definition: 'Fast and lively tempo', 
         example: 'Chickens move allegro around the barnyard.' 
     },
+    {
+        characterId: 'elephant',
+        term: 'Meter',
+        definition: 'In music, "meter" is the organization of recurring beats into groups of strong and weak beats, creating a rhythm framework or pattern. We use a time signature that shows beats per measure and note value.',
+        example: 'The elephants dance with this triple meter (waltz).'
+    }   
 ]

@@ -37,7 +37,7 @@ export const carnivalCharacters: Character[] = [
         video: {
             youtube: '-aLM7nJB2u4?si=K7cTf9Oyux3_vTxg&amp;start=16',
         },
-        imageUrl: '/cota/images/horse.png'
+        imageUrl: '/cota/images/donkey.png'
     },
     {
         id: 'tortoise',
@@ -163,12 +163,6 @@ export const carnivalCharacters: Character[] = [
 //             { term: 'Scale', definition: 'Notes going up or down in order', example: 'The pianos play fast scales like galloping hooves' },
 //             { term: 'Presto', definition: 'Very fast tempo', example: 'Wild donkeys run presto across the plains' }
 //         ],
-//         activitiesVideo: ['replace'],
-//         activities: [
-//             'Gallop around the room during the fastest parts',
-//             'Practice playing scales quickly on piano or a xylophone',
-//         ],
-//         imageUrl: '/cota/images/horse.png'
 //     },
 // ];
 

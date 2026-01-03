@@ -1,18 +1,34 @@
-import { Articulation, Tempo, Mood, Moves, InstrumentFamily, Dynamics, Instruments, Pitch, Time, LessonCategory, CharacterId } from '@/app/lib/cota/types';
+import { Articulation, Tempo, Mood, Moves, InstrumentFamily, Dynamics, Instruments, Pitch, Time, LessonCategory, CharacterId, PeopleCredits, TpT } from '@/app/lib/cota/types';
 
 export interface VideoSource {
     youtube?: string; // YouTube URI
 }
 
 export interface Activities {
-    activityCat1: LessonCategory[]
+    activityCat1: LessonCategory[];
     activity1: string; // Use this for Content Card: 5
     activityCat2: LessonCategory[];
     activity2: string; 
 }
 
+export interface Credits {
+    videoCreatedBy: PeopleCredits[];
+    activitiesCreatedBy?: string[];
+    tpt?: TpT[];
+    people?: PeopleContact[];
+    more?: string[];
+}
+
+export interface PeopleContact {
+    name: string;
+    description: string;
+    email?: string;
+    ytChannel?: string;
+    fbLink?: string;
+}
+
 export interface Vocabulary { // Use this for Vocabulary Section
-    characterId: CharacterId;
+    characterId?: CharacterId;
     term: string;
     definition: string;
     example: string;
@@ -68,12 +84,6 @@ export interface Content {
     funFacts: string; // Use this for Content Card: 3
     // Video sources
     video: VideoSource; // Use this for Content Card: 4
-}
-
-export interface Credits {
-    videoCreatedBy: string;
-    activitiesCreatedBy: string[];
-    movesIdeasFrom?: string[];
 }
 
 export interface LessonPlan {

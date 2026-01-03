@@ -5,8 +5,9 @@ import Breadcrumbs from '@/app/ui/cota/map/breadcrumbs';
 import Card from "@/app/ui/cota/map/cards";
 import Link from 'next/link';
 import Image from 'next/image';
-import { SparklesIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { EnvelopeIcon, SparklesIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import ScrollToTop from "@/app/ui/scroll-to-top";
+
 
 export default async function Page({
     params
@@ -213,7 +214,30 @@ export default async function Page({
                     </div>
                 )}
 
-                {/* Card 4: Movement Activities */}
+                {/* Card 4: Parachutes Activities */}
+                {lesson?.parachuteVideo?.youtube && (
+                    <div className='card w-full max-w-4xl'>
+                        <div className='card_content bg-white rounded-xl shadow-lg p-6 border-2 border-carnival-300'>
+                            <h2 className="text-2xl font-bold text-carnival-500 mb-4 text-center">Parachute Activity</h2>
+                            <div className='relative w-full aspect-video'>
+                                <iframe 
+                                    src={`https://www.youtube.com/embed/${lesson.parachuteVideo.youtube}`}
+                                    title={`${lesson.characterId} - YouTube video player`}
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerPolicy="strict-origin-when-cross-origin" 
+                                    allowFullScreen
+                                    className='absolute top-0 left-0 w-full h-full rounded-lg'
+                                />
+                            </div>
+                            <div className="rounded-lg mt-4 hover:bg-carnival-yellow">
+                                <h3 className="font-semibold">How to play:</h3>
+                                <p>{lesson?.parachute}</p>
+                            </div>
+                        </div>
+                    </div>
+                )}
+
+                {/* Card 5: Movement Activities */}
                 {details?.moves && details.moves.length > 0 && (
                     <div className='card w-full max-w-3xl'>
                         <div className='card_content bg-carnival-blue rounded-xl shadow-lg p-6 border-2 border-carnival-blue'>
@@ -235,17 +259,60 @@ export default async function Page({
                     </div>
                 )}
 
-                {/* Card 5: Discover More */}
+                {/* Card 5: Credits */}
                 <div className='card w-full max-w-4xl'>
                     <div className='card_content bg-white rounded-xl shadow-lg p-6 border-2 border-carnival-300'>
                         <div className="flex flex-col items-center gap-4">
-                            {/* <Link
-                            href="/content"
-                            className="inline-flex items-center gap-2 bg-carnival-100 text-carnival-500 px-6 py-3 rounded-lg text-lg font-bold hover:bg-green-600 hover:text-white transition-colors"
-                            >
-                                Continue
-                                <ArrowRightIcon className='w-4 h-4' />
-                            </Link> */}
+                            <div className="rounded-lg mt-4">
+                                <h3 className="font-semibold text-center wrap-break-word">
+                                    We are thankful for you.<br/> Our most important contribution for this project to work!
+                                </h3>
+                                <p className="mt-2">Our video makers channels. Please like and subscribe!</p>
+                                <ul className="list-disc list-inside">
+                                    {lesson?.credits?.videoCreatedBy?.map((creator, index) => (
+                                        <li key={index}>
+                                            <Link
+                                                href={`https://www.youtube.com/@${creator}`}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-carnival-blue hover:underline"
+                                            >
+                                                {creator}
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                                <p className="mt-2">Activities for {character.characterName} were made by:</p>
+                                <ul className="list-disc list-inside">
+                                    {lesson?.credits?.activitiesCreatedBy?.map((creator, index) => (
+                                        <li key={index}>
+                                            {creator}
+                                        </li>
+                                    ))}
+                                </ul>
+                                <p className="mt-2">Highly good resources for {character.characterName}:</p>
+                                <ul className="list-disc list-inside">
+                                    {lesson?.credits?.people?.map((creator, index) => (
+                                        <li key={index}>
+                                            <strong>{creator.name}</strong>
+                                            {creator.description && (
+                                                <span className="text-carnival-pink"> - {creator.description}</span>
+                                            )}
+                                            <div className="ml-5 mt-1 text-sm">
+                                                {creator.email && (
+                                                    <Link
+                                                        href={`mailto:${creator.email}`}
+                                                        className="flex items-center gap-2 text-carnival-blue hover:underline"
+                                                    >
+                                                        <EnvelopeIcon className="w-4 h-4" />
+                                                        {creator.email}
+                                                    </Link>
+                                                )}
+                                            </div>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
                             <div className='relative w-64 h-64'>
                                 <Image
                                     src={character.imageUrl || '/circus.jpg'}

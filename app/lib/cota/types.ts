@@ -19,4 +19,8 @@ export type InstrumentFamily = 'strings' | 'woodwinds' | 'brass' | 'percussion';
 
 export type Instruments = 'piccolo' | 'piano' | 'double bass' | 'cello' | 'violin' | 'viola' | 'clarinet' | 'flute' | 'glockenspiel' | 'xylophone' | 'glass harmonica';
  
-export type LessonCategory = 'rhythm' | 'body percussion' | 'move' | 'play' | 'create' | 'UP Percussion' | 'boomwhackers' | 'circle activity' | 'game' | 'small group';
+export type LessonCategory = 'rhythm' | 'body percussion' | 'move' | 'play' | 'create' | 'UP Percussion' | 'boomwhackers' | 'circle activity' | 'game' | 'small group' | 'watch';
+
+export type PeopleCredits = 'RondeauMusic' | 'MrGsBoomwhackerChannel' | 'newnewchannel' | 'lenaleon-thecrafterteacher' | 'ssousc' | 'jpiano1144' | 'emilychurch1322' | 'MsMusic-ju9gz';
+
+export type TpT = 'mr-g-music-tech';
