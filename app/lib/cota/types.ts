@@ -21,6 +21,6 @@ export type Instruments = 'piccolo' | 'piano' | 'double bass' | 'cello' | 'violi
  
 export type LessonCategory = 'rhythm' | 'body percussion' | 'move' | 'play' | 'create' | 'UP Percussion' | 'boomwhackers' | 'circle activity' | 'game' | 'small group' | 'watch';
 
-export type PeopleCredits = 'RondeauMusic' | 'MrGsBoomwhackerChannel' | 'newnewchannel' | 'lenaleon-thecrafterteacher' | 'ssousc' | 'jpiano1144' | 'emilychurch1322' | 'MsMusic-ju9gz';
+export type YtChannels = 'RondeauMusic' | 'Musicplayonline' | 'MrGsBoomwhackerChannel' | 'newnewchannel' | 'lenaleon-thecrafterteacher' | 'ssousc' | 'jpiano1144' | 'emilychurch1322' | 'MsMusic-ju9gz' | 'musicteaching7288' | 'amanda_hooper77' | 'pcimini1991' | 'alpacapellaeducacionmusica3125';
 
-export type TpT = 'mr-g-music-tech';
+export type TpT = 'mr-g-music-tech' | 'lena-leon-the-crafter-teacher';

@@ -82,7 +82,7 @@ export const carnivalCharacters: Character[] = [
     {
         id: 'person',
         title: 'Personnages with Long Ears',
-        characterName: 'Donkey',
+        characterName: 'Characters',
         orderNumber: 8,
         video: {
             youtube: '1kybrQokreo?si=kGmzdYNXrQ2vOcxR&amp;start=25',

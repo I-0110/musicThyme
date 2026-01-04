@@ -1,4 +1,4 @@
-import { Articulation, Tempo, Mood, Moves, InstrumentFamily, Dynamics, Instruments, Pitch, Time, LessonCategory, CharacterId, PeopleCredits, TpT } from '@/app/lib/cota/types';
+import { Articulation, Tempo, Mood, Moves, InstrumentFamily, Dynamics, Instruments, Pitch, Time, LessonCategory, CharacterId, YtChannels, TpT } from '@/app/lib/cota/types';
 
 export interface VideoSource {
     youtube?: string; // YouTube URI
@@ -12,9 +12,8 @@ export interface Activities {
 }
 
 export interface Credits {
-    videoCreatedBy: PeopleCredits[];
+    videoCreatedBy: YtChannels[];
     activitiesCreatedBy?: string[];
-    tpt?: TpT[];
     people?: PeopleContact[];
     more?: string[];
 }
@@ -23,8 +22,10 @@ export interface PeopleContact {
     name: string;
     description: string;
     email?: string;
-    ytChannel?: string;
+    ytChannel?: YtChannels;
     fbLink?: string;
+    tpt?: TpT;
+    otherLink?: string;
 }
 
 export interface Vocabulary { // Use this for Vocabulary Section
@@ -88,15 +89,21 @@ export interface Content {
 
 export interface LessonPlan {
     // Teacher content
-    characterId: CharacterId; // Use this for Content Card: 5
+    characterId: CharacterId;
     videoCat: LessonCategory[]; 
-    video: VideoSource; // Use this for Content Card: 5
+    video: VideoSource; 
+    videoNotes?: string;
     videoCat2?: LessonCategory[];
-    video2?: VideoSource; // Use this for Content Card: 6
+    video2?: VideoSource; 
+    videoNotes2?: string;
+    videoCat3?: LessonCategory[];
+    video3?: VideoSource; 
+    videoNotes3?: string;
     activities: Activities;
     coloring?: string;
     parachute?: string;
     parachuteVideo?: VideoSource;
+    parachuteImage?: string[];
     credits?: Credits;
 }
 
