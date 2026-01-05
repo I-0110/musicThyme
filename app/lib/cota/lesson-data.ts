@@ -324,7 +324,7 @@ export const characterLesson: LessonPlan[] = [
             ],
         },
     },
-{
+    {
         characterId: 'person',
         videoCat: ['boomwhackers','play'],
         video: {
@@ -358,6 +358,236 @@ export const characterLesson: LessonPlan[] = [
                     description: 'He have lots of good resources for boomwhackers and more. Please like and subscribe his YouTube channel and check his TpT for more good resources including emergency sub-plans.',
                     ytChannel: 'MrGsBoomwhackerChannel',
                     tpt: 'mr-g-music-tech',
+                },
+                {
+                    name: 'Kayden Nickles',
+                    email: 'kaydennickles@usd475.org',
+                    description: 'He gave me some good ideas to add activities that encourage the student to identify the form in the music.'
+                }
+            ],
+        },
+    },
+    {
+        characterId: 'cuckoo',
+        videoCat: ['listen', 'watch'],
+        video: {
+            youtube: 'GcXjP7wyTzQ?si=qxw-To23FLj535jz'
+        },
+        videoNotes: 'How many times we can see and hear the cuckoo played by the clarinet?',
+        videoCat2: ['UP Percussion', 'play'],
+        video2: {
+            youtube: '6uIFfCOBA5c?si=U6HMqaYOAPsvv-ct'
+        },
+        videoNotes2: 'Use drums or hand drums and a percussion instrument that can be shaked. Play drums when the flower point to the tree, and a shaker when you it points the bird.',
+        videoCat3: ['boomwhackers', 'play', 'recorders', 'Pitched Percussion'],
+        video3: {
+            youtube: 'FnKa0BBiZVw?si=Pba1zuGEDiI4dygk'
+        },
+        videoNotes3: 'Try this on recorders, xylophones, or bells, if available.',
+        activities: {
+        activityCat1: ['move', 'game'],
+        activity1: 
+            'Students have a basket or a hand drum upside down. Spread beam bags and/or egg shakers. Play the music. When students hear the "cuckoo" sound, they need to grab a beam bag or egg shaker. The student who gets the right amount of objects is the winner.',
+        activityCat2: ['UP Percussion','play'],
+        activity2:
+            'Walk and move the scarve up when you hear a cuckoo sound.',
+        },
+        parachuteVideo: {
+            youtube: 'SruLfG63uDg?si=k1fH40R0775AQKvg'
+        },
+        parachute: 'Divide the class in two groups: one is with the parachute, and the other one have scarves. Both groups lift their items when they hear "cuckoo". The scarves at the end of the piece toss their scarves to the parachute.',
+        credits: {
+            videoCreatedBy: ['RondeauMusic', 'Dolcejj80','MHmusicroom', 'Notenjonglina', 'MrGsBoomwhackerChannel', 'jpiano1144'],
+            activitiesCreatedBy: ['Jinky Jane C Simeon','Ivelis Becker'],
+            people:[
+                {
+                    name: 'Freedom Brass',
+                    email: 'freedombrass@usd475.org',
+                    description: 'Huge help sharing her lesson plans and resources that she uses in her classroom'
+                },
+                {
+                    name: 'Mr. G',
+                    description: 'He have lots of good resources for boomwhackers and more. Please like and subscribe his YouTube channel and check his TpT for more good resources including emergency sub-plans.',
+                    ytChannel: 'MrGsBoomwhackerChannel',
+                    tpt: 'mr-g-music-tech',
+                },
+                {
+                    name: 'Kayden Nickles',
+                    email: 'kaydennickles@usd475.org',
+                    description: 'He gave me some good ideas to add activities that encourage the student to identify the form in the music.'
+                }
+            ],
+        },
+    },
+    {
+        characterId: 'aviary',
+        videoCat: ['move','play'],
+        video: {
+            youtube: 'GpdACmWzGas?si=UFmc8eNSCo8_Ikoh'
+        },
+        videoCat2: ['move', 'play', 'parachute'],
+        video2: {
+            youtube: 'MjCNqV-GsCI?si=HWeY2tubTDYLzStZ'
+        },
+        videoNotes2: 'Alternative: Try these movements on a parachute. Start routine with the parachute high. Move the parachute side to side. When he is moving "side to side", alternate this to walk. Use "jogging" as it is.',
+        videoCat3: ['boomwhackers', 'play'],
+        video3: {
+            youtube: 'XhN9U94ta4w?si=yx3QzhnXW32iDziw'
+        },
+        activities: {
+            activityCat1: ['move','play'],
+            activity1:
+                'Pretend to be a bird and move around the space.',
+            activityCat2: ['move', 'circle activity', 'game'],
+            activity2: 
+                'Students have a tennis ball or beam bag. Move the object from one hand to another. When the flute goes higher, pass the object to the student in your right.',
+        },
+        credits: {
+            videoCreatedBy: ['RondeauMusic', 'braunream7411', 'juliafabrizio9276', 'MrGsBoomwhackerChannel'],
+            activitiesCreatedBy: ['Ivelis Becker'],
+            people:[
+                {
+                    name: 'Mr. G',
+                    description: 'He have lots of good resources for boomwhackers and more. Please like and subscribe his YouTube channel and check his TpT for more good resources including emergency sub-plans.',
+                    ytChannel: 'MrGsBoomwhackerChannel',
+                    tpt: 'mr-g-music-tech',
+                },
+                {
+                    name: 'Kayden Nickles',
+                    email: 'kaydennickles@usd475.org',
+                    description: 'He gave me some good ideas to add activities that encourage the student to identify the form in the music.'
+                }
+            ],
+        },
+    },
+    {
+        characterId: 'pianists',
+        videoCat: ['boomwhackers','xylophones', 'play'],
+        video: {
+            youtube: 'Z1Aji6jIbnk?si=LZ7GWxQI9IwdUagO'
+        },
+        videoNotes: 'Try this activity in the xylophone, or recorders for advanced students.',
+        activities: {
+            activityCat1: ['move','play'],
+            activity1:
+                'Pretend to be a pianist. Move your hands to the left and to the right, going high and low pitch.',
+            activityCat2: ['move', 'circle activity', 'game'],
+            activity2: 
+                'Tip-Toe and move to one side to another like a pianist will do. Clap when you here a chord cluster.',
+        },
+        credits: {
+            videoCreatedBy: ['RondeauMusic', 'MrGsBoomwhackerChannel'],
+            activitiesCreatedBy: ['Dana Herro', 'Ivelis Becker'],
+            people:[
+                {
+                    name: 'Dana Herro',
+                    description: 'Original idea for both of the movement activities. Please like and subscribe her channel for more awesome lesson ideas. Another good resource is Music Play Online with one of the best resources for new and old music teachers.',
+                    ytChannel: 'danaherro9565',
+                    otherLink: 'https://musicplayonline.com/'
+                },
+                {
+                    name: 'Mr. G',
+                    description: 'He have lots of good resources for boomwhackers and more. Please like and subscribe his YouTube channel and check his TpT for more good resources including emergency sub-plans.',
+                    ytChannel: 'MrGsBoomwhackerChannel',
+                    tpt: 'mr-g-music-tech',
+                },
+                {
+                    name: 'Kayden Nickles',
+                    email: 'kaydennickles@usd475.org',
+                    description: 'He gave me some good ideas to add activities that encourage the student to identify the form in the music.'
+                }
+            ],
+        },
+    },
+    {
+        characterId: 'fossils',
+        videoCat: ['body percussion', 'rhythm', 'play'],
+        video: {
+            youtube: '5ICd3clsWDE?si=hY88fa5CZiQXGY8W'
+        },
+        videoCat2: ['UP Percussion','rhythm', 'play'],
+        video2: {
+            youtube: '9lTzTpaM6bw?si=jExFrwQKaIOuGyMW'
+        },
+        videoCat3: ['listen','UP Percussion', 'play', 'parachute'],
+        video3: {
+            youtube: 'WhAUjEgRHXg?si=uIW3l5B-MW5OBuIY'
+        },
+        videoNotes3: 'Play rhythm sticks on section A, egg shakers on section B, and scarves on section C. Switch activity to a parachute routine. Section A move side to side, section B small bouncings, and section C go up and down.',
+        activities: {
+            activityCat1: ['move','play'],
+            activity1:
+                'Divide the classroom into Dinosaurus and Seurity Guards. In Section A, Dinosaurus move while Security Guard pretend to take a nap, and in Sections B and C, Security Guards move while Dinosaurs pretend to be fossils. If times allow, switch roles.',
+            activityCat2: ['move', 'create', 'small group'],
+            activity2: 
+                'Divide the class into three groups. Give each group ribbons or flashlights. Each group creates a simple movement to match one section of the melody, then switches sections with another group.',
+        },
+        credits: {
+            videoCreatedBy: ['RondeauMusic', 'SymphonicSounds-rm8qm', 'RachelHahn', 'andrewtralle626'],
+            activitiesCreatedBy: ['Dana Herro', 'Denise Gagne', 'Ivelis Becker'],
+            people:[
+                {
+                    name: 'Freedom Brass',
+                    email: 'freedombrass@usd475.org',
+                    description: 'Huge help sharing her lesson plans and resources that she uses in her classroom'
+                },
+                {
+                    name: 'Dana Herro',
+                    description: 'Original idea for the movement activity with flashlights. Please like and subscribe her channel for more awesome lesson ideas.',
+                    ytChannel: 'danaherro9565',
+                    otherLink: 'https://musicplayonline.com/'
+                },
+                {
+                    name: 'Denise Gagne',
+                    description: 'Original idea for the movement activity with ribbons. Her website is one of the best resources for new and old music teachers. Please like and subscribe YouTube channel and check her website for more resources.',
+                    ytChannel: 'Musicplayonline',
+                    otherLink: 'https://musicplayonline.com/'
+                },
+                {
+                    name: 'Kayden Nickles',
+                    email: 'kaydennickles@usd475.org',
+                    description: 'He gave me some good ideas to add activities that encourage the student to identify the form in the music.'
+                }
+            ],
+        },
+    },
+    {
+        characterId: 'swan',
+        videoCat: ['watch', 'listen'],
+        video: {
+            youtube: 'nZpd1C5KhQk?si=HtwYTLJSQU6LOwcv'
+        },
+        videoNotes: 'Listen first and second video and compare both performances. What is the difference between modern and classical dance?',
+        videoCat2: ['watch', 'listen'],
+        video2: {
+            youtube: 'kJ4uowripdw?si=gXmWuuV0XHZ8tgnu'
+        },
+        videoNotes2: 'Listen first and second video and compare both performances. What is the difference between modern and classical dance?',
+        videoCat3: ['move', 'play', 'create'],
+        video3: {
+            youtube: '8nq0atExMuc?si=oncmZ8UogGs8rMTp'
+        },
+        videoNotes3: 'Follow the movements or create your own.',
+        credits: {
+            videoCreatedBy: ['RondeauMusic', 'SymphonicSounds-rm8qm', 'RachelHahn', 'andrewtralle626'],
+            activitiesCreatedBy: ['Dana Herro', 'Denise Gagne', 'Ivelis Becker'],
+            people:[
+                {
+                    name: 'Freedom Brass',
+                    email: 'freedombrass@usd475.org',
+                    description: 'Huge help sharing her lesson plans and resources that she uses in her classroom'
+                },
+                {
+                    name: 'Dana Herro',
+                    description: 'Original idea for the movement activity with flashlights. Please like and subscribe her channel for more awesome lesson ideas.',
+                    ytChannel: 'danaherro9565',
+                    otherLink: 'https://musicplayonline.com/'
+                },
+                {
+                    name: 'Denise Gagne',
+                    description: 'Original idea for the movement activity with ribbons. Her website is one of the best resources for new and old music teachers. Please like and subscribe YouTube channel and check her website for more resources.',
+                    ytChannel: 'Musicplayonline',
+                    otherLink: 'https://musicplayonline.com/'
                 },
                 {
                     name: 'Kayden Nickles',

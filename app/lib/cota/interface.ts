@@ -99,7 +99,7 @@ export interface LessonPlan {
     videoCat3?: LessonCategory[];
     video3?: VideoSource; 
     videoNotes3?: string;
-    activities: Activities;
+    activities?: Activities;
     coloring?: string;
     parachute?: string;
     parachuteVideo?: VideoSource;
