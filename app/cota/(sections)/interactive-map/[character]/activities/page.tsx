@@ -5,8 +5,9 @@ import Breadcrumbs from '@/app/ui/cota/map/breadcrumbs';
 import Card from "@/app/ui/cota/map/cards";
 import Link from 'next/link';
 import Image from 'next/image';
-import { EnvelopeIcon, SparklesIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { EnvelopeIcon, PlayCircleIcon, SparklesIcon, SquaresPlusIcon, UsersIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import ScrollToTop from "@/app/ui/scroll-to-top";
+import ZoomImg from "@/app/ui/cota/map/zoomImg";
 
 
 export default async function Page({
@@ -52,7 +53,7 @@ export default async function Page({
             <div className='flex flex-col items-center'>
                 {/* Card 1: Lesson Plan */}
                 <div className='card_content bg-white p-6'>
-                    {lesson?.activities && (lesson.activities.activity1 || lesson.activities.activity2) && (
+                    {lesson?.activities && (lesson.activities?.activity1 || lesson.activities?.activity2) && (
                         <div className='w-full max-w-3xl'>
                             <div className='card_content bg-carnival-pink rounded-xl shadow-lg p-2 border-2 border-carnival-pink'>
                                 <h2 className="text-2xl font-bold text-carnival-100 mb-4 text-center flex items-center justify-center gap-2">
@@ -131,6 +132,12 @@ export default async function Page({
                                         .replace(/,([^,]*)$/, ' and$1') // Replace last comma with ' and'
                                 }
                                 </p>
+                                {lesson?.videoNotes && ( 
+                                    <div className="rounded-lg mt-4 hover:bg-carnival-yellow">
+                                        <h3 className="font-semibold">Notes:</h3>
+                                        <p>{lesson?.videoNotes}</p>
+                                    </div>
+                                )}
                         </div>
                     </div>
                 )}
@@ -140,31 +147,69 @@ export default async function Page({
                     <div className='card w-full max-w-4xl'>
                         <div className='card_content bg-white rounded-xl shadow-lg p-6 border-2 border-carnival-300'>
                             <h2 className="text-2xl font-bold text-carnival-500 mb-4 text-center">Video Activity</h2>
-                            <div className='relative w-full aspect-video'>
-                                <iframe 
-                                    src={`https://www.youtube.com/embed/${lesson.video2.youtube}`}
-                                    title={`${lesson.characterId} - YouTube video player`}
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                    referrerPolicy="strict-origin-when-cross-origin" 
-                                    allowFullScreen
-                                    className='absolute top-0 left-0 w-full h-full rounded-lg'
-                                />
-                            </div>
-                            {lesson?.videoCat2 && lesson.videoCat2.length > 0 && (
-                                <>
-                                    <p>Categories:</p>
-                                    <p className="italic">
-                                        {lesson.videoCat2.length === 1
-                                            ? lesson.videoCat2[0].charAt(0).toUpperCase() + 
-                                            lesson.videoCat2[0].slice(1)
-                                            : lesson.videoCat2
-                                                .map(cat => cat.charAt(0).toUpperCase() + cat.slice(1))
-                                                .join(', ')
-                                                .replace(/,([^,]*)$/, ' and$1') // Replace last comma with ' and'
-                                        }
-                                    </p>
-                                </>
-                            )}
+                                <div className='relative w-full aspect-video'>
+                                    <iframe 
+                                        src={`https://www.youtube.com/embed/${lesson.video2.youtube}`}
+                                        title={`${lesson.characterId} - YouTube video player`}
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                        referrerPolicy="strict-origin-when-cross-origin" 
+                                        allowFullScreen
+                                        className='absolute top-0 left-0 w-full h-full rounded-lg'
+                                    />
+                                </div>
+                                <p>Categories:</p>
+                                <p className="italic">
+                                    {lesson?.videoCat2?.length === 1
+                                        ? lesson?.videoCat2[0].charAt(0).toUpperCase() + 
+                                        lesson?.videoCat2[0].slice(1)
+                                        : lesson?.videoCat2
+                                            ?.map(cat => cat.charAt(0).toUpperCase() + cat.slice(1))
+                                            .join(', ')
+                                            .replace(/,([^,]*)$/, ' and$1') // Replace last comma with ' and'
+                                    }
+                                </p>
+                                {lesson?.videoNotes2 && ( 
+                                    <div className="rounded-lg mt-4 hover:bg-carnival-yellow">
+                                        <h3 className="font-semibold">Notes:</h3>
+                                        <p>{lesson?.videoNotes2}</p>
+                                    </div>
+                                )}
+                        </div>
+                    </div>
+                )}
+
+                {/* Video 3? */}
+                {lesson?.video3?.youtube && (
+                    <div className='card w-full max-w-4xl'>
+                        <div className='card_content bg-white rounded-xl shadow-lg p-6 border-2 border-carnival-300'>
+                            <h2 className="text-2xl font-bold text-carnival-500 mb-4 text-center">Video Activity</h2>
+                                <div className='relative w-full aspect-video'>
+                                    <iframe 
+                                        src={`https://www.youtube.com/embed/${lesson.video3.youtube}`}
+                                        title={`${lesson.characterId} - YouTube video player`}
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                        referrerPolicy="strict-origin-when-cross-origin" 
+                                        allowFullScreen
+                                        className='absolute top-0 left-0 w-full h-full rounded-lg'
+                                    />
+                                </div>
+                                <p>Categories:</p>
+                                <p className="italic">
+                                {lesson?.videoCat3?.length === 1
+                                    ? lesson.videoCat3[0].charAt(0).toUpperCase() + 
+                                    lesson.videoCat3[0].slice(1)
+                                    : lesson?.videoCat3
+                                        ?.map(cat => cat.charAt(0).toUpperCase() + cat.slice(1))
+                                        .join(', ')
+                                        .replace(/,([^,]*)$/, ' and$1') // Replace last comma with ' and'
+                                }
+                                </p>
+                                {lesson?.videoNotes3 && ( 
+                                    <div className="rounded-lg mt-4 hover:bg-carnival-yellow">
+                                        <h3 className="font-semibold">Notes:</h3>
+                                        <p>{lesson?.videoNotes3}</p>
+                                    </div>
+                                )}
                         </div>
                     </div>
                 )}
@@ -229,10 +274,18 @@ export default async function Page({
                                     className='absolute top-0 left-0 w-full h-full rounded-lg'
                                 />
                             </div>
-                            <div className="rounded-lg mt-4 hover:bg-carnival-yellow">
-                                <h3 className="font-semibold">How to play:</h3>
-                                <p>{lesson?.parachute}</p>
-                            </div>
+                            {lesson?.parachute && ( 
+                                <div className="rounded-lg mt-4 hover:bg-carnival-yellow">
+                                    <h3 className="font-semibold">How to play:</h3>
+                                    <p>{lesson?.parachute}</p>
+                                </div>
+                            )}
+
+                            {/* Clickable thumbnails images */}
+                            <ZoomImg 
+                                images={lesson?.parachuteImage || []}
+                                characterName={character.characterName}
+                            />
                         </div>
                     </div>
                 )}
@@ -282,7 +335,7 @@ export default async function Page({
                                         </li>
                                     ))}
                                 </ul>
-                                <p className="mt-2">Activities for {character.characterName} were made by:</p>
+                                <p className="mt-2">Activities for {lesson?.characterId} were made by:</p>
                                 <ul className="list-disc list-inside">
                                     {lesson?.credits?.activitiesCreatedBy?.map((creator, index) => (
                                         <li key={index}>
@@ -290,10 +343,10 @@ export default async function Page({
                                         </li>
                                     ))}
                                 </ul>
-                                <p className="mt-2">Highly good resources for {character.characterName}:</p>
+                                <p className="mt-2">Highly good resources for {lesson?.characterId}:</p>
                                 <ul className="list-disc list-inside">
                                     {lesson?.credits?.people?.map((creator, index) => (
-                                        <li key={index}>
+                                        <li key={index} className="mt-3">
                                             <strong>{creator.name}</strong>
                                             {creator.description && (
                                                 <span className="text-carnival-pink"> - {creator.description}</span>
@@ -307,6 +360,51 @@ export default async function Page({
                                                         <EnvelopeIcon className="w-4 h-4" />
                                                         {creator.email}
                                                     </Link>
+                                                )}
+                                            </div>
+                                            <div className="ml-5 mt-1 text-sm">
+                                                {creator?.ytChannel && (
+                                                    <div className="flex items-center gap-2 text-carnival-blue">
+                                                        <PlayCircleIcon className="w-4 h-4" />                                                    
+                                                        <Link
+                                                            href={`https://www.youtube.com/@${creator.ytChannel}`}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            className="hover:underline"
+                                                        >
+                                                            {creator.ytChannel}
+                                                        </Link>
+                                                    </div>
+                                                )}
+                                            </div>
+                                            <div className="ml-5 mt-1 text-sm">
+                                                {creator?.tpt && (
+                                                    <div className="flex items-center gap-2 text-carnival-blue">
+                                                        <UsersIcon className="w-4 h-4" />                                                    
+                                                        <Link
+                                                            href={`https://www.teacherspayteachers.com/store/${creator.tpt}`}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            className="hover:underline"
+                                                        >
+                                                            {creator.tpt}
+                                                        </Link>
+                                                    </div>
+                                                )}
+                                            </div>
+                                            <div className="ml-5 mt-1 text-sm">
+                                                {creator?.otherLink && (
+                                                    <div className="flex items-center gap-2 text-carnival-blue">
+                                                        <SquaresPlusIcon className="w-4 h-4" />                                                    
+                                                        <Link
+                                                            href={`${creator.otherLink}`}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            className="hover:underline"
+                                                        >
+                                                            {creator.otherLink}
+                                                        </Link>
+                                                    </div>
                                                 )}
                                             </div>
                                         </li>
