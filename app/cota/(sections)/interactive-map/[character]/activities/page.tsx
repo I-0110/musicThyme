@@ -7,7 +7,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { EnvelopeIcon, PlayCircleIcon, SparklesIcon, SquaresPlusIcon, UsersIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import ScrollToTop from "@/app/ui/scroll-to-top";
-import ZoomImg from "@/app/ui/cota/map/zoomImg";
+import ZoomImg from "@/app/ui/cota/map/zoom-image";
 
 
 export default async function Page({
