@@ -568,6 +568,10 @@ export const characterLesson: LessonPlan[] = [
             youtube: '8nq0atExMuc?si=oncmZ8UogGs8rMTp'
         },
         videoNotes3: 'Follow the movements or create your own.',
+        // activities: {
+        //     activityCat1: ['move', 'play','create'],
+        //     activity1: 'Pretend to be a swan. Using two scarves, move and create movements like you are in a pond swimming.',
+        // },
         credits: {
             videoCreatedBy: ['RondeauMusic', 'SymphonicSounds-rm8qm', 'RachelHahn', 'andrewtralle626'],
             activitiesCreatedBy: ['Dana Herro', 'Denise Gagne', 'Ivelis Becker'],
@@ -595,6 +599,21 @@ export const characterLesson: LessonPlan[] = [
                     description: 'He gave me some good ideas to add activities that encourage the student to identify the form in the music.'
                 }
             ],
+        },
+    },
+    {
+        characterId: 'finale',
+        videoCat: ['body percussion', 'move', 'play'],
+        video: {
+            youtube: 'nkUueLiI8nI?si=maGjmDv6kfnje8mi'
+        },
+        videoCat2: ['UP Percussion','move', 'play'],
+        video2: {
+            youtube: 'ccrVltAeIlY?si=XnlEzAiELjPsvT2y'
+        },
+        videoCat3: ['listen','UP Percussion', 'play', 'parachute'],
+        credits: {
+            videoCreatedBy: ['RondeauMusic', 'musicwithmrs.kincaid2151', 'soaringscarvesacademy2871'],
         },
     },
 ];
