@@ -23,20 +23,20 @@ export default function Nav() {
             href: '/metronome', 
             label: 'Metronome' 
         },
+        // { 
+        //     href: '#', 
+        //     label: 'Tuner' 
+        // },
         { 
-            href: '#', 
-            label: 'Tuner' 
-        },
-        { 
-            href: 'flutists', 
+            href: '/flutists', 
             label: 'Flutists' 
         },
         { 
-            href: 'patw', 
+            href: '/patw', 
             label: 'Peter and the Wolf' 
         },
         {
-          href: 'cota',
+          href: '/cota',
           label: 'The Carnival of the Animals'
         },
     ]

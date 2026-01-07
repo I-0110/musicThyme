@@ -58,7 +58,7 @@ export default function GameController() {
                     <div className='flex flex-col justify-center gap-6 rounded-lg bg-transparent px-6 py-10'>
                         <PatwListenForm
                             currentCharacter={currentCharacter}
-                            characterImageUrl={character.imageUrl}
+                            // characterImageUrl={character.imageUrl}
                             audioUrl={character.audioUrl}
                             characterName={character.name}
                             onInstrumentClick={handleInstrumentSelect}
