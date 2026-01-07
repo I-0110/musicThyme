@@ -4,7 +4,7 @@ import Nav from "@/app/ui/nav";
 import Breadcrumbs from '@/app/ui/cota/map/breadcrumbs';
 import Card from "@/app/ui/cota/map/cards";
 import Link from 'next/link';
-import Image from 'next/image';
+// import Image from 'next/image';
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import ScrollToTop from "@/app/ui/scroll-to-top";
 
@@ -56,7 +56,7 @@ export default async function Page({
                     
                     {/* Centered content */}
                     <div className='flex flex-col items-center gap-4'>
-                        <div className='text-center space-y-2'>
+                        <div className='text-center space-y-2 dark:text-carnival-300'>
                             <p className="text-lg"><strong>Description:</strong> {content?.description}</p>
                             <p className="text-lg"><strong>Fun Facts:</strong> {content?.funFacts}</p>
                         </div>
@@ -123,7 +123,7 @@ export default async function Page({
                                     <h3 className="text-xl font-bold text-orange-600 mb-3">Instruments:</h3>
                                     <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                                         {instruments.instruments.map((instr, index) => (
-                                            <div key={index} className="bg-orange-100 p-3 rounded-lg text-center">
+                                            <div key={index} className="bg-orange-100 p-3 rounded-lg text-center dark:text-carnival-500">
                                                 <span className="text-lg font-semibold capitalize">{instr}</span>
                                             </div>
                                         ))}

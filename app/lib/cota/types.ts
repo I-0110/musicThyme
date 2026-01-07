@@ -14,10 +14,6 @@ export type Time = 'stedy = 4/4'| 'waltz = 3/4' | 'march = 2/4';
 export type Mood = 'majestic' | 'playful' | 'elegant' | 'heavy' | 'mysterious' | 'delicate' | 'humorius' | 'graceful' | 'clumsy' | 'energetic';
 
 export type Moves = 'walk' | 'hop' | 'stomp' | 'swim' | 'tip-toe' | 'crawl' | 'jog' | 'gallop' | 'march' | 'creep';
-
-export type InstrumentFamily = 'strings' | 'woodwinds' | 'brass' | 'percussion';
-
-export type Instruments = 'piccolo' | 'piano' | 'double bass' | 'cello' | 'violin' | 'viola' | 'clarinet' | 'flute' | 'glockenspiel' | 'xylophone' | 'glass harmonica';
  
 export type LessonCategory = 'rhythm' | 'body percussion' | 'move' | 'play' | 'create' | 'UP Percussion' | 'boomwhackers' | 'circle activity' | 'game' | 'small group' | 'watch' | 'listen' | 'recorders' | 'xylophones' | 'Pitched Percussion' | 'parachute';
 

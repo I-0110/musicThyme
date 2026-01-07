@@ -56,7 +56,7 @@ export default async function Page({
                     
                     {/* Centered content */}
                     <div className='flex flex-col items-center gap-4'>
-                        <div className='text-center space-y-2'>
+                        <div className='text-center space-y-2 dark:text-carnival-300'>
                             <p className="text-lg"><strong>Title:</strong> {character.title}</p>
                             <p className="text-lg"><strong>Character:</strong> {character.characterName}</p>
                             <p className="text-lg"><strong>Movement:</strong> #{character.orderNumber}</p>

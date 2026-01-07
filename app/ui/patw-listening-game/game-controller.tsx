@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import PatwListenForm from './listen-form';
-import { Characters, Instruments, characterData } from '@/app/lib/patw-game-data';
+import { Characters, listenGame } from '@/app/lib/patw-game-data';
 import Image from 'next/image';
 
 export default function GameController() {
@@ -23,7 +23,7 @@ export default function GameController() {
     const [isCorrect, setIsCorrect] = useState(false);
 
     // Current character data and index
-    const character = characterData[currentCharacter];
+    const character = listenGame[currentCharacter];
     const currentIndex = allCharacters.indexOf(currentCharacter);
 
     // Handle instrument selection - instant feedback (no submit needed)

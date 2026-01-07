@@ -12,7 +12,7 @@ export default function Card({ characterId }: Card) {
     const pathname = usePathname();
 
     return (
-        <nav className='flex space-x-1 mb-8'>
+        <nav className='flex space-x-1 mb-8 overflow-x-auto scrollbar-hide'>
             {sections.map((section) => {
                 const href = `/cota/interactive-map/${characterId}/${section.slug}`;
                 const isActive = pathname === href;

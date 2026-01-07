@@ -52,7 +52,7 @@ export default async function Page({
             {/* Stacking Cards Container */}
             <div className='flex flex-col items-center'>
                 {/* Card 1: Lesson Plan */}
-                <div className='card_content bg-white p-6'>
+                <div className='card_content p-6'>
                     {lesson?.activities && (lesson.activities?.activity1 || lesson.activities?.activity2) && (
                         <div className='w-full max-w-3xl'>
                             <div className='card_content bg-carnival-pink rounded-xl shadow-lg p-2 border-2 border-carnival-pink'>
@@ -121,8 +121,8 @@ export default async function Page({
                                         className='absolute top-0 left-0 w-full h-full rounded-lg'
                                     />
                                 </div>
-                                <p>Categories:</p>
-                                <p className="italic">
+                                <p className="text-carnival-500">Categories:</p>
+                                <p className="italic text-carnival-500">
                                 {lesson?.videoCat.length === 1
                                     ? lesson.videoCat[0].charAt(0).toUpperCase() + 
                                     lesson.videoCat[0].slice(1)
@@ -157,8 +157,8 @@ export default async function Page({
                                         className='absolute top-0 left-0 w-full h-full rounded-lg'
                                     />
                                 </div>
-                                <p>Categories:</p>
-                                <p className="italic">
+                                <p className="text-carnival-500">Categories:</p>
+                                <p className="italic text-carnival-500">
                                     {lesson?.videoCat2?.length === 1
                                         ? lesson?.videoCat2[0].charAt(0).toUpperCase() + 
                                         lesson?.videoCat2[0].slice(1)
@@ -193,8 +193,8 @@ export default async function Page({
                                         className='absolute top-0 left-0 w-full h-full rounded-lg'
                                     />
                                 </div>
-                                <p>Categories:</p>
-                                <p className="italic">
+                                <p className="text-carnival-500">Categories:</p>
+                                <p className="italic text-carnival-500">
                                 {lesson?.videoCat3?.length === 1
                                     ? lesson.videoCat3[0].charAt(0).toUpperCase() + 
                                     lesson.videoCat3[0].slice(1)
@@ -240,7 +240,7 @@ export default async function Page({
                                     <h3 className="text-xl font-bold text-carnival-300 mb-3">Instruments:</h3>
                                     <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                                         {instrument.instruments.map((instr, index) => (
-                                            <div key={index} className="bg-carnival-100 hover:bg-carnival-pink hover:text-carnival-100 p-3 rounded-lg text-center">
+                                            <div key={index} className="bg-carnival-100 text-carnival-500 hover:bg-carnival-pink hover:text-carnival-100 p-3 rounded-lg text-center">
                                                 <span className="text-lg font-semibold capitalize">{instr}</span>
                                             </div>
                                         ))}
@@ -314,7 +314,7 @@ export default async function Page({
 
                 {/* Card 5: Credits */}
                 <div className='card w-full max-w-4xl'>
-                    <div className='card_content bg-white rounded-xl shadow-lg p-6 border-2 border-carnival-300'>
+                    <div className='card_content bg-white text-carnival-500 rounded-xl shadow-lg p-6 border-2 border-carnival-300'>
                         <div className="flex flex-col items-center gap-4">
                             <div className="rounded-lg mt-4">
                                 <h3 className="font-semibold text-center wrap-break-word">

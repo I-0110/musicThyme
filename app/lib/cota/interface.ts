@@ -1,4 +1,5 @@
-import { Articulation, Tempo, Mood, Moves, InstrumentFamily, Dynamics, Instruments, Pitch, Time, LessonCategory, CharacterId, YtChannels, TpT } from '@/app/lib/cota/types';
+import { Articulation, Tempo, Mood, Moves, Dynamics, Pitch, Time, LessonCategory, CharacterId, YtChannels, TpT } from '@/app/lib/cota/types';
+import { InstrumentFamily, Instruments } from '../instrument-type';
 
 export interface VideoSource {
     youtube?: string; // YouTube URI
