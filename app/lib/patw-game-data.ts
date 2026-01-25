@@ -14,56 +14,56 @@ export const characterData: Record<Characters, {
         name: 'Bird',
         correctInstr: 'fl',
         correctMemeUrl: '/images/bird-yay.gif',
-        audioUrl: '/audio/BIRD.mp3',
-        imageUrl: '/images/bird.jpeg',
+        audioUrl: '/patw/audio/BIRD.mp3',
+        imageUrl: '/patw/charImages/bird.png',
         incorrectMemeUrl: '/images/bird-meme.gif'
     },
     cat: {
         name: 'Cat',
         correctInstr: 'cl',
         correctMemeUrl: '/images/cat-yay.gif',
-        audioUrl: '/audio/CAT.mp3',
-        imageUrl: '/images/cat.jpeg',
+        audioUrl: '/patw/audio/CAT.mp3',
+        imageUrl: '/patw/charImages/cat.png',
         incorrectMemeUrl: '/images/cat-meme.gif'
     },
     duck: {
         name: 'Duck',
         correctInstr: 'ob',
         correctMemeUrl: '/images/duck-yay.gif',
-        audioUrl: '/audio/DUCK.mp3',
-        imageUrl: '/images/duck.jpeg',
+        audioUrl: '/patw/audio/DUCK.mp3',
+        imageUrl: '/patw/charImages/duck.png',
         incorrectMemeUrl: '/images/duck-meme.gif'
     },
     grandpa: {
         name: 'Grandpa',
         correctInstr: 'bsn',
         correctMemeUrl: '/images/grandpa-yay.gif',
-        audioUrl: '/audio/GRAND.mp3',
-        imageUrl: '/images/grandpa.jpeg',
+        audioUrl: '/patw/audio/GRAND.mp3',
+        imageUrl: '/patw/charImages/grandpa.png',
         incorrectMemeUrl: '/images/grandpa-meme.gif'
     },
     hunters: {
         name: 'Hunters',
         correctInstr: 'obtimp',
         correctMemeUrl: '/images/hunters-yay.gif',
-        audioUrl: '/audio/HUNTERS.mp3',
-        imageUrl: '/images/hunters.jpeg',
+        audioUrl: '/patw/audio/HUNTERS.mp3',
+        imageUrl: '/patw/charImages/hunter.png',
         incorrectMemeUrl: '/images/hunters-meme.gif'
     },
     peter: {
         name: 'Peter',
         correctInstr: 'str',
         correctMemeUrl: '/images/peter-yay.gif',
-        audioUrl: '/audio/PETER.mp3',
-        imageUrl: '/images/peter.jpeg',
+        audioUrl: '/patw/audio/PETER.mp3',
+        imageUrl: '/patw/charImages/peter.png',
         incorrectMemeUrl: '/images/peter-meme.gif'
     },
     wolf: {
         name: 'Wolf',
         correctInstr: 'hn',
         correctMemeUrl: '/images/wolf-yay.gif',
-        audioUrl: '/audio/WOLF.mp3',
-        imageUrl: '/images/wolf.jpeg',
+        audioUrl: '/patw/audio/WOLF.mp3',
+        imageUrl: '/patw/charImages/wolf.png',
         incorrectMemeUrl: '/images/wolf-meme.gif'
     },
 }

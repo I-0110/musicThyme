@@ -42,13 +42,13 @@ export default function PatwListenForm({
   ];
 
   const instrumentImages = {
-    bsn: '/images/bassoon.jpg',
-    cl: '/images/clarinet.png',
-    fl: '/images/flute.png',
-    hn: '/images/frenchhorn.png',
-    ob: '/images/oboe.png',
-    str: '/images/string.png',
-    obtimp: '/images/timpani.png',
+    bsn: '/instruments/bassoon.png',
+    cl: '/instruments/clarinet.png',
+    fl: '/instruments/flute.png',
+    hn: '/instruments/frenchhorn.png',
+    ob: '/instruments/oboe.png',
+    str: '/instruments/violin.png',
+    obtimp: '/instruments/timpani.png',
   }
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -135,8 +135,8 @@ export default function PatwListenForm({
                 onClick={() => handleInstrumentClick(item.instrument.value)}
                 className={`w-full h-full rounded-lg bg-thyme-200/75 flex flex-col items-center justify-center p-4 text-center transition-all ${
                   instruments === item.instrument.value
-                    ? 'border-thyme-500'
-                    : 'border-thyme-200 hover:border-thyme-400 hover:bg-thyme-400/75'
+                    ? 'border-thyme-500 text-thyme-500'
+                    : 'border-thyme-200 hover:border-thyme-400 hover:bg-thyme-400/75 hover:text-thyme-100 '
                 }`}
               >
                 <Image 
@@ -147,7 +147,7 @@ export default function PatwListenForm({
                   className="object-contain mb-2"
                   priority
                 />
-                <strong className="text-md text-thyme-100">{item.instrument.label}</strong>
+                <strong className="text-md">{item.instrument.label}</strong>
               </button>
             )}
             </div>

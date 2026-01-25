@@ -14,7 +14,10 @@ export type Time = 'stedy = 4/4'| 'waltz = 3/4' | 'march = 2/4';
 export type Mood = 'majestic' | 'playful' | 'elegant' | 'heavy' | 'mysterious' | 'delicate' | 'humorius' | 'graceful' | 'clumsy' | 'energetic';
 
 export type Moves = 'walk' | 'hop' | 'stomp' | 'swim' | 'tip-toe' | 'crawl' | 'jog' | 'gallop' | 'march' | 'creep';
- 
+
+// Last clue for easy game: Saint-Saens
+export type SS = 'S' | 'A' | 'I' | 'N' | 'T' | '-' | 'S' | 'A' | 'E' | 'N' | 'S';
+
 export type LessonCategory = 'rhythm' | 'body percussion' | 'move' | 'play' | 'create' | 'UP Percussion' | 'boomwhackers' | 'circle activity' | 'game' | 'small group' | 'watch' | 'listen' | 'recorders' | 'xylophones' | 'Pitched Percussion' | 'parachute';
 
 export type YtChannels = 'RondeauMusic' | 'Musicplayonline' | 'MrGsBoomwhackerChannel' | 'newnewchannel' | 'lenaleon-thecrafterteacher' | 'ssousc' | 'jpiano1144' | 'emilychurch1322' | 'MsMusic-ju9gz' | 'musicteaching7288' | 'amanda_hooper77' | 'pcimini1991' | 'alpacapellaeducacionmusica3125' | 'MHmusicroom' | 'Dolcejj80' | 'Notenjonglina' | 'braunream7411' | 'juliafabrizio9276' | 'SymphonicSounds-rm8qm' | 'RachelHahn'| 'andrewtralle626' | 'danaherro9565' | 'musicwithmrs.kincaid2151' | 'soaringscarvesacademy2871';

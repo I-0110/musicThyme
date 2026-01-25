@@ -1,4 +1,4 @@
-import { Articulation, Tempo, Mood, Moves, Dynamics, Pitch, Time, LessonCategory, CharacterId, YtChannels, TpT } from '@/app/lib/cota/types';
+import { Articulation, Tempo, Mood, Moves, Dynamics, Pitch, Time, LessonCategory, CharacterId, YtChannels, TpT, SS } from '@/app/lib/cota/types';
 import { InstrumentFamily, Instruments } from '../instrument-type';
 
 export interface VideoSource {
@@ -66,7 +66,7 @@ export interface Details {
     moves: Moves[]; // Use this for Overview Card: 4
 }
 
-export interface Instrumentation { // Use this for Content Card: 2
+export interface Instrumentation {
     characterId: CharacterId;
     mainFamily: InstrumentFamily[]; 
     instruments: Instruments[];
@@ -106,6 +106,16 @@ export interface LessonPlan {
     parachuteVideo?: VideoSource;
     parachuteImage?: string[];
     credits?: Credits;
+}
+
+export interface EasyGame {
+    id: CharacterId;
+    instruments: {
+        name: Instruments,
+        family: InstrumentFamily,
+        letters: readonly string[],
+    }[]; 
+    letter: SS;
 }
 
 export interface QuizOption {
