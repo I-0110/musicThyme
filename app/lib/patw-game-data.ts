@@ -13,10 +13,10 @@ export const characterData: Record<Characters, {
     bird: {
         name: 'Bird',
         correctInstr: 'fl',
-        correctMemeUrl: '/images/bird-yay.gif',
+        correctMemeUrl: '/patw/charImages/bird-yay.gif',
         audioUrl: '/patw/audio/BIRD.mp3',
         imageUrl: '/patw/charImages/bird.png',
-        incorrectMemeUrl: '/images/bird-meme.gif'
+        incorrectMemeUrl: '/patw/charImages/birdno.gif'
     },
     cat: {
         name: 'Cat',

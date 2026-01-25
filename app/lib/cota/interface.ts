@@ -111,7 +111,7 @@ export interface LessonPlan {
 export interface EasyGame {
     id: CharacterId;
     instruments: {
-        name: Instruments,
+        instr: string,
         family: InstrumentFamily,
         letters: readonly string[],
     }[]; 
