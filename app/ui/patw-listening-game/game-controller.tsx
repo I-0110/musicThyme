@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import PatwListenForm from './listen-form';
 import { Characters, Instruments, characterData } from '@/app/lib/patw-game-data';
-import Image from 'next/image';
+// import Image from 'next/image';
 
 export default function GameController() {
     // All characters in order
@@ -82,7 +82,7 @@ export default function GameController() {
                                     <h2 className='text-3xl font-bold text-green-700 mb-4'>
                                         Yippie Hurray! 🎉
                                     </h2>
-                                    {character.correctMemeUrl && (
+                                    {/* {character.correctMemeUrl && (
                                         <Image 
                                             className="w-64 h-64 mx-auto mb-4 object-contain"
                                             src={character.correctMemeUrl}
@@ -91,14 +91,14 @@ export default function GameController() {
                                             height={256}
                                             priority
                                         />   
-                                    )}
+                                    )} */}
                                 </>
                             ) : (
                                 <>
                                     <h2 className='text-3xl font-bold text-red-700 mb-4'>
                                         Oops! Try Again 😅
                                     </h2>
-                                    {character.incorrectMemeUrl && (
+                                    {/* {character.incorrectMemeUrl && (
                                         <Image 
                                             className="w-64 h-64 mx-auto mb-4 object-contain"
                                             src={character.incorrectMemeUrl}
@@ -108,7 +108,7 @@ export default function GameController() {
                                             priority
                                             unoptimized
                                         />   
-                                    )}
+                                    )} */}
                                     <p className='text-lg text-red-800'>
                                         Try again! Listen carefully to the theme.
                                     </p>

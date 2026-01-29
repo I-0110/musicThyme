@@ -86,10 +86,10 @@ export default function PatwListenForm({
     ]
 
   return (
-    <div className="w-full h-full flex items-center justify-center">
-        <form onSubmit={handleSubmit} className='w-full'>
+    <div className="w-full h-full flex flex-col items-center justify-center p-4">
+        <form onSubmit={handleSubmit} className='w-full h-full max-w-4xl'>
         {/* Desktop: 3x3 Grid */}
-        <div className="hidden md:grid md:grid-cols-3 gap-4 max-w-2xl mx-auto">
+        <div className="hidden md:grid md:grid-cols-3 md:grid-rows-3 gap-2 w-full h-full max-h-auto">
           {gridItems.map((item, index) => (
             <div key={index} className="w-full">
               {item.type === 'audio' && (
