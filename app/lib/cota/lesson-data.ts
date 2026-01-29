@@ -7,6 +7,11 @@ export const characterLesson: LessonPlan[] = [
         video: {
             youtube: 'mbh8MLwt5tY?si=zpuEppeAdqLMPy2r'
         },
+        videoCat2: ['listen', 'UP Percussion','move'],
+        videoNotes2: 'End of video have some ideas to follow with activity.',
+        video2: {
+            youtube: '3C5ko4EFbPg?si=waHRAsNl8hLU-ea3'
+        },
         activities: {
         activityCat1: ['move'],
         activity1: 
