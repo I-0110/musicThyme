@@ -1,0 +1,25 @@
+// Data structure types for Map and Quiz
+export type PlanetId = 'mars' | 'venus' | 'mercury' | 'jupiter' | 'saturn' | 'uranus' | 'neptune';
+
+export type Articulation = 'smooth = legato' | 'bumpy = staccato';
+
+export type Dynamics = 'soft = piano' | 'medium-soft = mezzo-piano' | 'medium-loud = mezzo-forte' | 'loud = forte' | 'soft to loud = crescendo' | 'loud to soft = descrecendo';
+
+export type Pitch = 'high pitch sound' | 'low pitch sound';
+
+export type Tempo = 'very slow = largo' | 'slow = andante' | 'moderate = moderato' | 'fast = allegro' | 'very fast = presto' | 'increasing speed = accelerando';
+
+export type Time = 'steady = 4/4'| 'waltz = 3/4' | 'march = 2/4' | 'irregular = 5/4' | "compound = 6/8";
+
+export type Mood = 'majestic' | 'playful' | 'elegant' | 'heavy' | 'mysterious' | 'delicate' | 'humorius' | 'graceful' | 'clumsy' | 'energetic';
+
+export type Moves = 'walk' | 'hop' | 'stomp' | 'swim' | 'tip-toe' | 'crawl' | 'jog' | 'gallop' | 'march' | 'creep';
+
+// Last clue for easy game: Gustav Holst
+export type GH = 'G' | 'U' | 'S' | 'T' | 'A' | 'V' | 'H' | 'O' | 'L' | 'S' | 'T';
+
+export type LessonCategory = 'rhythm' | 'body percussion' | 'move' | 'play' | 'create' | 'UP Percussion' | 'boomwhackers' | 'circle activity' | 'game' | 'small group' | 'watch' | 'listen' | 'recorders' | 'xylophones' | 'Pitched Percussion' | 'parachute';
+
+export type YtChannels = 'RondeauMusic' | 'Musicplayonline' | 'MrGsBoomwhackerChannel' | 'newnewchannel' | 'lenaleon-thecrafterteacher' | 'ssousc' | 'jpiano1144' | 'emilychurch1322' | 'MsMusic-ju9gz' | 'musicteaching7288' | 'amanda_hooper77' | 'pcimini1991' | 'alpacapellaeducacionmusica3125' | 'MHmusicroom' | 'Dolcejj80' | 'Notenjonglina' | 'braunream7411' | 'juliafabrizio9276' | 'SymphonicSounds-rm8qm' | 'RachelHahn'| 'andrewtralle626' | 'danaherro9565' | 'musicwithmrs.kincaid2151' | 'soaringscarvesacademy2871';
+
+export type TpT = 'mr-g-music-tech' | 'lena-leon-the-crafter-teacher';

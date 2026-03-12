@@ -39,6 +39,10 @@ export default function Nav() {
           href: '/cota',
           label: 'The Carnival of the Animals'
         },
+        {
+          href: '/planets',
+          label: 'The Planets'
+        },
     ]
 
     return (
@@ -48,7 +52,7 @@ export default function Nav() {
           {/* Mobile hamburger - left side */}
           <button
             onClick={() => setOpen(!open)}
-            className="lg:hidden p-2 text-thyme-200 hover:text-thyme-100"
+            className="lg:hidden p-2 text-thyme-150 hover:text-thyme-100"
             aria-label="Toggle menu"
           >
             {open ? (
@@ -73,7 +77,7 @@ export default function Nav() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-thyme-200 hover:text-thyme-100 font-medium transition-colors"
+                  className="text-thyme-150 hover:text-thyme-100 font-medium transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -108,7 +112,7 @@ export default function Nav() {
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="block px-3 py-3 text-thyme-200 hover:bg-thyme-300 hover:text-thyme-100 rounded-md font-medium transition-colors"
+              className="block px-3 py-3 text-thyme-150 hover:bg-thyme-300 hover:text-thyme-100 rounded-md font-medium transition-colors"
             >
               {link.label}
             </Link>

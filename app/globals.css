@@ -13,6 +13,7 @@
   --color-music-500: #1a1410; /* light mode text, dark mode background */
   
   --color-thyme-100: #dad7cd; /* lightmode bg, darkmode text*/
+  --color-thyme-150: #d1d5c3; /* ligher text color on navbar */
   --color-thyme-200: #a3b18a; /* primary brand color (header, links) */
   --color-thyme-300: #588157; /* accent colors (buttons, highlights, hover) */
   --color-thyme-400: #3a5a40; /* borders, subtle dividers, disable states */
@@ -28,6 +29,14 @@
   --color-carnival-blue: #5ba3c4; /* sky blue - for variety */
   --color-carnival-yellow: #ffd166; /* bright yellow - celebrations */
   --color-carnival-pink: #d95980; /* pink stripe - playful accent */
+
+  /* The Planets Color Palette */
+  --color-planet-deep: #0c134fff;
+  --color-planet-cobalt: #1d267dff;
+  --color-planet-grape: #5c469cff;
+  --color-planet-teal: #0b666aff;
+  --color-planet-sea-green: #35a29fff;
+  --color-planet-cyan: #97feedff;
 }
 
 @media (prefers-color-scheme: dark) {
