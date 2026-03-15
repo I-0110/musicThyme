@@ -13,7 +13,7 @@ export const planetMvt: Planet[] = [
         planetName: 'Mars',
         orderNumber: 1,
         youtube: 'fdwwzn3X6hE?si=5NN806mikXMKasTN',
-        imageUrl: '/cota/images/lion.jpg'
+        imageUrl: '/planets/mars.png'
     },
     {
         id: 'venus',
@@ -21,7 +21,7 @@ export const planetMvt: Planet[] = [
         planetName: 'Venus',
         orderNumber: 2,
         youtube: '-Ptd3_LusE8?si=muta6njEgdZ3Ulzy',
-        imageUrl: '/cota/images/lion.jpg'
+        imageUrl: '/planets/venus.png'
     },
     {
         id: 'mercury',
@@ -29,7 +29,7 @@ export const planetMvt: Planet[] = [
         planetName: 'Mercury',
         orderNumber: 3,
         youtube: '8ykZKsrs8LM?si=O0q0T9hiaWyLAEq4',
-        imageUrl: '/cota/images/lion.jpg'
+        imageUrl: '/planets/mercury.png'
     },
     {
         id: 'jupiter',
@@ -37,7 +37,7 @@ export const planetMvt: Planet[] = [
         planetName: 'Jupiter',
         orderNumber: 4,
         youtube: '-C1nC0NHnbo?si=tFyQOlir5ijM8N2_',
-        imageUrl: '/cota/images/lion.jpg'
+        imageUrl: '/planets/jupiter.png'
     },
     {
         id: 'saturn',
@@ -45,7 +45,7 @@ export const planetMvt: Planet[] = [
         planetName: 'Saturn',
         orderNumber: 5,
         youtube: 'e2CQlJe4rwc?si=CoeLvafZtDbKvKUX',
-        imageUrl: '/cota/images/lion.jpg'
+        imageUrl: '/planets/saturn.png'
     },
     {
         id: 'uranus',
@@ -53,7 +53,7 @@ export const planetMvt: Planet[] = [
         planetName: 'Uranus',
         orderNumber: 6,
         youtube: 'yTSQm3aJbP8?si=KJb1u-0_gsBF63dB',
-        imageUrl: '/cota/images/lion.jpg'
+        imageUrl: '/planets/uranus.png'
     },
     {
         id: 'neptune',
@@ -61,6 +61,6 @@ export const planetMvt: Planet[] = [
         planetName: 'Neptune',
         orderNumber: 7,
         youtube: 'PBhYlmIbbfw?si=oZ0NIFMMUZmMdhuv',
-        imageUrl: '/cota/images/lion.jpg'
+        imageUrl: '/planets/neptune.png'
     },
 ];

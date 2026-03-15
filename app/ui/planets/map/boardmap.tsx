@@ -91,38 +91,39 @@ export default function BoardMap({ planets }: BoardMapProps) {
             </button>
 
             {/* Header */}
-            <div className='text-center pr-6'>
+            <div className='text-center justify-center pr-6'>
               <h2 className='text-xl font-bold'>{selected.planetName}</h2>
               <p className='text-xs text-white/70 mt-0'>{selected.title}</p>
-            </div>
-
-            {/* Video — full width of panel */}
-            {selected.youtube && (
-              <div className='relative w-full aspect-video'>
-                <iframe
-                  src={`https://www.youtube.com/embed/${selected.youtube}`}
-                  title='YouTube video player'
-                  allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-                  referrerPolicy='strict-origin-when-cross-origin'
-                  allowFullScreen
-                  className='absolute inset-0 w-full h-full rounded-2xl'
-                />
-              </div>
-            )}
-
-            {/* Footer action */}
-            <div className='flex justify-end pb-0'>
               <Link
-                href={`/cota/interactive-map/${selected.id}/overview`}
-                className='flex items-center gap-1.5 text-planet-cyan hover:text-white text-sm font-semibold transition-colors'
+                href={`/planet/interactive-map/${selected.id}/overview`}
+                className='text-planet-cyan hover:text-white inline-flex items-center gap-1 text-sm font-semibold transition-colors'
                 onClick={() =>
-                  console.log('Character ID:', selected.id, 'Full URL:', `/cota/interactive-map/${selected.id}/activities`)
+                  console.log('Planet ID:', selected.id, 'Full URL:', `/planet/interactive-map/${selected.id}/activities`)
                 }
               >
                 Explore {selected.planetName}
                 <ArrowRightIcon className='w-4 h-4' />
               </Link>
             </div>
+
+            {/* Video — full width of panel */}
+            {selected.youtube && (
+              <div className='hidden sm:block w-full'>
+                <div className='relative w-full aspect-video'>
+                  <iframe 
+                    src={`https://www.youtube.com/embed/${selected.youtube}`}
+                    title="YouTube video player" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerPolicy="strict-origin-when-cross-origin" 
+                    allowFullScreen
+                    className='absolute w-full h-full rounded-2xl'
+                  />
+                </div>
+              </div>
+            )}
+
+            {/* Footer action */}
+            
 
           </div>
         )}

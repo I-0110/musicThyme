@@ -1,19 +1,11 @@
 // Data structure types for Map and Quiz
 export type PlanetId = 'mars' | 'venus' | 'mercury' | 'jupiter' | 'saturn' | 'uranus' | 'neptune';
 
-export type Articulation = 'smooth = legato' | 'bumpy = staccato';
+export type Meter = 'steady = 4/4'| 'waltz = 3/4' | 'march = 2/4' | 'irregular = 5/4' | "compound = 6/8" | "compound = 6/4"; // Consider to change title to TIME SIGNATURE!!
 
-export type Dynamics = 'soft = piano' | 'medium-soft = mezzo-piano' | 'medium-loud = mezzo-forte' | 'loud = forte' | 'soft to loud = crescendo' | 'loud to soft = descrecendo';
+export type Tempo = 'very slow = largo' | 'slowy = lento' | 'at ease = adagio' | 'slow = andante' | 'walking speed = andante' | 'moderate = moderato' | 'fast = allegro' | 'lively = vivace' | 'very fast = presto' | 'increasing speed = accelerando';
 
-export type Pitch = 'high pitch sound' | 'low pitch sound';
-
-export type Tempo = 'very slow = largo' | 'slow = andante' | 'moderate = moderato' | 'fast = allegro' | 'very fast = presto' | 'increasing speed = accelerando';
-
-export type Time = 'steady = 4/4'| 'waltz = 3/4' | 'march = 2/4' | 'irregular = 5/4' | "compound = 6/8";
-
-export type Mood = 'majestic' | 'playful' | 'elegant' | 'heavy' | 'mysterious' | 'delicate' | 'humorius' | 'graceful' | 'clumsy' | 'energetic';
-
-export type Moves = 'walk' | 'hop' | 'stomp' | 'swim' | 'tip-toe' | 'crawl' | 'jog' | 'gallop' | 'march' | 'creep';
+export type Dynamics = 'very soft = pianissimo' | 'soft = piano' | 'medium-soft = mezzo-piano' | 'medium-loud = mezzo-forte' | 'loud = forte' | 'very loud = fortissimo' | 'soft to loud = crescendo' | 'loud to soft = descrecendo';
 
 // Last clue for easy game: Gustav Holst
 export type GH = 'G' | 'U' | 'S' | 'T' | 'A' | 'V' | 'H' | 'O' | 'L' | 'S' | 'T';

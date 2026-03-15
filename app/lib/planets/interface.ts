@@ -1,4 +1,6 @@
 import { PlanetId, LessonCategory, YtChannels, TpT } from "./types";
+import { Meter, Tempo, Dynamics } from "./types";
+import { Instruments, InstrumentFamily } from "../instrument-type";
 
 export interface Planet {
     id: PlanetId;
@@ -16,6 +18,16 @@ export interface Planet {
 export interface PlanetSection {
     slug: string;
     title: string;
+}
+
+export interface Details {
+    // Correct answers and details for each character
+    planetId: PlanetId; 
+    meter: Meter[];
+    tempo: Tempo[]; 
+    dynamics: Dynamics[];
+    instrumentsFamily: InstrumentFamily[];
+    instruments: Instruments[];
 }
 
 export interface Activities {

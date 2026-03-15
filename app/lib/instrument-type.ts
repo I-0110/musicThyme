@@ -1,8 +1,8 @@
 // Type that applies for PatW and CotA projects
 
-export type InstrumentFamily = 'strings' | 'woodwinds' | 'brass' | 'percussion' | 'keyboard';
+export type InstrumentFamily = 'full orchestra' | 'strings' | 'woodwinds' | 'brass' | 'percussion' | 'keyboard' | 'choir';
 
-export type Instruments = 'piccolo' | 'piano' | 'double bass' | 'cello' | 'violin' | 'viola' | 'clarinet' | 'flute' | 'glockenspiel' | 'xylophone' | 'glass harmonica' | 'oboe' | 'bassoon' | 'french horn' | 'trumpet' | 'timpani' | 'string family' | 'oboe, trumpet and timpani';
+export type Instruments = 'piccolo' | 'flute' | 'alto flute' | 'oboe' | 'bass oboe' | 'english horn' | 'clarinet' | 'clarinet in Bb' | 'clarinet in A' | 'bass clarinet' | 'bassoon' | 'contra-bassoon' | 'french horn' | 'trumpet' | 'trumpet in C'| 'trumpet in Bb' | 'trombone' | 'tenor trombone' | 'bass trombone' | 'euphonium (tenor tuba)' | 'tuba' | 'bass tuba' | 'cello' | 'violin' | 'viola' |'cello' | 'double bass' | 'piano' | 'harp' | 'organ' | 'female choir' |  'glockenspiel' | 'xylophone' | 'glass harmonica' | 'triangle' | 'tambourine' | 'side drum' | 'bass drum' | 'gong' | 'bells' | 'celesta' |'cymbals' | 'timpani' | 'string family' | 'oboe, trumpet and timpani';
 
 // Define individual instrument letter arrays
 export const FLUTE_LETTERS = ["F", "L", "U", "T", "E"] as const;

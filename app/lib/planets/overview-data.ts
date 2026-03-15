@@ -1,0 +1,68 @@
+import { Details } from '@/app/lib/planets/interface';
+
+export const planetDetails: Details[] = [
+    {
+        planetId: 'mars',
+        meter: ['irregular = 5/4'], 
+        tempo: ['fast = allegro'], 
+        dynamics: [ 'soft = piano' ,'soft to loud = crescendo', 'loud = forte'],
+        instrumentsFamily: ['full orchestra' ],
+        instruments: ['piccolo', 'flute', 'oboe', 'english horn', 'bass oboe', 'clarinet', 'bassoon', 'contra-bassoon', 'french horn', 'trumpet', 'tenor trombone', 'bass trombone', 'euphonium (tenor tuba)', 'bass tuba', 'timpani', 'side drum', 'cymbals', 'bass drum', 'gong', 'harp', 'organ', 'violin', 'viola', 'cello', 'double bass' ],
+    },
+    {
+        planetId: 'venus',
+        meter: ['steady = 4/4'], 
+        tempo: ['at ease = adagio'], 
+        dynamics: [ 'soft = piano' ],
+        instrumentsFamily: ['strings', 'woodwinds', 'percussion', 'keyboard'],
+        instruments: ['flute', 'oboe', 'english horn', 'clarinet', 'bass clarinet', 'bassoon', 'contra-bassoon', 'french horn', 'glockenspiel', 'celesta', 'harp', 'violin', 'viola', 'cello', 'double bass' ],
+    },
+    {
+        planetId: 'mercury',
+        meter: ['compound = 6/8'], 
+        tempo: ['lively = vivace'], 
+        dynamics: [ 'soft = piano' ],
+        instrumentsFamily: ['strings', 'woodwinds', 'percussion', 'keyboard'],
+        instruments: ['piccolo', 'flute', 'oboe', 'english horn', 'bass oboe', 'clarinet in A', 'clarinet in Bb', 'bass clarinet', 'bassoon', 'contra-bassoon', 'french horn', 'trumpet in C', 'timpani', 'glockenspiel', 'celesta', 'harp', 'violin', 'viola', 'cello', 'double bass' ],
+    },
+    {
+        planetId: 'jupiter',
+        meter: ['march = 2/4'], 
+        tempo: ['fast = allegro'], 
+        dynamics: [ 'loud = forte' ],
+        instrumentsFamily: ['full orchestra'],
+        instruments: ['piccolo', 'flute', 'oboe', 'english horn', 'clarinet in Bb', 'bass clarinet', 'bassoon', 'contra-bassoon', 'french horn', 'trumpet in C', 'tenor trombone', 'bass trombone', 'euphonium (tenor tuba)', 'bass tuba', 'timpani', 'triangle', 'tambourine', 'cymbals', 'bass drum', 'glockenspiel', 'harp', 'violin', 'viola', 'cello', 'double bass' ],
+    },
+    {
+        planetId: 'jupiter',
+        meter: ['march = 2/4', 'waltz = 3/4'], 
+        tempo: ['fast = allegro', 'walking speed = andante'], 
+        dynamics: [ 'loud = forte', 'soft = piano' ],
+        instrumentsFamily: ['full orchestra'],
+        instruments: ['piccolo', 'flute', 'oboe', 'english horn', 'clarinet in Bb', 'bass clarinet', 'bassoon', 'contra-bassoon', 'french horn', 'trumpet in C', 'tenor trombone', 'bass trombone', 'euphonium (tenor tuba)', 'bass tuba', 'timpani', 'triangle', 'tambourine', 'cymbals', 'bass drum', 'glockenspiel', 'harp', 'violin', 'viola', 'cello', 'double bass' ],
+    },
+    {
+        planetId: 'saturn',
+        meter: ['march = 2/4', 'waltz = 3/4'], 
+        tempo: ['at ease = adagio', 'walking speed = andante'], 
+        dynamics: [ 'soft = piano', 'very loud = fortissimo' ],
+        instrumentsFamily: ['full orchestra'],
+        instruments: ['flute', 'alto flute', 'oboe', 'english horn', 'clarinet in Bb', 'bass clarinet', 'bassoon', 'contra-bassoon', 'french horn', 'trumpet in C', 'tenor trombone', 'bass trombone', 'tuba', 'timpani', 'bells', 'harp', 'organ', 'violin', 'viola', 'cello', 'double bass' ],
+    },
+    {
+        planetId: 'uranus',
+        meter: ['compound = 6/4'], 
+        tempo: ['fast = allegro', 'slowy = lento', 'fast = allegro', 'very slow = largo'], 
+        dynamics: [ 'very soft = pianissimo', 'medium-loud = mezzo-forte', 'loud = forte', 'very loud = fortissimo' ],
+        instrumentsFamily: ['full orchestra'],
+        instruments: ['piccolo', 'flute', 'alto flute', 'oboe', 'english horn', 'bass oboe', 'clarinet in Bb', 'bass clarinet', 'bassoon', 'contra-bassoon', 'french horn', 'trumpet in C', 'tenor trombone', 'bass trombone', 'euphonium (tenor tuba)', 'bass tuba', 'timpani', 'xylophone', 'harp', 'organ', 'violin', 'viola', 'cello', 'double bass' ],
+    },
+    {
+        planetId: 'neptune',
+        meter: ['irregular = 5/4'], 
+        tempo: ['walking speed = andante'], 
+        dynamics: [ 'very soft = pianissimo' ],
+        instrumentsFamily: ['full orchestra', 'choir'],
+        instruments: ['piccolo', 'flute', 'alto flute', 'oboe', 'english horn', 'bass oboe', 'clarinet in A', 'bass clarinet', 'bassoon', 'contra-bassoon', 'french horn', 'trumpet in C', 'trombone', 'timpani', 'celesta', 'harp', 'organ', 'female choir', 'violin', 'viola', 'cello', 'double bass' ],
+    },
+]
