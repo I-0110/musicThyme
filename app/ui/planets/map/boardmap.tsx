@@ -95,10 +95,10 @@ export default function BoardMap({ planets }: BoardMapProps) {
               <h2 className='text-xl font-bold'>{selected.planetName}</h2>
               <p className='text-xs text-white/70 mt-0'>{selected.title}</p>
               <Link
-                href={`/planet/interactive-map/${selected.id}/overview`}
+                href={`/planets/interactive-map/${selected.id}/overview`}
                 className='text-planet-cyan hover:text-white inline-flex items-center gap-1 text-sm font-semibold transition-colors'
                 onClick={() =>
-                  console.log('Planet ID:', selected.id, 'Full URL:', `/planet/interactive-map/${selected.id}/activities`)
+                  console.log('Planet ID:', selected.id, 'Full URL:', `/planets/interactive-map/${selected.id}/activities`)
                 }
               >
                 Explore {selected.planetName}
@@ -121,10 +121,6 @@ export default function BoardMap({ planets }: BoardMapProps) {
                 </div>
               </div>
             )}
-
-            {/* Footer action */}
-            
-
           </div>
         )}
       </div>

@@ -4,15 +4,15 @@ import { Instruments, InstrumentFamily } from "../instrument-type";
 
 export interface Planet {
     id: PlanetId;
-    title: string; // Use this for Overview Card: 1
-    planetName: string; // Use this for Overview Card: 1
-    orderNumber: number; // Use this for Overview Card: 1
-
+    title: string; 
+    planetName: string; 
+    orderNumber: number; 
     // Video sources
-    youtube?: string; // Use this for Overview Card: 2
+    youtube?: string; 
+    fullMvt?: string;
 
     // Character Image
-    imageUrl?: string; // Use this for Overview Card: 1
+    imageUrl?: string; 
 }
 
 export interface PlanetSection {
@@ -42,6 +42,26 @@ export interface Vocabulary { // Use this for Vocabulary Section
     term: string;
     definition: string;
     example: string;
+}
+
+export interface LessonPlan {
+    // Teacher content
+    planetId: PlanetId;
+    videoCat: LessonCategory[]; 
+    video: string; 
+    videoNotes?: string;
+    videoCat2?: LessonCategory[];
+    video2?: string; 
+    videoNotes2?: string;
+    videoCat3?: LessonCategory[];
+    video3?: string; 
+    videoNotes3?: string;
+    activities?: Activities;
+    coloring?: string;
+    parachute?: string;
+    parachuteVideo?: string;
+    parachuteImage?: string[];
+    credits?: Credits;
 }
 
 export interface Credits {

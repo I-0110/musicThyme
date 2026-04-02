@@ -12,6 +12,6 @@ export type GH = 'G' | 'U' | 'S' | 'T' | 'A' | 'V' | 'H' | 'O' | 'L' | 'S' | 'T'
 
 export type LessonCategory = 'rhythm' | 'body percussion' | 'move' | 'play' | 'create' | 'UP Percussion' | 'boomwhackers' | 'circle activity' | 'game' | 'small group' | 'watch' | 'listen' | 'recorders' | 'xylophones' | 'Pitched Percussion' | 'parachute';
 
-export type YtChannels = 'RondeauMusic' | 'Musicplayonline' | 'MrGsBoomwhackerChannel' | 'newnewchannel' | 'lenaleon-thecrafterteacher' | 'ssousc' | 'jpiano1144' | 'emilychurch1322' | 'MsMusic-ju9gz' | 'musicteaching7288' | 'amanda_hooper77' | 'pcimini1991' | 'alpacapellaeducacionmusica3125' | 'MHmusicroom' | 'Dolcejj80' | 'Notenjonglina' | 'braunream7411' | 'juliafabrizio9276' | 'SymphonicSounds-rm8qm' | 'RachelHahn'| 'andrewtralle626' | 'danaherro9565' | 'musicwithmrs.kincaid2151' | 'soaringscarvesacademy2871';
+export type YtChannels = 'BBC' | 'mrsimusic' | 'musicandmotivate1128';
 
 export type TpT = 'mr-g-music-tech' | 'lena-leon-the-crafter-teacher';
