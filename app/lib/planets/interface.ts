@@ -56,6 +56,9 @@ export interface LessonPlan {
     videoCat3?: LessonCategory[];
     video3?: string; 
     videoNotes3?: string;
+    videoCat4?: LessonCategory[];
+    video4?: string;
+    videoNotes4?: string;
     activities?: Activities;
     coloring?: string;
     parachute?: string;

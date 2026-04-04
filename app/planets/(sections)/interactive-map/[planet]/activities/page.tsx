@@ -60,7 +60,7 @@ export default async function Page({
                 {lesson?.video && (
                     <div className='card'>
                         <div className='card_content bg-planet-teal/65 dark:bg-planet-sea-green-200/65 border-planet-cobalt rounded-xl shadow-lg border-2 p-6'>
-                            <h2 className="text-2xl font-bold text-white mb-4 text-center">Watch full movement:</h2>
+                            <h2 className="text-2xl font-bold text-white mb-4 text-center">Watch Summary:</h2>
                                 <div className='relative w-full aspect-video'>
                                     <iframe 
                                         src={`https://www.youtube.com/embed/${lesson.video}`}
@@ -159,6 +159,42 @@ export default async function Page({
                                     <div className="rounded-lg mt-4 hover:bg-planet-grape">
                                         <h3 className="font-semibold">Notes:</h3>
                                         <p>{lesson?.videoNotes3}</p>
+                                    </div>
+                                )}
+                        </div>
+                    </div>
+                )}
+
+                {/* Video 4? */}
+                {lesson?.video4 && (
+                    <div className='card w-full max-w-4xl'>
+                        <div className='card_content bg-planet-teal/65 dark:bg-planet-sea-green-200/65 border-planet-cobalt rounded-xl shadow-lg border-2 p-6'>
+                            <h2 className="text-2xl font-bold text-white mb-4 text-center">Video Activity</h2>
+                                <div className='relative w-full aspect-video'>
+                                    <iframe 
+                                        src={`https://www.youtube.com/embed/${lesson.video4}`}
+                                        title={`${lesson.planetId} - YouTube video player`}
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                        referrerPolicy="strict-origin-when-cross-origin" 
+                                        allowFullScreen
+                                        className='absolute top-0 left-0 w-full h-full rounded-lg'
+                                    />
+                                </div>
+                                <p className="text-white">Categories:</p>
+                                <p className="italic text-white">
+                                {lesson?.videoCat4?.length === 1
+                                    ? lesson.videoCat4[0].charAt(0).toUpperCase() + 
+                                    lesson.videoCat4[0].slice(1)
+                                    : lesson?.videoCat4
+                                        ?.map(cat => cat.charAt(0).toUpperCase() + cat.slice(1))
+                                        .join(', ')
+                                        .replace(/,([^,]*)$/, ' and$1') // Replace last comma with ' and'
+                                }
+                                </p>
+                                {lesson?.videoNotes4 && ( 
+                                    <div className="rounded-lg mt-4 hover:bg-planet-grape">
+                                        <h3 className="font-semibold">Notes:</h3>
+                                        <p>{lesson?.videoNotes4}</p>
                                     </div>
                                 )}
                         </div>
