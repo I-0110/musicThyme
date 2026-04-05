@@ -14,6 +14,7 @@ export default function Page() {
                     <p className={`${teachers.className} text-xl text-white md:text-xl md:leading-normal`}>
                         <strong>The Planets</strong>
                     </p>
+                    <p className='block sm:hidden text-sm italic'>(Click the image of the planet to explore more)</p>
                 </div>
             </div>
             <div>

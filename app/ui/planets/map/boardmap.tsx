@@ -48,6 +48,12 @@ export default function BoardMap({ planets }: BoardMapProps) {
               {/* Planet Image */}
               {planet.imageUrl && (
                 <div className='relative w-full h-12 mb-1'>
+                  {/* On Mobile, the image will need to be click to access more info. */}
+                  <Link 
+                    href={`/planets/interactive-map/${planet.id}/overview`}
+                    className='block sm:hidden absolute inset-0 z-10'
+                    aria-label={`Explore ${planet.planetName}`}
+                  />
                   <Image
                     src={planet.imageUrl}
                     alt={planet.planetName}
