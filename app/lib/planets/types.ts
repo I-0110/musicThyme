@@ -10,7 +10,7 @@ export type Dynamics = 'very soft = pianissimo' | 'soft = piano' | 'medium-soft 
 // Last clue for easy game: Gustav Holst
 export type GH = 'G' | 'U' | 'S' | 'T' | 'A' | 'V' | 'H' | 'O' | 'L' | 'S' | 'T';
 
-export type LessonCategory = 'rhythm' | 'body percussion' | 'move' | 'play' | 'create' | 'UP Percussion' | 'boomwhackers' | 'circle activity' | 'game' | 'small group' | 'watch' | 'listen' | 'Listen and Compare' | 'Learn about the Instrument' | 'interview' |'recorders' | 'xylophones' | 'Pitched Percussion' | 'parachute' ;
+export type LessonCategory = 'rhythm' | 'body percussion' | 'move' | 'play' | 'create' | 'UP Percussion' | 'boomwhackers' | 'circle activity' | 'game' | 'small group' | 'watch' | 'listen' | 'Listen and Compare' | 'Learn about the Instrument' | 'interview' | 'music Theory' |'recorders' | 'xylophones' | 'Pitched Percussion' | 'parachute' ;
 
 export type YtChannels = 'BBC' | 'mrsimusic' | 'musicandmotivate1128';
 

@@ -49,7 +49,7 @@ export const planetMvt: Planet[] = [
         planetName: 'Saturn',
         orderNumber: 5,
         youtube: 'e2CQlJe4rwc?si=CoeLvafZtDbKvKUX',
-        fullMvt: 'cXOanvv4plU?si=r4yJhtY1E9Emp6pC',
+        fullMvt: 'OYPg8H5LtCI?si=T06MtUYPD_3MvtMN',
         imageUrl: '/planets/saturn.png'
     },
     {
@@ -58,7 +58,7 @@ export const planetMvt: Planet[] = [
         planetName: 'Uranus',
         orderNumber: 6,
         youtube: 'yTSQm3aJbP8?si=KJb1u-0_gsBF63dB',
-        fullMvt: 'cXOanvv4plU?si=r4yJhtY1E9Emp6pC',
+        fullMvt: 'fUyVFKA1MaU?si=wpLyO0w65aJnhZW-',
         imageUrl: '/planets/uranus.png'
     },
     {
@@ -67,7 +67,7 @@ export const planetMvt: Planet[] = [
         planetName: 'Neptune',
         orderNumber: 7,
         youtube: 'PBhYlmIbbfw?si=oZ0NIFMMUZmMdhuv',
-        fullMvt: 'cXOanvv4plU?si=r4yJhtY1E9Emp6pC',
+        fullMvt: 'oFMXNUHuWug?si=YLpRjHfXgla0WGE6',
         imageUrl: '/planets/neptune.png'
     },
 ];

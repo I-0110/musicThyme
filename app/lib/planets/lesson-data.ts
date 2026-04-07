@@ -9,6 +9,9 @@ export const planetLesson: LessonPlan[] = [
         video2: 'jdUTBFUwmyQ?si=3DJzvXIFaLOqYsZ-',
         videoCat3: ['play', 'UP Percussion'],
         video3: 'nvZfd24JFhY?si=YKP7DKvTq6TbO8vG',
+        videoCat4:['listen'],
+        video4: '4eDTFty76Ls?si=Y2joqV48ee-QqHLa',
+        videoNotes4: 'Timpani Orchestra Excerpts from Mars',
         credits: {
             videoCreatedBy: ['BBC', 'mrsimusic', 'musicandmotivate1128'],
         },
@@ -27,7 +30,8 @@ export const planetLesson: LessonPlan[] = [
     {
         planetId: 'mercury',
         videoCat: ['listen'],
-        video: 'IZvo04uNQ1w?si=vkhLgQqpc4dB_8l1',
+        video: 'RkiiAloL6aE?si=NUTk-aJg-ddfZL2a',
+        videoNotes: 'Performed by The Royal Liverpool Philharmonic Orchestra and conducted by Sir Charles Mackerras.',
         videoCat2: ['move', 'body percussion'],
         video2: 'i-76U0h5srM?si=6RvdlGyPEi3PcJr1',
         credits: {
@@ -35,7 +39,7 @@ export const planetLesson: LessonPlan[] = [
         },
     },
     {
-        planetId: 'jupiter', // videos are accurate!
+        planetId: 'jupiter', 
         videoCat: ['listen'],
         video: 'qEwZQVOcLXc?si=HEh3B3ZnpJheDQ6w',
         videoCat2: ['move', 'body percussion', 'UP Percussion'],
@@ -50,6 +54,10 @@ export const planetLesson: LessonPlan[] = [
         planetId: 'saturn', 
         videoCat: ['listen'],
         video: 'aD8EcAndONs?si=FuREhJdlY7dom00H',
+        videoCat2: ['listen'],
+        video2: 'deiq1E5V3QM?si=PFiLHYF6xpVFijgR',
+        videoTheoryCat: ['music Theory'],
+        videoTheory: 'TuRRBxrEKVE?si=1dDUJmH6qtFv8uER',
         credits: {
             videoCreatedBy: ['BBC', 'mrsimusic', 'musicandmotivate1128'],
         },
@@ -57,8 +65,10 @@ export const planetLesson: LessonPlan[] = [
     {
         planetId: 'uranus', 
         videoCat: ['listen'],
-        video: 'HNs4MNH2EMI?si=SPpyYoe06Dc3WDxB', 
-        videoNotes: 'You can try to follow the changes of instruments with percussion available in the classroom',
+        video: 'OBPJ0AN0WBE?si=MTXU7jA-q4si5bUq',
+        videoCat2: ['listen', 'UP Percussion'],
+        video2: 'HNs4MNH2EMI?si=SPpyYoe06Dc3WDxB', 
+        videoNotes2: 'You can try to follow the changes of instruments with percussion available in the classroom',
         credits: {
             videoCreatedBy: ['BBC', 'mrsimusic', 'musicandmotivate1128'],
         },

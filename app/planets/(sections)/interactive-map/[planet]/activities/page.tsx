@@ -201,6 +201,42 @@ export default async function Page({
                     </div>
                 )}
 
+                {/* Music Theory? */}
+                {lesson?.videoTheory && (
+                    <div className='card w-full max-w-4xl'>
+                        <div className='card_content bg-planet-teal/65 dark:bg-planet-sea-green-200/65 border-planet-cobalt rounded-xl shadow-lg border-2 p-6'>
+                            <h2 className="text-2xl font-bold text-white mb-4 text-center">Music Theory</h2>
+                                <div className='relative w-full aspect-video'>
+                                    <iframe 
+                                        src={`https://www.youtube.com/embed/${lesson.videoTheory}`}
+                                        title={`${lesson.planetId} - YouTube video player`}
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                        referrerPolicy="strict-origin-when-cross-origin" 
+                                        allowFullScreen
+                                        className='absolute top-0 left-0 w-full h-full rounded-lg'
+                                    />
+                                </div>
+                                <p className="text-white">Categories:</p>
+                                <p className="italic text-white">
+                                {lesson?.videoTheoryCat?.length === 1
+                                    ? lesson.videoTheoryCat[0].charAt(0).toUpperCase() + 
+                                    lesson.videoTheoryCat[0].slice(1)
+                                    : lesson?.videoTheoryCat
+                                        ?.map(cat => cat.charAt(0).toUpperCase() + cat.slice(1))
+                                        .join(', ')
+                                        .replace(/,([^,]*)$/, ' and$1') // Replace last comma with ' and'
+                                }
+                                </p>
+                                {lesson?.videoTheoryNotes && ( 
+                                    <div className="rounded-lg mt-4 hover:bg-planet-grape">
+                                        <h3 className="font-semibold">Notes:</h3>
+                                        <p>{lesson?.videoTheoryNotes}</p>
+                                    </div>
+                                )}
+                        </div>
+                    </div>
+                )}
+
                 {/* Card 3: Instrument Check! */}
                 {instrument && (
                     <div className='card_content bg-planet-sea-green text-white border-planet-cobalt rounded-xl shadow-lg border-2 p-6'>
