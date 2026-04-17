@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { getPlanetById, getPlanetDetails } from '@/app/lib/planets/functions';
 import Nav from "@/app/ui/nav";
-// import Breadcrumbs from '@/app/ui/planets/map/breadcrumbs';
+import Breadcrumbs from '@/app/ui/planets/map/breadcrumbs';
 import Card from "@/app/ui/planets/map/cards";
 import Link from 'next/link';
 import Image from 'next/image';
@@ -39,11 +39,11 @@ export default async function Page({
                 </Link>
             </div>
             
-            {/* <Breadcrumbs
+            <Breadcrumbs
                 planetId={planet.id}
-                planetName={planetName}
+                planetName={planet.planetName}
                 currentSection='overview'
-            /> */}
+            />
 
             <Card planetId={planet.id} />
 

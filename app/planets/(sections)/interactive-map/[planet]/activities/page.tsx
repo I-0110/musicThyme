@@ -6,7 +6,7 @@ import {
     getPlanetLessonPlan 
 } from "@/app/lib/planets/functions";
 import Nav from "@/app/ui/nav";
-// import Breadcrumbs from '@/app/ui/planets/map/breadcrumbs';
+import Breadcrumbs from '@/app/ui/planets/map/breadcrumbs';
 import Card from "@/app/ui/planets/map/cards";
 import Link from 'next/link';
 import Image from 'next/image';
@@ -44,11 +44,11 @@ export default async function Page({
                   <XMarkIcon className='w-4 h-4' />
                 </Link>
             </div>
-            {/* <Breadcrumbs
+            <Breadcrumbs
                 planetId={planet.id}
                 planetName={planet.planetName}
                 currentSection='activities'
-            /> */}
+            />
 
             <Card planetId={planet.id} />
 

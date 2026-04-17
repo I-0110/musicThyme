@@ -23,8 +23,8 @@ export default function Card({ planetId }: Card) {
                         href={href}
                         className={`card px-4 py-2 font-medium transition-colors ${
                             isActive
-                            ? 'border-b-2 border-planet-cyan text-whihte'
-                            : 'text-white hover:text-planet-cyan'
+                            ? 'border-b-2 dark:bg-planet-cyan border-planet-grape text-planet-deep'
+                            : 'bg-planet-purple hover:text-planet-cyan'
                         }`}
                     >
                             {section.title}

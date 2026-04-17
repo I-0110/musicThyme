@@ -1,4 +1,4 @@
-import GameLoader from '@/app/ui/games/arcade/GameLoader';
+import GameLoader from '@/app/ui/games/GameLoader';
 
 export const metadata = {
     title: 'Chase the Orchestra! on Music Thyme',
