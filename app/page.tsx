@@ -21,6 +21,12 @@ export default function Home() {
             >
               <span>Log in</span> <ArrowRightIcon className="w-5 md:w-6" />
             </Link>
+            <Link
+            href="/signup"
+            className="flex items-center gap-5 self-start rounded-lg bg-thyme-400 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-thyme-300 md:text-base"
+            >
+              <span>Sign up</span> <ArrowRightIcon className="w-5 md:w-6" />
+            </Link>
           </div>
           <div className="flex justify-center">
             {/* Add Hero Videos Here */}

@@ -5,11 +5,13 @@ import Link from 'next/link';
 import { 
   Bars3Icon, 
   XMarkIcon, 
+  PowerIcon,
   // MagnifyingGlassIcon, 
   // UserIcon, 
   // PencilSquareIcon 
 } from '@heroicons/react/24/outline';
 import MusicLogo from './music-logo';
+import { signOut } from 'next-auth/react';
 
 export default function Nav() {
     const [open, setOpen] = useState(false);
@@ -86,8 +88,8 @@ export default function Nav() {
           </div>
 
           {/* Right side icons: TODO uncomment when buttons are working */}
-          {/* <div className="flex items-center space-x-4">
-            <button className="p-2 text-thyme-200 hover:text-thyme-100" aria-label="Search">
+          <div className="flex items-center space-x-4">
+            {/* <button className="p-2 text-thyme-200 hover:text-thyme-100" aria-label="Search">
               <MagnifyingGlassIcon className="w-6 h-6" />
             </button>
             <button className="p-2 text-thyme-200 hover:text-thyme-100" aria-label="Account">
@@ -95,8 +97,12 @@ export default function Nav() {
             </button>
             <button className="p-2 text-thyme-200 hover:text-thyme-100 relative" aria-label="Practice Log">
               <PencilSquareIcon className="w-6 h-6" />
+            </button> */}
+            
+            <button onClick={() => signOut({ callbackUrl: "/login" })} className="p-2 text-thyme-200 hover:text-thyme-100" aria-label="Sign Out">
+              <PowerIcon className="w-6 h-6" />
             </button>
-          </div> */}
+          </div>
         </div>
       </div>
 

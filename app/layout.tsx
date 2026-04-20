@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Josefin_Sans, Teachers } from "next/font/google";
 import "@/app/globals.css";
+import { SessionProvider } from "next-auth/react";
 
 const josefinSans = Josefin_Sans({
   variable: "--font-josefin-sans",
@@ -39,7 +40,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${josefinSans.variable} ${teachers.variable} font-sans`}>
-        {children}
+        <SessionProvider>
+          {children}
+        </SessionProvider>
       </body>
     </html>
   );

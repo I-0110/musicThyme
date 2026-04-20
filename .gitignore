@@ -42,3 +42,5 @@ next-env.d.ts
 data/
 *.json
 public/data/
+
+/app/generated/prisma

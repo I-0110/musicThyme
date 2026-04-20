@@ -46,6 +46,24 @@
   }
 }
 
+/* Floating Labels */
+.label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.5s ease;
+}
+
+input:not(:placeholder-shown) + label,
+input:focus+label{
+  top:0;
+}
+
+input:valid:not(:placeholder-shown) + label {
+  color: green;
+}
+
+/* Keyframe animation for stack of cards */
 .container:has(:hover) .card:not(:hover) {
   filter: grayscale(1) brightness(0.6);
   transform: scale(0.95);
