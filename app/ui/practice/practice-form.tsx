@@ -56,12 +56,20 @@ export default function PracticeForm() {
                     </div>
                     </div>
                     <input
-                    placeholder="Instrument"
+                    placeholder=""
                     value={form.instrument}
                     onChange={e => setForm({ ...form, instrument: e.target.value })}
                     className="w-full border border-gray-300 rounded p-2"
                     required
                     />
+                    <label
+                        htmlFor="Instrument"
+                        className="absolute left-3 top-3 text-thyme-400 text-sm transition-all duration-200
+                        peer-placeholder-shown:top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-thyme-400
+                        peer-focus:top-1 peer-focus:text-xs peer-focus:text-thyme-500"
+                    >
+                        Instrument 
+                    </label>
                     <ArrayInput
                     label="Scales"
                     placeholder="Enter a scale..."
