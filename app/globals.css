@@ -47,7 +47,7 @@
 }
 
 /* Floating Labels */
-.label {
+label {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
