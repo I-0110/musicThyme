@@ -2,11 +2,9 @@
 
 import { usePractice } from "@/app/lib/practice/usePractice";
 import ArrayInput from "@/app/ui/practice/array-input"; 
-import { calculateDuration, minutesToTime } from "@/app/lib/practice/utils";
 
 export default function PracticeForm() {
-    const { 
-        entries, 
+    const {  
         form, 
         loading, 
         edit,
@@ -14,99 +12,139 @@ export default function PracticeForm() {
         error, 
         setForm, 
         handleSubmit, 
-        handleEdit, 
-        handleDelete, 
         handleCancelEdit 
     } = usePractice();
 
     return (
         <>
-            <form onSubmit={handleSubmit} className="mb-6 bg-white p-4 rounded shadow">
-                <div className="mb-4 space-y-3">
-                    <h2 className="text-lg font-bold mb-2">
-                    {edit ? "Edit session" : "Log new session"}
-                    </h2>
-                    <input
-                    type="date"
-                    value={form.date}
-                    onChange={e => setForm({ ...form, date: e.target.value })}
-                    className="w-full border border-gray-300 rounded p-2"
-                    required
-                    />
-                    <div className="flex gap-4">
-                    <div className="flex-1">
-                        <label className="text-sm text-gray-500">Start time</label>
-                        <input
-                        type="time"
-                        value={form.startTime}
-                        onChange={e => setForm({ ...form, startTime: e.target.value })}
-                        className="w-full border border-gray-300 rounded p-2"
-                        required
-                        />
+            <form 
+                onSubmit={handleSubmit} 
+                className="mb-4 space-y-3 p-2"
+            >
+                <div className="flex-1">
+                    <h1 className="mb-3 text-xl font-bold text-thyme-400">
+                    {edit ? "Edit Session" : "Log New Session"}
+                    </h1>
+                    <div className="w-full">
+                        <div className="relative mb-3">
+                            <input
+                            type="date"
+                            value={form.date}
+                            onChange={e => setForm({ ...form, date: e.target.value })}
+                            className="w-full border border-thyme-300 rounded p-2"
+                            required
+                            />
+                            <label
+                                htmlFor="Date"
+                                className="absolute left-3 top-3 text-thyme-500 bg-thyme-100 text-sm"
+                            >
+                                Date 
+                            </label>
+                        </div>
                     </div>
-                    <div className="flex-1">
-                        <label className="text-sm text-gray-500">End time</label>
-                        <input
-                        type="time"
-                        value={form.endTime}
-                        onChange={e => setForm({ ...form, endTime: e.target.value })}
-                        className="w-full border border-gray-300 rounded p-2"
-                        required
-                        />
+                    <div className="w-full">
+                        <div className="relative mb-3">
+                            <input
+                                type="time"
+                                value={form.startTime}
+                                onChange={e => setForm({ ...form, startTime: e.target.value })}
+                                className="w-full border border-thyme-300 rounded p-2"
+                                required
+                            />
+                            <label
+                                htmlFor="Start Time"
+                                className="absolute left-3 top-3 text-thyme-500 bg-thyme-100 text-sm"
+                            >
+                                Start Time 
+                            </label>
+                        </div>
                     </div>
+                    <div className="w-full">
+                        <div className="relative mb-3">
+                            <input
+                                type="time"
+                                value={form.endTime}
+                                onChange={e => setForm({ ...form, endTime: e.target.value })}
+                                className="w-full border border-thyme-300 rounded p-2"
+                                required
+                            />
+                            <label
+                                htmlFor="End Time"
+                                className="absolute left-3 top-3 text-thyme-500 bg-thyme-100 text-sm"
+                            >
+                                End Time 
+                            </label>
+                        </div>
                     </div>
-                    <input
-                    placeholder=""
-                    value={form.instrument}
-                    onChange={e => setForm({ ...form, instrument: e.target.value })}
-                    className="w-full border border-gray-300 rounded p-2"
-                    required
-                    />
-                    <label
-                        htmlFor="Instrument"
-                        className="absolute left-3 top-3 text-thyme-400 text-sm transition-all duration-200
-                        peer-placeholder-shown:top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-thyme-400
-                        peer-focus:top-1 peer-focus:text-xs peer-focus:text-thyme-500"
-                    >
-                        Instrument 
-                    </label>
+
+                    <div className="w-full">
+                        <div className="relative mb-3">
+                            <input
+                                placeholder=""
+                                value={form.instrument}
+                                onChange={e => setForm({ ...form, instrument: e.target.value })}
+                                className="w-full border border-thyme-300 rounded p-2"
+                                required
+                            />
+                            <label
+                                htmlFor="Instrument"
+                                className="absolute left-3 top-3 text-thyme-400 bg-thyme-100 text-sm transition-all duration-200
+                                peer-placeholder-shown:top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-thyme-400
+                                peer-focus:top-1 peer-focus:text-xs peer-focus:text-thyme-500"
+                            >
+                                Instrument 
+                            </label>
+                        </div>
+                    </div>
+
                     <ArrayInput
-                    label="Scales"
-                    placeholder="Enter a scale..."
-                    value={form.scales}
-                    onChange={scales => setForm({ ...form, scales })}
-                    />
-                    <ArrayInput
-                    label="Studies"
-                    placeholder="Enter an exercise/study/etude..."
-                    value={form.study}
-                    onChange={study => setForm({ ...form, study })}
-                    />
-                    <ArrayInput
-                    label="Repertoire"
-                    placeholder="Enter a piece of repertoire..."
-                    value={form.piece}
-                    onChange={piece => setForm({ ...form, piece })}
+                        label="Scales"
+                        placeholder="e.g. C major"
+                        value={form.scales}
+                        onChange={scales => setForm({ ...form, scales })}
                     />
                     <ArrayInput
-                    label="Solos"
-                    placeholder="Enter any solos/excerpts/licks..."
-                    value={form.solos}
-                    onChange={solos => setForm({ ...form, solos })}
+                        label="Study(-ies)"
+                        placeholder=""
+                        value={form.study}
+                        onChange={study => setForm({ ...form, study })}
                     />
-                    <textarea
-                    placeholder="Notes (e.g. what you worked on, how it felt, etc.)"
-                    value={form.notes}
-                    onChange={e => setForm({ ...form, notes: e.target.value })}
-                    rows={4}
-                    className="w-full border border-gray-300 rounded p-2"
+                    <ArrayInput
+                        label="Piece"
+                        placeholder=""
+                        value={form.piece}
+                        onChange={piece => setForm({ ...form, piece })}
                     />
+                   <ArrayInput
+                        label="Solos"
+                        placeholder=""
+                        value={form.solos}
+                        onChange={solos => setForm({ ...form, solos })}
+                    />
+                    
+                    <div className="w-full">
+                        <div className="relative mb-3">
+                            <textarea
+                                placeholder="Notes (e.g. what you worked on, how it felt, etc.)"
+                                value={form.notes}
+                                onChange={e => setForm({ ...form, notes: e.target.value })}
+                                rows={4}
+                                className="w-full border border-thyme-300 rounded p-2"
+                            />
+                            <label
+                                htmlFor="Notes"
+                                className="absolute left-3 top-3 text-thyme-400 text-sm transition-all duration-200
+                                peer-placeholder-shown:top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-thyme-400
+                                peer-focus:top-1 peer-focus:text-xs peer-focus:text-thyme-500"
+                            />
+                        </div>
+                    </div>
                 </div>
         
                 <button
                     type="submit"
                     disabled={loading}
-                    className="bg-blue-500 text-white px-4 py-2 rounded disabled:bg-gray-400"
+                    className="bg-thyme-400 text-white px-4 py-2 rounded disabled:bg-thyme-200"
                 >
                     {loading ? "Saving..." : "Save Practice Session"}
                 </button>
@@ -115,58 +153,15 @@ export default function PracticeForm() {
                     <button
                     type="button"
                     onClick={handleCancelEdit}
-                    className="text-sm text-gray-500 underline mb-2"
+                    className="bg-thyme-400 text-white px-4 py-2 rounded"
                     >
-                    Cancel edit
+                    Cancel Edit
                     </button>
                 )}
         
-                {success && <p className="text-green-500 mt-2">Practice session saved!</p>}
+                {success && <p className="text-green-700 mt-2">Practice session saved!</p>}
                 {error && <p className="text-red-500 mt-2">{error}</p>}
             </form>
-
-            <h2 className="text-xl font-bold mb-4">Previous Practice Sessions</h2>
-        
-            {entries.length === 0 ? (
-            <p className="text-gray-600">No practice sessions logged yet.</p>
-            ) : (
-            <div className="space-y-4">
-                {entries.map(entry => (
-                <div key={entry.id} className="border border-gray-300 rounded p-4">
-                    <div className="flex justify-between items-center">
-                    <h3 className="text-lg font-bold">{entry.instrument}</h3>
-                    <span className="text-gray-500 text-sm">
-                        {calculateDuration(entry.startTime, entry.endTime)}
-                    </span>
-                    </div>
-                    <p className="text-gray-500 text-sm mb-2">
-                    {new Date(entry.date).toLocaleDateString()} · {minutesToTime(entry.startTime)} → {minutesToTime(entry.endTime)}
-                    </p>
-                    {entry.piece.length > 0 && <p className="text-sm">Pieces: {entry.piece.join(", ")}</p>}
-                    {entry.scales.length > 0 && <p className="text-sm">Scales: {entry.scales.join(", ")}</p>}
-                    {entry.study.length > 0 && <p className="text-sm">Studies: {entry.study.join(", ")}</p>}
-                    {entry.solos.length > 0 && <p className="text-sm">Solos: {entry.solos.join(", ")}</p>}
-                    {entry.notes && <p className="text-sm text-gray-500 mt-2">{entry.notes}</p>}
-                    <div className="flex gap-2 mt-2">
-                    <button
-                    type="button"
-                    onClick={() => handleEdit(entry)}
-                    className="text-sm text-blue-500 hover:underline"
-                    >
-                        Edit
-                    </button>
-                    <button
-                        type="button"
-                        onClick={() => handleDelete(entry.id)}
-                        className="text-sm text-red-500 hover:underline"
-                    >
-                        Delete
-                    </button>
-                    </div>
-                </div>
-                ))}  
-            </div>
-            )}
         </>
     );
 }

@@ -50,7 +50,8 @@ export default function SignupForm() {
     };
 
     return (
-        <form onSubmit={handleSubmit} className="space-y-3">
+        <>
+            <form onSubmit={handleSubmit} className="space-y-3">
                 <div className="flex-1 rounded-lg">
                     <h1 className="mb-3 text-2xl text-thyme-400">
                         Your first step to track your practice starts here!
@@ -121,5 +122,6 @@ export default function SignupForm() {
                 </Button>
             </div>
         </form>
+        </>
     );
 }

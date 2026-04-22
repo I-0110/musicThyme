@@ -12,6 +12,9 @@ type ArrayInputProps = {
 
 export default function ArrayInput({ label, placeholder, value, onChange }: ArrayInputProps) {
     const [input, setInput] = useState("");
+    const [focused, setFocused] = useState(false);
+
+    const isFloating = focused || value.length > 0 || input.length > 0;
 
     const handleAdd = () => {
         if (!input.trim()) return;
@@ -24,20 +27,27 @@ export default function ArrayInput({ label, placeholder, value, onChange }: Arra
     };
 
     return (
-        <div className="mb-4">
-            <label className="block text-gray-700 mb-2">{label}</label>
+        <div className="relative mb-3 w-full border border-thyme-300 rounded">
+            <label
+                className={`absolute left-3 text-thyme-100 pointer-events-none transition-all duration-200 ${
+                isFloating 
+                    ? "top-1 text-xs text-thyme-100" 
+                    : "top-3 text-md text-thyme-500"
+                }`}
+            >
+                {label}
+            </label>
             
             {/* List of values */}
-            
             {value.length > 0 && (
                 <div className="mb-2">
                     {value.map((item, index) => (
-                        <span key={index} className="inline-flex items-center bg-gray-200 text-gray-700 rounded-full px-3 py-1 mr-2 mb-2">
+                        <span key={index} className="inline-flex items-center bg-thyme-200 text-thyme-500 rounded-full px-3 py-1 mr-2 mb-2">
                             {item}
                             <button
                             type="button"
                             onClick={() => handleRemove(index)}
-                            className="ml-2 text-gray-500 hover:text-gray-700"
+                            className="ml-2 text-thyme-300 hover:text-thyme-500"
                             >
                                 <XMarkIcon className="h-4 w-4" />
                             </button>
@@ -50,21 +60,22 @@ export default function ArrayInput({ label, placeholder, value, onChange }: Arra
             <div className="flex">
                 <input
                     value={input}
-                    placeholder={placeholder}
-                    onChange={(e) => setInput(e.target.value)}
+                    placeholder={isFloating ? placeholder : ""}
+                    onChange={e => setInput(e.target.value)}
+                    onFocus={() => setFocused(true)}
+                    onBlur={() => setFocused(false)}
                     onKeyDown={(e) => {
                         if (e.key === "Enter") {
                             e.preventDefault();
                             handleAdd();
                         }
                     }}
-                    className="flex-1 border border-gray-300 rounded-l p-2"
+                    className="flex-1 border border-transparent rounded-l p-2"
                 />
-                <button type="button" onClick={handleAdd} className="bg-blue-500 text-white px-4 rounded-r">
+                <button type="button" onClick={handleAdd} className="bg-thyme-400 text-white px-4 rounded-r">
                     <PlusIcon className="h-5 w-5" />
                 </button>
             </div>
         </div>
     );
 } 
-
