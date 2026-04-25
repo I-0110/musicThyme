@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { ExclamationTriangleIcon } from "@heroicons/react/24/outline";
+import { Suspense } from "react";
 
 export default function ResetPasswordPage() {
   const searchParams = useSearchParams();
@@ -20,6 +21,7 @@ export default function ResetPasswordPage() {
   if (!token) {
     return (
       <main className="min-h-screen flex items-center justify-center p-6">
+        <Suspense fallback={<div>Loading...</div>}>
         <div className="w-full max-w-md bg-thyme-100 rounded-lg p-8 text-center">
           <ExclamationTriangleIcon className="w-4 h-4" />
           <h1 className="text-2xl font-bold text-thyme-500 mb-2">
@@ -33,6 +35,7 @@ export default function ResetPasswordPage() {
             Request new link
           </a>
         </div>
+        </Suspense>
       </main>
     );
   }
@@ -64,6 +67,7 @@ export default function ResetPasswordPage() {
 
   return (
     <main className="min-h-screen flex items-center justify-center p-6">
+      <Suspense fallback={<div>Loading...</div>}>
       <div className="w-full max-w-md bg-thyme-100 rounded-lg p-8">
         <h1 className="text-2xl font-bold text-thyme-500 mb-6">
           Reset password
@@ -120,6 +124,7 @@ export default function ResetPasswordPage() {
           </form>
         )}
       </div>
+      </Suspense>
     </main>
   );
 }
