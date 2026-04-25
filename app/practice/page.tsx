@@ -5,6 +5,8 @@ import PracticeForm from "@/app/ui/practice/practice-form";
 import PracticeChart from "@/app/ui/practice/practice-chart";
 import { usePractice } from "../lib/practice/usePractice";
 import PracticeCard from "../ui/practice/practice-card";
+import PracticeSummary from "../ui/practice/practice-summary";
+import TeacherGoals from "../ui/practice/teacher-goals";
 import ScrollToTop from "../ui/scroll-to-top";
 
 export default function PracticePage() {
@@ -33,17 +35,13 @@ export default function PracticePage() {
               {/* Progress Chart */}
               <div className="flex-1 p-4">
                 <h2 className="text-2xl text-thyme-500 font-bold pb-2">Progress</h2>
+                <PracticeSummary entries={entries} />
                 <PracticeChart entries={entries} />
               </div>
 
               {/* Goals, if any */}
               <div className="flex-1 p-4">
-                <h2 className="text-2xl text-thyme-500 font-bold pb-2 mb-3">
-                  Goals
-                </h2>
-                <p className="text-thyme-300 text-sm">
-                  No goals assigned yet. Find a teacher to help you set goals today! 
-                </p>
+                <TeacherGoals />
               </div>
             </div>
 

@@ -24,12 +24,15 @@ export default function LoginPage() {
         <Suspense>
             <LoginForm />
         </Suspense>
-        <h3 className="text-thyme-400">
-            Are you new?
-        </h3>
+        
         <Button className="w-full">
           <Link href={"/signup"}>
             Signup here!
+          </Link>
+        </Button>
+        <Button className="w-full">
+          <Link href={"/forgot-password"}>
+            Forgot password?
           </Link>
         </Button>
       </div>

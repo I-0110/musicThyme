@@ -21,7 +21,7 @@ export default function PracticeChart({ entries }: Props) {
     if (data.length === 0) {
         return (
             <p className="text-thyme-500 text-sm">
-                No data yet - log a practice session to see your progress!
+                No data yet. Log a practice session to see your progress!
             </p>
         );
     }

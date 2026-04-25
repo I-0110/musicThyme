@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     description: 'Practice makes perfect! Start your practice track here.'
 }
 
-export default function LoginPage() {
+export default function SignupPage() {
     return (
     <main className="flex items-center justify-center md:h-screen">
       <div className="relative mt-3 flex w-full max-w-md flex-col space-y-2.5 p-4 bg-thyme-150">
@@ -24,14 +24,14 @@ export default function LoginPage() {
         <Suspense>
             <SignupForm />
         </Suspense>
-        <h3 className="text-thyme-400">
-            Did you have an account already?
-        </h3>
-        <Button className="w-full">
-          <Link href={"/login"}>
-            Login here!
-          </Link>
-        </Button>
+        <p className="text-center text-sm text-thyme-300 mt-4">
+          Already have an account?{" "}
+          <Button className="w-full">
+            <Link href={"/login"}>
+              Login here!
+            </Link>
+          </Button>
+        </p>
       </div>
     </main>
     );

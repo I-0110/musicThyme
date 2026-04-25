@@ -73,5 +73,5 @@ export function usePractice() {
         setForm({ ...emptyForm });
     };
 
-    return { entries, form, loading, edit,success, error, setForm, handleSubmit, handleEdit, handleDelete, handleCancelEdit };
+    return { entries, form, loading, edit, success, error, setForm, handleSubmit, handleEdit, handleDelete, handleCancelEdit };
 }

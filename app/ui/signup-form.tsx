@@ -1,20 +1,33 @@
 "use client";
 
 import { useState } from "react";
-import { signIn, getSession } from "next-auth/react";
+import { useRouter } from "next/router";
+import { getSession } from "next-auth/react";
 import { Button } from "./buttons";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
 export default function SignupForm() {
+    const router = useRouter();
     const [formData, setFormData] = useState({
         name: "",
         email: "",
         password: "",
+        confirmPassword: "",
     });
     const [error, setError] = useState("");
+    const [loading, setLoading] = useState(false);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+
+        if (formData.password !== formData.confirmPassword) {
+            setError("Password don't match!");
+            return;
+        }
+
+        setLoading(true);
+        setError("");
+
         try {
             // Step 1: Create the account
             const res = await fetch("/api/signup", {
@@ -23,18 +36,15 @@ export default function SignupForm() {
                 headers: { "Content-Type": "application/json" },
             });
 
+            const data = await res.json();
+
             if (!res.ok) {
-                const data = await res.json();
                 setError(data.error || "Signup failed");
                 return;
             }
 
-            // Step 2: Auto-login after successful signup
-            await signIn("credentials", {
-                email: formData.email,
-                password: formData.password,
-                callbackUrl: "/practice",
-            });
+            // Step 2: Redirect to check email page instead of auto-login
+            router.push("/verify-email");
 
             //  Step 3: Confirm session exists after login
             const session = await getSession();
@@ -45,7 +55,9 @@ export default function SignupForm() {
                 window.location.href = "/login";
             }
         } catch {
-            setError("An unexpected error occurred. Please try again.");
+            setError("Something went wrong. Please try again.");
+        } finally {
+            setLoading(false);
         }
     };
 
@@ -65,12 +77,12 @@ export default function SignupForm() {
                                 required 
                             />
                             <label
-                                htmlFor="Name"
+                                htmlFor="Full Name"
                                 className="absolute left-3 top-3 text-thyme-400 text-sm transition-all duration-200
                                 peer-placeholder-shown:top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-thyme-400
                                 peer-focus:top-1 peer-focus:text-xs peer-focus:text-thyme-500"
                             >
-                                Name 
+                                Full Name 
                             </label>
                         </div>
                         <div className="w-full">
@@ -78,7 +90,7 @@ export default function SignupForm() {
                             <input
                                 id="email"
                                 type="email"
-                                placeholder=""
+                                placeholder=" "
                                 className="peer w-full border rounded p-3 pt-5 focus:outline-none border-thyme-500" onChange={e => setFormData({ ...formData, email: e.target.value })} 
                                 required
                             />
@@ -95,9 +107,9 @@ export default function SignupForm() {
                             <input
                                 id="password"
                                 type="password"
-                                placeholder=""
+                                placeholder=" "
                                 className="peer w-full border border-thyme-500 rounded p-3 pt-5 focus:outline-none"
-                                minLength={6} 
+                                minLength={8} 
                                 onChange={e => setFormData({ ...formData, password: e.target.value })} 
                                 required
                             />
@@ -107,7 +119,24 @@ export default function SignupForm() {
                                 peer-placeholder-shown:top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-thyme-400
                                 peer-focus:top-1 peer-focus:text-xs peer-focus:text-thyme-500"
                             >
-                                Password
+                                Password (8 characters minimum)
+                            </label>
+                            <input
+                                id="password"
+                                type="password"
+                                placeholder=" "
+                                className="peer w-full border border-thyme-500 rounded p-3 pt-5 focus:outline-none"
+                                minLength={8} 
+                                onChange={e => setFormData({ ...formData, confirmPassword: e.target.value })} 
+                                required
+                            />
+                            <label
+                                htmlFor="Password"
+                                className="absolute left-3 top-3 text-thyme-400 text-sm transition-all duration-200
+                                peer-placeholder-shown:top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-thyme-400
+                                peer-focus:top-1 peer-focus:text-xs peer-focus:text-thyme-500"
+                            >
+                                Confirm Password
                             </label>
                         </div>
                     </div>
@@ -115,9 +144,10 @@ export default function SignupForm() {
                 {error && <p>{error}</p>}
                 <Button 
                     type="submit"
+                    disabled={loading}
                     className="mt-4 w-full"
                 >
-                    Submit
+                    {loading ? "Creating account..." : "Create account"}
                     <ArrowRightIcon className="ml-auto h-5 w-5 text-thyme-100" />
                 </Button>
             </div>

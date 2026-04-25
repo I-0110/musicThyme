@@ -27,7 +27,7 @@ export default function LoginForm() {
         const session = await getSession();
 
         if (!session) {
-        setError("Invalid email or password");
+        setError("Invalid email or password. If you just signed up, please verify your email first!");
         } else {
         window.location.href = "/practice";
         }

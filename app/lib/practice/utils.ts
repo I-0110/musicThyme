@@ -1,4 +1,5 @@
 import { Entry } from "@/app/lib/practice/types";
+import { Student } from "../teacher/types";
 // Duration helper functions for practice entries
 export function calculateDuration(startTime: string, endTime: string) {
     if (!startTime || !endTime) return "--";
@@ -15,6 +16,24 @@ export function calculateDuration(startTime: string, endTime: string) {
     return `${hours}hr ${minutes}min(s)`;
 }
 
+export function totalHoursThisWeek(entries: Student["entries"]): string {
+    const weekAgo = new Date();
+    weekAgo.setDate(weekAgo.getDate() - 7);
+    const mins = entries
+    .filter(e => new Date(e.date) >= weekAgo)
+    .reduce((sum, e) => {
+      const [sh, sm] = e.startTime.split(":").map(Number);
+      const [eh, em] = e.endTime.split(":").map(Number);
+      const diff = (eh * 60 + em) - (sh * 60 + sm);
+      return sum + (diff > 0 ? diff : 0);
+    }, 0);
+    const hrs = Math.floor(mins / 60);
+    const rem = mins % 60;
+    if (hrs === 0) return `${rem} min`;
+    if (rem === 0) return `${hrs} hr`;
+    return `${hrs} hr ${rem} min`;
+}
+
 export function minutesToTime(time: string) {
     if (!time) return "--";
     const [h, m] = time.split(':').map(Number);
@@ -22,6 +41,27 @@ export function minutesToTime(time: string) {
     const hour12 = h % 12 === 0 ? 12 : h % 12;
     const min = m.toString().padStart(2, "0");
     return `${hour12}:${min} ${period}`;
+}
+
+export function formatMins(mins: number): string {
+  const hrs = Math.floor(mins / 60);
+  const rem = mins % 60;
+  if (hrs === 0) return `${rem} min`;
+  if (rem === 0) return `${hrs} hr`;
+  return `${hrs} hr ${rem} min`;
+}
+
+export function getTotalMinsThisWeek(entries: { date: string; startTime: string; endTime: string }[]): number {
+  const weekAgo = new Date();
+  weekAgo.setDate(weekAgo.getDate() - 7);
+  return entries
+    .filter(e => new Date(e.date) >= weekAgo)
+    .reduce((sum, e) => {
+      const [sh, sm] = e.startTime.split(":").map(Number);
+      const [eh, em] = e.endTime.split(":").map(Number);
+      const diff = (eh * 60 + em) - (sh * 60 + sm);
+      return sum + (diff > 0 ? diff : 0);
+    }, 0);
 }
 
 // Group entries by date and sum duration in minutes
@@ -51,4 +91,27 @@ export function getChartData(entries: Entry[]) {
             minutes, 
             hours: parseFloat((minutes / 60).toFixed(1)),
     }));
+}
+
+export function getCurrentStreak(entries: Entry[]): number {
+  if (entries.length === 0) return 0;
+
+  const practicedDays = new Set(
+    entries.map(e => new Date(e.date).toLocaleDateString())
+  );
+
+  let streak = 0;
+  const today = new Date();
+
+  for (let i = 0; i < 365; i++) {
+    const day = new Date(today);
+    day.setDate(today.getDate() - i);
+    if (practicedDays.has(day.toLocaleDateString())) {
+      streak++;
+    } else {
+      break;
+    }
+  }
+
+  return streak;
 }
