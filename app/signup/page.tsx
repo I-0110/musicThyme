@@ -25,7 +25,7 @@ export default function SignupPage() {
             <SignupForm />
         </Suspense>
         <p className="text-center text-sm text-thyme-300 mt-4">
-          Already have an account?{" "}
+          Already have an account?
           <Button className="w-full">
             <Link href={"/login"}>
               Login here!
