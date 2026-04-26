@@ -39,7 +39,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${josefinSans.variable} ${teachers.variable} font-sans`}>
+      <body 
+        className={`${josefinSans.variable} ${teachers.variable} font-sans`}
+        suppressHydrationWarning
+      >
         <SessionProvider>
           {children}
         </SessionProvider>
