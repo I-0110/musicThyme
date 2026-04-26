@@ -6,7 +6,7 @@ export async function sendVerificationEmail(email: string, token: string) {
   const url = `${process.env.NEXT_PUBLIC_APP_URL}/verify-email?token=${token}`;
   
   await resend.emails.send({
-    from: "Music Diary <onboarding@resend.dev>", // use this for testing
+    from: "Music Thyme! <musicthyme23@gmail.com>", // use this for testing
     to: email,
     subject: "Verify your Music Diary account",
     html: `
@@ -30,9 +30,9 @@ export async function sendPasswordResetEmail(email: string, token: string) {
   const url = `${process.env.NEXT_PUBLIC_APP_URL}/reset-password?token=${token}`;
 
   await resend.emails.send({
-    from: "Music Diary <onboarding@resend.dev>",
+    from: "Music Thyme! <onboarding@resend.dev>",
     to: email,
-    subject: "Reset your Music Diary password",
+    subject: "Reset your Music Thyme! password",
     html: `
       <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
         <h1 style="color: #4f7c5a;">Reset your password 🔑</h1>
