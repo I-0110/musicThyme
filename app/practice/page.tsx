@@ -10,6 +10,7 @@ import { usePractice } from "../lib/practice/usePractice";
 import PracticeCard from "../ui/practice/practice-card";
 import PracticeSummary from "../ui/practice/practice-summary";
 import TeacherGoals from "../ui/practice/teacher-goals";
+import DeleteAccount from "../ui/delete-account";
 import ScrollToTop from "../ui/scroll-to-top";
 
 export default function PracticePage() {
@@ -51,6 +52,11 @@ export default function PracticePage() {
             {/* Bottom Right - Previous Logs */}
             <div className="p-4">
               <PracticeCard />
+            </div>
+
+            {/* Bottom Right - Settings, for now just delete account */}
+            <div className="p-4">
+              <DeleteAccount />
             </div>
           </section>
         </div>
