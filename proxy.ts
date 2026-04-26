@@ -23,7 +23,7 @@ export default auth((req) => {
 
 export const config = {
   matcher: [
-    "/:path*", // verify-email, forgot-password, reset-password are public by default
+    "/dashboard/:path*", // verify-email, forgot-password, reset-password are public by default
     "/practice/:path*",    // students
     "/teacher/:path*",     // teachers only
   ],
