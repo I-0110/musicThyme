@@ -1,5 +1,8 @@
 "use client";
 
+// TODO: Delete this line and create a new file on ui folders to import here
+export const dynamic = "force-dynamic";
+
 import { useState } from "react";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";

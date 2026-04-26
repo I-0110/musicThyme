@@ -1,5 +1,8 @@
 "use client"
 
+// TODO: Delete this line and create a new file on ui folders to import here
+export const dynamic = "force-dynamic";
+
 import Nav from "@/app/ui/nav";
 import PracticeForm from "@/app/ui/practice/practice-form";
 import PracticeChart from "@/app/ui/practice/practice-chart";
