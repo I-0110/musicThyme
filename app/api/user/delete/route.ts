@@ -5,7 +5,7 @@ import bcrypt from "bcryptjs";
 
 export async function DELETE(req: Request) {
     const session = await auth();
-    if (!session.user?.email) {
+    if (!session?.user?.email) {
         return NextResponse.json({ error: "Not logged in" }, { status: 401 });
     }
 
@@ -24,6 +24,12 @@ export async function DELETE(req: Request) {
     if (!passwordMatch) {
         return NextResponse.json({ error: "Incorrect password" }, { status: 401 });
     }
+
+    // If teacher, unlink (free) all students first
+    await prisma.user.updateMany({
+        where: { teacherId: user.id },
+        data: { teacherId: null },
+    });
 
     // Delete everything related to the user
     await prisma.practiceEntry.deleteMany({ where: { userId: user.id } });
