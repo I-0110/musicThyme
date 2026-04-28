@@ -6,7 +6,7 @@ export async function sendVerificationEmail(email: string, token: string) {
   const url = `${process.env.NEXT_PUBLIC_APP_URL}/verify-email?token=${token}`;
   
   await resend.emails.send({
-    from: "Music Thyme! <musicthyme23@gmail.com>", // use this for testing
+    from: "Music Thyme! <noreply@musicthyme.com>", 
     to: email,
     subject: "Verify your Music Diary account",
     html: `
