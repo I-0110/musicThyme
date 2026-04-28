@@ -2,6 +2,7 @@
 
 import { Suspense } from "react";
 import { useState } from "react";
+import Link from "next/link";
 import { useSearchParams, useRouter } from "next/navigation";
 
 function ResetPasswordForm() {
@@ -25,10 +26,10 @@ function ResetPasswordForm() {
         <p className="text-thyme-300 mb-6">
           This reset link is invalid. Please request a new one.
         </p>
-        <a href="/forgot-password"
+        <Link href="/forgot-password"
           className="bg-thyme-500 text-white px-6 py-2 rounded">
           Request new link
-        </a>
+        </Link>
       </div>
     );
   }

@@ -2,6 +2,7 @@
 
 import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
+import Link from "next/link";
 
 function VerifyEmailContent() {
   const searchParams = useSearchParams();
@@ -13,9 +14,9 @@ function VerifyEmailContent() {
       <p className="text-4xl mb-4">🎵</p>
       <h1 className="text-2xl font-bold text-thyme-500 mb-2">Email verified!</h1>
       <p className="text-thyme-300 mb-6">Your account is ready. You can now log in.</p>
-      <a href="/login" className="bg-thyme-500 text-white px-6 py-2 rounded hover:bg-thyme-600">
+      <Link href="/login" className="bg-thyme-500 text-white px-6 py-2 rounded hover:bg-thyme-600">
         Go to login
-      </a>
+      </Link>
     </>
   );
 
@@ -26,9 +27,9 @@ function VerifyEmailContent() {
       <p className="text-thyme-300 mb-6">
         This link has expired or already been used. Sign up again to get a new one.
       </p>
-      <a href="/signup" className="bg-thyme-500 text-white px-6 py-2 rounded hover:bg-thyme-600">
+      <Link href="/signup" className="bg-thyme-500 text-white px-6 py-2 rounded hover:bg-thyme-600">
         Back to signup
-      </a>
+      </Link>
     </>
   );
 

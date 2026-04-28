@@ -3,8 +3,7 @@ import { Resend } from "resend";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function sendVerificationEmail(email: string, token: string) {
-  const url = `${process.env.NEXT_PUBLIC_APP_URL}/verify-email?token=${token}`;
-  
+  const url = `${process.env.NEXT_PUBLIC_APP_URL}/api/auth/verify-email?token=${token}`;
   await resend.emails.send({
     from: "Music Thyme! <noreply@musicthyme.com>", 
     to: email,
@@ -30,7 +29,7 @@ export async function sendPasswordResetEmail(email: string, token: string) {
   const url = `${process.env.NEXT_PUBLIC_APP_URL}/reset-password?token=${token}`;
 
   await resend.emails.send({
-    from: "Music Thyme! <onboarding@resend.dev>",
+    from: "Music Thyme! <noreply@musicthyme.com>",
     to: email,
     subject: "Reset your Music Thyme! password",
     html: `
