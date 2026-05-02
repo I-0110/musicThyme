@@ -64,7 +64,14 @@ export function useTeacher() {
       body: JSON.stringify({ studentId, ...goal }),
     });
     if (!res.ok) throw new Error("Failed to assign goal");
-    return res.json();
+
+    const newGoal = await res.json();
+    setGoalsByStudent(prev => ({
+      ...prev,
+    [studentId]: [newGoal, ...(prev[studentId] ?? [])],
+  }));
+
+    return newGoal;
   };
 
   // Assign one Goal for more students
@@ -132,7 +139,7 @@ export function useTeacher() {
   };
 
   return {
-    students, goals, form, loading, edit, error, goalsByStudent, expandedId, setGoals,
+    students, goals, form, loading, edit, error, goalsByStudent, expandedId, setGoals, setGoalsByStudent,
     addStudent, removeStudent, toggleExpand, assignGoal, fetchGoalsForStudent, assignGoalToMany, updateGoal, deleteGoal, handleCancelEdit, 
   };
 }

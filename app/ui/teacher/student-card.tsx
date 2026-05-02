@@ -57,17 +57,17 @@ export default function StudentCard({
                     <button
                         type="button"
                         onClick={() => onAssignGoal(student)}
-                        className="text-xs bg-thyme-100 text-thyme-600 px-3 py-1 rounded-full hover:bg-thyme-200"
+                        className="flex items-center gap-1 text-xs bg-thyme-200 text-thyme-500 px-3 py-1 rounded-full hover:bg-thyme-300 hover:text-thyme-100"
+                        title="Add Goal"
                     >
                         <PlusIcon className="w-2 h-2" /> Goal
                     </button>
                     <button
                         type="button"
                         onClick={() => onRemove(student.id)}
-                        className="p-1 text-thyme-300 hover:text-red-500"
-                        title="Remove Student"
+                        className="flex items-center gap-1 text-xs text-thyme-500 px-6 py-1 border rounded-full  hover:text-red-500 hover:border-red-500"
                     >
-                        <TrashIcon className="w-4 h-4" /> 
+                        <TrashIcon className="w-3 h-3" /> Remove Student
                     </button>
                     <button
                         type="button"
@@ -115,23 +115,25 @@ export default function StudentCard({
                                             <p className="text-xs text-thyme-300">{goal.description}</p>
                                             )}
                                         </div>
-                                        <span className="text-xs bg-thyme-100 text-thyme-500 px-2 py-1 rounded-full whitespace-nowrap">
-                                            {goal.targetMins} min/day
-                                        </span>
-                                        <button
-                                            type="button"
-                                            onClick={() => onEditGoal(goal, student.id)}
-                                            className="text-yellow-500 hover:text-yellow-300"
-                                        >
-                                            <PencilIcon className="w-2 h-2" /> Edit
-                                        </button>
-                                        <button
-                                            type="button"
-                                            onClick={() => onDeleteGoal(goal.id, student.id)}
-                                            className="text-red-500 hover:text-red-300"
-                                        >
-                                            <TrashIcon className="w-2 h-2" /> Delete
-                                        </button>
+                                        <div className="space-y-1 items-end flex flex-col">
+                                            <span className="flex justify-center gap-1 text-xs bg-thyme-200 text-thyme-500 px-3 py-1 rounded-full whitespace-nowrap">
+                                                {goal.targetMins} min/day
+                                            </span>
+                                            <button
+                                                type="button"
+                                                onClick={() => onEditGoal(goal, student.id)}
+                                                className="flex items-center gap-1 text-xs text-thyme-500 px-6 py-1 border rounded-full hover:text-blue-400"
+                                            >
+                                                <PencilIcon className="w-2 h-2" /> Edit
+                                            </button>
+                                            <button
+                                                type="button"
+                                                onClick={() => onDeleteGoal(goal.id, student.id)}
+                                                className="flex items-center gap-1 text-xs text-thyme-500 px-6 py-1 border rounded-full hover:text-red-500"
+                                            >
+                                                <TrashIcon className="w-2 h-2" /> Delete
+                                            </button>
+                                        </div>
                                     </div>
                                 ))}
                             </div>

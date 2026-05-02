@@ -51,7 +51,7 @@ export function formatMins(mins: number): string {
   return `${hrs} hr ${rem} min`;
 }
 
-export function getTotalMinsThisWeek(entries: { date: string; startTime: string; endTime: string }[]): number {
+export function getTotalMinsThisWeek(entries: Student["entries"]): number {
   const weekAgo = new Date();
   weekAgo.setDate(weekAgo.getDate() - 7);
   return entries

@@ -36,6 +36,7 @@ export async function GET(req: Request) {
     }
 
     const body = await req.json();
+    console.log("Goals POST body:", body); // temporary
     const { studentId, studentIds, title, description, targetMins } = body;
 
     // Assigning goals to multiple students

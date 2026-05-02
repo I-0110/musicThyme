@@ -33,35 +33,50 @@ export default function StudentChart({ entries, targetMins }: Props) {
     return(
         <ResponsiveContainer width="100%" height={180}>
         <BarChart data={data} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
-            <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e5e7eb" />
+            <CartesianGrid 
+                strokeDasharray="3 3" vertical={false} stroke="#588157" 
+            />
             <XAxis
             dataKey="date"
-            tick={{ fontSize: 11, fill: "#6b7280" }}
+            tick={{ fontSize: 12, fill: "#344e41" }}
             axisLine={false}
             tickLine={false}
             />
             <YAxis
-            tickFormatter={v => `${v}m`}
-            tick={{ fontSize: 11, fill: "#6b7280" }}
-            axisLine={false}
-            tickLine={false}
+                tickFormatter={(value) => {
+                    const mins = Number(value) || 0;
+
+                    if (mins < 60) return `${mins}m`;
+
+                    const hours = mins / 60;
+
+                    // Clean numbers like 1h instead of 1.0h
+                    return Number.isInteger(hours)
+                        ? `${hours}h`
+                        : `${hours.toFixed(1)}h`
+                }}
+                tick={{ fontSize: 12 , fill: "#6b7280" }}
+                axisLine={false}
+                tickLine={false}
             />
             <Tooltip
                 formatter={(value) => {
-                const mins = typeof value === "number" ? value : 0;
-                const hrs = Math.floor(mins / 60);
-                const rem = mins % 60;
-                if (hrs === 0) return [`${rem} min`, "Practiced"];
-                if (rem === 0) return [`${hrs} hr`, "Practiced"];
-                return [`${hrs} hr ${rem} min`, "Practiced"];
+                    const mins = Number(value) || 0;
+
+                    const hrs = Math.floor(mins / 60);
+                    const rem = mins % 60;
+
+                    if (hrs === 0) return [`${rem} min`, "Practiced"];
+                    if (rem === 0) return [`${hrs} hr`, "Practiced"];
+                    return [`${hrs} hr ${rem} min`, "Practiced"];
                 }}
-                cursor={{ fill: "#f3f4f6" }}
+                cursor={{ fill: "#d1d5c3" }}
             />
             {/* Dotted goal line */}
             {targetMins && (
             <ReferenceLine
                 y={targetMins}
-                stroke="#4f7c5a"
+                stroke="#344e41"
                 strokeDasharray="4 4"
                 label={{
                 value: `Goal: ${targetMins}m`,
@@ -72,10 +87,9 @@ export default function StudentChart({ entries, targetMins }: Props) {
             />
             )}
             <Bar
-            dataKey="minutes"
-            radius={[4, 4, 0, 0]}
-            // Green if met goal, amber if not
-            fill="#4f7c5a"
+                dataKey="minutes"
+                fill="#4f7c5a"
+                radius={[4, 4, 0, 0]}
             />
         </BarChart>
         </ResponsiveContainer>

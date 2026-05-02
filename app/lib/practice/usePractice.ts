@@ -35,6 +35,10 @@ export function usePractice() {
             }
             setForm({ ...emptyForm });
             setSuccess(true);
+
+            // Refetch to make sure everything is in sync
+            const refetch = await fetchEntries();
+            setEntries(refetch);
         } catch {
             setError("Failed to save practice entry");
         } finally {
