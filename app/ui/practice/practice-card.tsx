@@ -1,16 +1,20 @@
 "use client";
 
-import { usePractice } from "@/app/lib/practice/usePractice";
+import { Entry } from "@/app/lib/practice/types";
 import { calculateDuration, minutesToTime } from "@/app/lib/practice/utils";
 import { PencilIcon, TrashIcon } from "@heroicons/react/24/outline";
 
-export default function PracticeCard() {
-    const { 
-        entries, 
-        handleEdit, 
-        handleDelete, 
-    } = usePractice();
+type Props = {
+  entries: Entry[];
+  handleEdit: (entry: Entry) => void;
+  handleDelete: (id: string) => void;
+};
 
+export default function PracticeCard({
+  entries,
+  handleEdit,
+  handleDelete,
+}: Props) {
     return (
         <>
             <h2 className="text-2xl text-thyme-500 font-bold pb-2 mb-3">Previous Practice Sessions</h2>

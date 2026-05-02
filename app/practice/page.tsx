@@ -14,7 +14,19 @@ import DeleteAccount from "../ui/delete-account";
 import ScrollToTop from "../ui/scroll-to-top";
 
 export default function PracticePage() {
-  const { entries } = usePractice()
+  const {
+    entries,
+    form,
+    setForm,
+    loading,
+    success,
+    error,
+    edit,
+    handleSubmit,
+    handleCancelEdit,
+    handleEdit,
+    handleDelete,
+  } = usePractice();
 
   return (
     <div className="flex flex-col">
@@ -28,7 +40,16 @@ export default function PracticePage() {
             <p className=" text-thyme-300">
               Track your practice sessions and see your progress over time.
             </p>
-            <PracticeForm />  
+            <PracticeForm
+              form={form}
+              setForm={setForm}
+              loading={loading}
+              edit={edit}
+              success={success}
+              error={error}
+              handleSubmit={handleSubmit}
+              handleCancelEdit={handleCancelEdit}
+            /> 
           </section>
 
           {/* Right - Chart, Goals, Entries on bottom */}
@@ -51,7 +72,11 @@ export default function PracticePage() {
 
             {/* Bottom Right - Previous Logs */}
             <div className="p-4">
-              <PracticeCard />
+              <PracticeCard
+                entries={entries}
+                handleEdit={handleEdit}
+                handleDelete={handleDelete}
+              />
             </div>
 
             {/* Bottom Right - Settings, for now just delete account */}

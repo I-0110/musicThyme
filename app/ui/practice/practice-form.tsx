@@ -1,20 +1,29 @@
 'use client';
 
-import { usePractice } from "@/app/lib/practice/usePractice";
-import ArrayInput from "@/app/ui/practice/array-input"; 
+import ArrayInput from "@/app/ui/practice/array-input";
+import { PracticeForm as PracticeFormType } from "@/app/lib/practice/types";
 
-export default function PracticeForm() {
-    const {  
-        form, 
-        loading, 
-        edit,
-        success, 
-        error, 
-        setForm, 
-        handleSubmit, 
-        handleCancelEdit 
-    } = usePractice();
+type Props = {
+  form: PracticeFormType;
+  setForm: (form: PracticeFormType) => void;
+  loading: boolean;
+  edit: string | null;
+  success: boolean;
+  error: string | null;
+  handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
+  handleCancelEdit: () => void;
+};
 
+export default function PracticeForm({
+  form,
+  setForm,
+  loading,
+  edit,
+  success,
+  error,
+  handleSubmit,
+  handleCancelEdit,
+}: Props) {
     return (
         <>
             <form 
@@ -140,7 +149,8 @@ export default function PracticeForm() {
                         </div>
                     </div>
                 </div>
-        
+
+                <div className="space-x-2">
                 <button
                     type="submit"
                     disabled={loading}
@@ -158,6 +168,7 @@ export default function PracticeForm() {
                     Cancel Edit
                     </button>
                 )}
+                </div>
         
                 {success && <p className="text-green-700 mt-2">Practice session saved!</p>}
                 {error && <p className="text-red-500 mt-2">{error}</p>}
