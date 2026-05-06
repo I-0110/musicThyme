@@ -53,7 +53,7 @@ export default function LoginForm() {
                             />
                             <label
                                 htmlFor="Email"
-                                className="absolute left-3 top-3 text-thyme-400 text-sm transition-all duration-200
+                                className="absolute left-3 top-3 text-thyme-400 bg-thyme-150 text-sm transition-all duration-200
                                 peer-placeholder-shown:top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-thyme-400
                                 peer-focus:top-1 peer-focus:text-xs peer-focus:text-thyme-500"
                             >
@@ -70,7 +70,7 @@ export default function LoginForm() {
                             />
                             <label
                                 htmlFor="Password"
-                                className="absolute left-3 top-3 text-thyme-400 text-sm transition-all duration-200
+                                className="absolute left-3 top-3 text-thyme-400 bg-thyme-150 text-sm transition-all duration-200
                                 peer-placeholder-shown:top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-thyme-400
                                 peer-focus:top-1 peer-focus:text-xs peer-focus:text-thyme-500"
                             >

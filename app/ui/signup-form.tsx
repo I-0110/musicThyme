@@ -66,7 +66,7 @@ export default function SignupForm() {
             className="peer w-full border rounded p-3 pt-5 focus:outline-none border-thyme-500"
             required
           />
-          <label htmlFor="name" className="absolute left-3 top-1 text-xs text-thyme-400
+          <label htmlFor="name" className="absolute left-3 top-1 text-xs text-thyme-400 bg-thyme-150
             pointer-events-none transition-all duration-200
             peer-placeholder-shown:top-4 peer-placeholder-shown:text-sm
             peer-focus:top-1 peer-focus:text-xs peer-focus:text-thyme-500">
@@ -84,7 +84,7 @@ export default function SignupForm() {
             className="peer w-full border rounded p-3 pt-5 focus:outline-none border-thyme-500"
             required
           />
-          <label htmlFor="email" className="absolute left-3 top-1 text-xs text-thyme-400
+          <label htmlFor="email" className="absolute left-3 top-1 text-xs text-thyme-400 bg-thyme-150
             pointer-events-none transition-all duration-200
             peer-placeholder-shown:top-4 peer-placeholder-shown:text-sm
             peer-focus:top-1 peer-focus:text-xs peer-focus:text-thyme-500">
@@ -103,7 +103,7 @@ export default function SignupForm() {
             className="peer w-full border border-thyme-500 rounded p-3 pt-5 focus:outline-none"
             required
           />
-          <label htmlFor="password" className="absolute left-3 top-1 text-xs text-thyme-400
+          <label htmlFor="password" className="absolute left-3 top-1 text-xs text-thyme-400 bg-thyme-150
             pointer-events-none transition-all duration-200
             peer-placeholder-shown:top-4 peer-placeholder-shown:text-sm
             peer-focus:top-1 peer-focus:text-xs peer-focus:text-thyme-500">
@@ -122,7 +122,7 @@ export default function SignupForm() {
             className="peer w-full border border-thyme-500 rounded p-3 pt-5 focus:outline-none"
             required
           />
-          <label htmlFor="confirmPassword" className="absolute left-3 top-1 text-xs text-thyme-400
+          <label htmlFor="confirmPassword" className="absolute left-3 top-1 text-xs text-thyme-400 bg-thyme-150
             pointer-events-none transition-all duration-200
             peer-placeholder-shown:top-4 peer-placeholder-shown:text-sm
             peer-focus:top-1 peer-focus:text-xs peer-focus:text-thyme-500">
