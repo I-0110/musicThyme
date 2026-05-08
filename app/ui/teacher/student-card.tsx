@@ -100,14 +100,14 @@ export default function StudentCard({
                     {/* Goals list */}
                     {goals && goals.length > 0 && (
                         <div>
-                            <h4 className="text-sm font-medium text-thyme-400 mb-2">
+                            <h4 className="text-sm font-medium text-thyme-400 mb-0">
                                 Assigned goals
                             </h4>
                             <div className="space-y-2">
                                 {goals.map(goal => (
                                     <div 
                                         key={goal.id}
-                                        className="flex justify-between items-center bg-thyme-100 rounded p-2 text-sm"
+                                        className="flex justify-between items-center p-2 text-sm"
                                     >
                                         <div>
                                             <p className="font-medium text-thyme-500">{goal.title}</p>
@@ -146,25 +146,37 @@ export default function StudentCard({
                             Recent sessions
                         </h4>
                         {student.entries.length === 0 ? (
-                            <p className="text-sm text-gray-400">No sessions logged yet.</p>
+                            <p className="text-sm text-thyme-400">No sessions logged yet.</p>
                         ) : (
                             student.entries.map(entry => (
                                 <div
                                     key={entry.id}
-                                    className="text-sm border border-thyme-100 rounded p-3 mb-2"
+                                    className="text-sm border border-thyme-100 hover:bg-thyme-150 rounded-xl p-3 mb-2"
                                 >
-                                    <div className="flex justify-between">
-                                        <span className="font-medium">{entry.instrument}</span>
-                                        <span className="text-gray-400">
+                                    <div className="flex justify-between ">
+                                        <span className="font-medium text-thyme-500">{entry.instrument}</span>
+                                        <span className="text-thyme-400">
                                             {calculateDuration(entry.startTime, entry.endTime)}
                                         </span>
                                     </div>
-                                    <p className="text-gray-400 text-xs mt-1">
+                                    <p className="text-thyme-300 text-xs mt-1">
                                         {new Date(entry.date).toLocaleDateString()} · {minutesToTime(entry.startTime)} → {minutesToTime(entry.endTime)}
                                     </p>
-                                    {entry.piece.length > 0 && (
-                                        <p className="text-xs mt-1">Piece/Song {entry.piece.join(", ")}</p>
-                                    )}
+                                    <div className="text-thyme-400">
+                                        {entry.scales.length > 0 && (
+                                            <p className="text-sm mt-1">Scales: {entry.scales.join(", ")}</p>
+                                        )}
+                                        {entry.study.length > 0 && (
+                                            <p className="text-sm mt-1">Study(s): {entry.study.join(", ")}</p>
+                                        )}
+                                        {entry.piece.length > 0 && (
+                                            <p className="text-sm mt-1">Piece/Song: {entry.piece.join(", ")}</p>
+                                        )}
+                                        {entry.solos.length > 0 && (
+                                            <p className="text-sm mt-1">Solos: {entry.solos.join(", ")}</p>
+                                        )}
+                                        <p className="text-xs text-thyme-300 mt-2">&quot;{entry.notes}&quot;</p>
+                                    </div>
                                 </div>
                             ))
                         )}

@@ -67,7 +67,7 @@ export default function TeacherPage() {
           </div>
 
           {/* RIGHT */}
-          <div className="md:w-2/3 space-y-4">
+          <div className="md:w-2/3 space-y-4 p-6 bg-thyme-100 rounded-lg relative">
             <div className="flex items-center justify-between">
               <h2 className="text-xl font-bold text-thyme-500">My students</h2>
             </div>
